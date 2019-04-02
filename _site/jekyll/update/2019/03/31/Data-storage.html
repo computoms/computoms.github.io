@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=7b0190acf8004ff777084737378e2c5173c221ce">
+
+<!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Data storage | CompuToms</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Data storage" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Data structures, algorithms" />
+<meta property="og:description" content="Data structures, algorithms" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2019/03/31/Data-storage.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2019/03/31/Data-storage.html" />
+<meta property="og:site_name" content="CompuToms" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-31T21:00:00+02:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/jekyll/update/2019/03/31/Data-storage.html","description":"Data structures, algorithms","headline":"Data storage","dateModified":"2019-03-31T21:00:00+02:00","datePublished":"2019-03-31T21:00:00+02:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2019/03/31/Data-storage.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="http://github.com/computoms/computoms.github.io">View on GitHub</a>
+
+          <h1 id="project_title">CompuToms</h1>
+          <h2 id="project_tagline">Welcome to CompuToms github pages site.</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="data-structures-algorithms">Data structures, algorithms</h1>
+
+<p><a href="https://computoms.com/2019/03/31/data-storage/">This article is hosted on computoms.com</a></p>
+
+<p>When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance.</p>
+
+<p><img src="https://i0.wp.com/computoms.com/wp-content/uploads/2019/03/Untitled-Diagram.png?w=431&amp;ssl=1" alt="Parallel between data structures / algorithms and memory / processor" /></p>
+
+<p>Choosing the right data structure for your algorithm or program usually involves thinking about how to efficiently store and retrieve the data associated to your problem.</p>
+
+<p>To correctly understand how the different data structures work, it is then important to know how we store data in a computer.</p>
+
+<h1 id="computer-memory">Computer memory</h1>
+
+<p>Basically, there are three “data storage” types in a computer:</p>
+
+<ul>
+  <li>Hard drive storage</li>
+  <li>Random-access memory</li>
+  <li>Processor cache memory</li>
+</ul>
+
+<h2 id="hard-drive">Hard drive</h2>
+
+<p>Hard drives are non-volatile data storage. This means that data remains unchanged when power is turned off. It is usually the cheapest and biggest memory in a computer, and is where you typically save your files, photos and other data you want to keep. One of the disadvantage of this type of memory is that it is usually slow (mostly due to hardware implementation as we’ll see in a futur post).</p>
+
+<h2 id="random-access-memory">Random-access memory</h2>
+
+<p>Random-access memory (RAM) is where the non-persistent data is stored on your computer. It is a volatile data storage. When starting a program, the operating system loads the content of the program into the RAM memory and the program’s data is stored within the RAM memory.</p>
+
+<p>The RAM memory is relatively fast to access, as we’ll see below, but <strong>looses its data when power is turned off</strong>. As we’ll see in futur posts on the hardware implementation of RAM memory, it needs a certain amount of power to be refreshed and to avoid loosing its data.</p>
+
+<p>This is the memory type we’ll be interested when talking about data structures. Its most common hardware implementation is interesting to study as it allows to have a clearer insight into how data structures actually work and why some are better than others for solving particular problems.</p>
+
+<h2 id="processor-cache-memory">Processor cache memory</h2>
+
+<p>In order to have an even faster memory, processors implements a part of memory directly onto their chips, called the cache memory. Its hardware implementation and location (closer to logic area of the processor) makes it the fastest storage accessible from the processor. This memory is also a type of random-access memory, and shares its drawback (loss of data when power turns off).</p>
+
+<p>Before data is loaded into processor registers from the RAM memory, it is actually transferred from RAM to cache memory. Knowing this is important to understand the performance of data structures and some algorithms.</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>Here is a summary of the characteristics of each computer memory.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Data access</th>
+      <th>Persistence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hard drive</td>
+      <td>Slowest</td>
+      <td>Persistent</td>
+    </tr>
+    <tr>
+      <td>RAM</td>
+      <td>Fast</td>
+      <td>Non-persistent</td>
+    </tr>
+    <tr>
+      <td>Processor cache</td>
+      <td>Fastest</td>
+      <td>Non-persistent</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Next posts will present an overview of the standard hardware implementations of these memories in order to have a better understanding of how they work and how they can be used.</p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">CompuToms maintained by <a href="http://github.com/computoms">computoms</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
