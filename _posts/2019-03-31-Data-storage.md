@@ -6,11 +6,12 @@ categories: storage
 published: true
 ---
 
-# Data structures, algorithms
 
 ![Binary representation illustration](https://i2.wp.com/computoms.com/wp-content/uploads/2019/03/Illustration.png?resize=768%2C283&ssl=1)
 
-[This article is hosted on computoms.com](https://computoms.com/2019/03/31/data-storage/)
+[This article is also available on computoms.com](https://computoms.com/2019/03/31/data-storage/)
+
+## Data structures, algorithms
 
 When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance.
 
