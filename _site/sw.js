@@ -1,8 +1,8 @@
-const version = '20190404231416';
+const version = '20190404232727';
 const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
-  return ["/storage/2019/03/31/Data-storage/","/categories/","/blog/","/","/manifest.json","/offline/","/assets/search.json","/search/","/assets/styles.css","/thanks/","/redirects.json","/sitemap.xml","/robots.txt","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
+  return ["/physics/storage/2019/04/08/the-physical-principles-behind-data-storage-and-data-processing/","/2019/04/04/New-themes/","/storage/2019/03/31/Data-storage/","/2019/03/18/elements/","/categories/","/blog/","/","/manifest.json","/offline/","/assets/search.json","/search/","/assets/styles.css","/thanks/","/redirects.json","/sitemap.xml","/robots.txt","/blog/page2/","/feed.xml","/assets/logos/logo.svg", "/assets/default-offline-image.png", "/assets/scripts/fetch.js"
   ]
 }
 
