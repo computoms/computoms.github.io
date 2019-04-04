@@ -56,6 +56,5 @@ Here is a summary of the characteristics of each computer memory.
 | RAM	| Fast |	Non-persistent |
 | Processor cache |	Fastest |	Non-persistent |
 
-
-
+<br/>
 Next posts will present an overview of the standard hardware implementations of these memories in order to have a better understanding of how they work and how they can be used.

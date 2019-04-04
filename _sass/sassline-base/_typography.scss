@@ -218,13 +218,25 @@ a {
     font-style: normal;
     font-weight: map-get($headingtype, regular);
     width: 100%;
+    border: 1px solid $bodyColour;
+    border-collapse: collapse;
 
     thead {
 
       th {
         @include sassline(zeta, $headingtype, 2, 0, all);
-        padding-bottom: 1px;
+        padding-bottom: 2px;
+        border-style: solid;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: #008300;
+        color: white;
       }
+    }
+
+    td {
+      border-style: solid;
+
     }
   }
 

@@ -1,14 +1,9 @@
 ---
-title: About CompuToms
+title: 
 feature_text: |
   ## CompuToms
   Computer algorithms explained.
-excerpt: "Welcome to CompuToms."
 ---
-
-Welcome to CompuToms!
-
-Check out the latest posts below.
 
 {% for post in site.posts %}
   <article>
