@@ -1,5 +1,9 @@
 ---
-layout: default
+title: About CompuToms
+feature_text: |
+  ## CompuToms
+  Computer algorithms explained.
+excerpt: "Welcome to CompuToms."
 ---
 
 Welcome to CompuToms!
