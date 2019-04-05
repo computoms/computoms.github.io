@@ -13,10 +13,10 @@
    version="1.1"
    id="svg8"
    sodipodi:docname="logo.svg"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
-   inkscape:export-filename="/Users/thomas/Downloads/alembic-master/assets/logos/logo1024.png"
-   inkscape:export-xdpi="1854.79"
-   inkscape:export-ydpi="1854.79">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="Z:\web\computoms.github.io\assets\logos\logo16.png"
+   inkscape:export-xdpi="28.98"
+   inkscape:export-ydpi="28.98">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -94,6 +94,28 @@
            style="fill:#000018;fill-opacity:1;stroke:none;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </g>
     </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask852">
+      <g
+         id="g858"
+         transform="translate(-0.9348191,1.246426)">
+        <rect
+           y="-12.998526"
+           x="53.567699"
+           height="54.842724"
+           width="61.230652"
+           id="rect854"
+           style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <rect
+           y="-8.081274"
+           x="76.905914"
+           height="24.772707"
+           width="24.772707"
+           id="rect856"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </mask>
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -108,29 +130,34 @@
      inkscape:window-height="877"
      id="namedview10"
      showgrid="false"
-     inkscape:zoom="9.0769231"
-     inkscape:cx="24.384497"
-     inkscape:cy="20.655984"
-     inkscape:window-x="72"
-     inkscape:window-y="0"
+     inkscape:zoom="6.4183539"
+     inkscape:cx="116.70294"
+     inkscape:cy="24.373039"
+     inkscape:window-x="126"
+     inkscape:window-y="50"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg8" />
-  <path
-     style="fill:none;stroke:#008300;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 9.0965692,15.706999 H 23.430462"
-     id="path3715"
-     inkscape:connector-curvature="0"
-     mask="url(#mask4614)" />
   <circle
-     style="fill:none;stroke:#008300;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="path4542"
-     cx="15.941233"
-     cy="15.747162"
-     r="17.06045"
-     mask="url(#mask4606)" />
-  <path
-     style="fill:none;stroke:#008300;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="M 16.110169,8.8389828 V 22.610169"
-     id="path4641"
-     inkscape:connector-curvature="0" />
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#008300;stroke-width:4.62860107;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path826"
+     cx="75.652802"
+     cy="17.733652"
+     r="13.746938"
+     mask="url(#mask852)"
+     transform="matrix(1.2279634,0,0,1.2279634,-77.152395,-5.7564592)" />
+  <g
+     id="g862"
+     transform="translate(0.02716037,0.61716041)">
+    <path
+       mask="url(#mask4614)"
+       inkscape:connector-curvature="0"
+       id="path3715"
+       d="M 9.0965692,15.706999 H 23.430462"
+       style="fill:none;stroke:#008300;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path4641"
+       d="m 16.110169,13.746783 v 8.863386"
+       style="fill:none;stroke:#008300;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
 </svg>
