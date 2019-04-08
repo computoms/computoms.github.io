@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The fundamental interactions used in data storage"
-date:   2019-04-08 14:00:00 +0200
+date:   2019-04-09 14:00:00 +0200
 categories: physics storage
 published: true
 ---
