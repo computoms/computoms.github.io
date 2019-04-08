@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The physical principles behind data storage"
+title:  "The fundamental interactions used in data storage"
 date:   2019-04-08 14:00:00 +0200
 categories: physics storage
 published: true
@@ -10,11 +10,21 @@ published: true
 
 ![Light bulbs](https://computoms.com/wp-content/uploads/2019/04/light-bulbs-918581_1920.jpg)
 
-## Electromagnetism
+## Physical interactions and properties of matter
 
-As we know, matter is composed of molecules that are in turn composed of atoms -- electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a **mass**, an **electric charge** and a **spin**. These properties are very interesting to store and process information.
+As we know, matter is composed of molecules that are in turn composed of atoms -- electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a **mass**, an **electric charge** and a **spin**. Some of these properties are interesting to store and process information.
 
-> Define a force? => Fundamental forces (gravitational, electromagnetic and nuclear forces (weak/strong))
+To understand how we can use these physical properties, we need to understand how matter interacts. Specifically, we need to understand the concept of _force_. 
+
+> A force is a representation of the physical interaction between two bodies (particles, molecules, objects); where one body is capable of giving an acceleration to the other (that is, to change its speed).
+
+In nature, there are only 4 fundamental forces that can explain all the interactions of our world:
+* The gravitational force
+* The electromagnetic force
+* The strong nuclear force
+* The weak nuclear force
+
+The two last forces relate to interactions inside sub-atomic particles and only take part in nuclear reactions. In this post, we'll focus on the two first fundamental forces.
 
 ### Weight & the gravitational force
 
@@ -39,9 +49,11 @@ In conductive materials, such as most metals, electrons can freely move and hop 
 
 ### Moving electrons
 
-How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge $$q_1$$. The other way to make them move is by using a current generator. But to understand how a current generator works, we need to understand how the electric charges can interact with the _magnetic force_.
+How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge $$q_1$$. The other way to make them move is by using a current generator (see next posts).
 
 ### Spin & the magnetic force
+
+The fundamental force we are using is actually called the _electromagnetic_ force. This is because the electric force is tightly coupled with the magnetic force, which is another type of interaction.
 
 The magnetic force can be produced by two mechanisms: 
 
@@ -78,35 +90,23 @@ This force is called the _Lorentz's force_. $$\vec{v}$$ is the velocity of the p
 
 #### Permanent magnets and spins
 
-A permanent magnetic is a matter than generates a static magnetic field $$\vec{B}$$. These types of materials are called ferromagnetic materials and can actually be _magnetized_ (by applying a large magnetic field on them) to become permanent magnets. 
+A permanent magnetic is a material that generates a static magnetic field $$\vec{B}$$. These types of materials are called ferromagnetic materials and can actually be _magnetized_ (by applying a large magnetic field on them) to become permanent magnets. 
 
 The **spin** of particles, an intrinsic property of elementary particles such as electrons and protons/neutrons, is responsible for the magnetic orientation of atoms. The magnetic orientation is also called the _magnetic moment_. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to algin with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet.
 
 In summary, a ferro-magnetic material:
 
 * can be _magnetized_ in order to create a permanent magnet -- a material that creates a permanent static magnetic field. 
-* can be modified so that its magnetic orientation chages by applying a large magnetic field. 
+* can be modified so that its magnetic orientation changes by applying a large magnetic field. 
 
 This allows to encode information into ferromagnetic pieces by changing the magnetic orientation / probing the magnetic field of each ferromagnetic piece, as we'll see on a next post about hard drives. 
 
-### Current generator
-
-A current generator is a device that converts mechanical motion into electrical current. It is based on the magnetic part of the Lorentz' force law. That is, when no electric field are present in a region of space:
-
-$$\vec{F} = q \vec{v} \times \vec{B}$$
-
-Now let's imaging we have a fixed metal wire inside which electrons can move if they feel a force $$\vec{F}$$. If we take this wire close the a fixed permanent magnet and move it along the magnet, the electrons inside the wire will have a speed, with respect to the magnet, equal (and opposite) to the speed at which we are moving the wire. The resulting force or amplitude $$F = q v B$$ (if the wire is moved perpendicularly to the magnetic field $$B$$ of the magnet at speed $$v$$) will be applied on each electron of charge $$q$$. 
-
-> Include a figure to show the principle
-
-Now mechanically, this is not very efficient. We have to move a long wire along a fixed magnet and then collect the current on this wire. What if we bend the wire into a coil around the magnet; and make the coil rotate around the magnet. This would actually result in the same force on each electron. 
-
-Better.
-
-Now in the formula, $$\vec{v}$$ is actually the velocity of a charge particle with respect to a fixed magnetic field. This is equivalent to having a fixed charged particle with moving magnetic field $$\vec{B}$$ at velocity $$\vec{v}$$. In this case, we could have a fixed wire and make the magnet move along the wire. Or we could have a fixed coil around a spinning magnet. This is actually even better in terms of mechanic, because it allows to input our mechanical motion onto the spinning magnet and collect the current at the output of the coil with a fixed electrical circuit. 
-
-> Include a figure of the current generator
-
-This is the basic idea behind which a current generator is made. There are a lot of ways to actually construct a current generator, but they are all based on the same physical principles explained above.
-
 ## Summary
+
+In summary, we saw that matter is interacting by mechanisms that are modelled as forces. These forces are ruled by intrinsic properties of matter; of which the _eletric charge_ and _spin_ are important properties that we use to store information in our computers. 
+
+Of the 4 fundamental forces ruling our world, we use the _electromagnetic_ force based on the electric charge and spin of particles to make them interact. 
+
+We can store information using the electric charge of electrons, that can freely move inside metals. We can also store information using the magnetic field of a ferromagnetic material. 
+
+In the next post, we'll see how to glue this together: how we can create devices to move electric charges and change or generate magnetic fields.
