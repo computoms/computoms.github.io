@@ -8,7 +8,7 @@ published: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-![Light bulbs](https://computoms.com/wp-content/uploads/2019/04/light-bulbs-918581_1920.jpg)
+![Light bulbs](https://computoms.com/wp-backup/wp-content/uploads/2019/04/light-bulbs-918581_1920.jpg)
 
 ## Physical interactions and properties of matter
 
