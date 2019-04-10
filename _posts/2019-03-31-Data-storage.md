@@ -6,10 +6,7 @@ categories: storage
 published: true
 ---
 
-
 ![Binary representation illustration](https://i2.wp.com/computoms.com/wp-content/uploads/2019/03/Illustration.png?resize=768%2C283&ssl=1)
-
-[This article is also available on computoms.com](https://computoms.com/2019/03/31/data-storage/)
 
 ## Data structures, algorithms
 
