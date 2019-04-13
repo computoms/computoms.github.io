@@ -6,13 +6,13 @@ categories: storage
 published: true
 ---
 
-![Binary representation illustration](https://i2.wp.com/computoms.com/wp-content/uploads/2019/03/Illustration.png?resize=768%2C283&ssl=1)
+![Binary representation illustration]({{site.url}}/images/posts/01_Binary-numbers.png)
 
 ## Data structures, algorithms
 
 When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance.
 
-{% include figure.html image="https://i0.wp.com/computoms.com/wp-content/uploads/2019/03/Untitled-Diagram.png?w=431&ssl=1" caption="Parallel between data structures / algorithms and memory / processor" %}
+{% include figure.html image="images/posts/01_Memory-and-algorithms.png" caption="Parallel between data structures / algorithms and memory / processor" %}
 
 Choosing the right data structure for your algorithm or program usually involves thinking about how to efficiently store and retrieve the data associated to your problem.
 

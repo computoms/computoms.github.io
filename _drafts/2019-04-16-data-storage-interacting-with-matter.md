@@ -1,3 +1,15 @@
+---
+layout: post
+title:  "Data storage: Interacting with matter"
+date:   2019-04-16 14:00:00 +0200
+categories: physics storage
+published: true
+---
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+![Wind turbines]({{site.url}}/images/posts/03_Interaction-with-matter.jpg)
+
 ### Current generator
 
 A current generator is a device that converts mechanical motion into electrical current. It is based on the magnetic part of the Lorentz' force. That is, when no electric field are present in a region of space:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The fundamental interactions used in data storage"
+title:  "Data storage: fundamental principles"
 date:   2019-04-09 14:00:00 +0200
 categories: physics storage
 published: true
@@ -8,7 +8,7 @@ published: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-![Light bulbs](https://computoms.com/wp-backup/wp-content/uploads/2019/04/light-bulbs-918581_1920.jpg)
+![Light bulbs]({{site.url}}/images/posts/02_Light-bulbs.jpg)
 
 ## Physical interactions and properties of matter
 
