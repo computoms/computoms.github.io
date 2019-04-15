@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-GB"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://computoms.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://computoms.github.io/" rel="alternate" type="text/html" hreflang="en-GB" /><updated>2019-04-08T22:17:56+02:00</updated><id>https://computoms.github.io/feed.xml</id><title type="html">CompuToms</title><subtitle>Welcome to CompuToms website!</subtitle><author><name>CompuToms</name></author><entry><title type="html">The fundamental interactions used in data storage</title><link href="https://computoms.github.io/physics/storage/2019/04/08/the-fundamental-interactions-used-in-data-storage/" rel="alternate" type="text/html" title="The fundamental interactions used in data storage" /><published>2019-04-08T14:00:00+02:00</published><updated>2019-04-08T14:00:00+02:00</updated><id>https://computoms.github.io/physics/storage/2019/04/08/the-fundamental-interactions-used-in-data-storage</id><content type="html" xml:base="https://computoms.github.io/physics/storage/2019/04/08/the-fundamental-interactions-used-in-data-storage/">&lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://computoms.com/wp-content/uploads/2019/04/light-bulbs-918581_1920.jpg&quot; alt=&quot;Light bulbs&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;physical-interactions-and-properties-of-matter&quot;&gt;Physical interactions and properties of matter&lt;/h2&gt;
+
+&lt;p&gt;As we know, matter is composed of molecules that are in turn composed of atoms – electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a &lt;strong&gt;mass&lt;/strong&gt;, an &lt;strong&gt;electric charge&lt;/strong&gt; and a &lt;strong&gt;spin&lt;/strong&gt;. Some of these properties are interesting to store and process information.&lt;/p&gt;
+
+&lt;p&gt;To understand how we can use these physical properties, we need to understand how matter interacts. Specifically, we need to understand the concept of &lt;em&gt;force&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A force is a representation of the physical interaction between two bodies (particles, molecules, objects); where one body is capable of giving an acceleration to the other (that is, to change its speed).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In nature, there are only 4 fundamental forces that can explain all the interactions of our world:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The gravitational force&lt;/li&gt;
+  &lt;li&gt;The electromagnetic force&lt;/li&gt;
+  &lt;li&gt;The strong nuclear force&lt;/li&gt;
+  &lt;li&gt;The weak nuclear force&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The two last forces relate to interactions inside sub-atomic particles and only take part in nuclear reactions. In this post, we’ll focus on the two first fundamental forces.&lt;/p&gt;
+
+&lt;h3 id=&quot;weight--the-gravitational-force&quot;&gt;Weight &amp;amp; the gravitational force&lt;/h3&gt;
+
+&lt;p&gt;Let’s start by using the &lt;em&gt;mass&lt;/em&gt; property of matter to show some physical interactions, that are very similar to the ones we actually use to store data in our computers.&lt;/p&gt;
+
+&lt;p&gt;If you hold an apple with your hand and suddenly drop it, it will fall on the floor. This is due to its weight. Its “weight” is actually the force applied on it by the Earth’s mass. Two masses attract each other by a force that is proportional to their distance and to their masses:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{W} = G\frac{m_1 m_2}{r^2}&lt;/script&gt;
+
+&lt;p&gt;(where &lt;script type=&quot;math/tex&quot;&gt;\vec{W}&lt;/script&gt; if the force between the two masses, &lt;script type=&quot;math/tex&quot;&gt;G&lt;/script&gt; is a constant, &lt;script type=&quot;math/tex&quot;&gt;m_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;m_2&lt;/script&gt; are the masses and &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the distance between the masses). This interaction is considered a long-distance interaction, meaning that it is usually the dominant interaction for objects that are heavy and can act at very long distances (stars, planets and all sorts of objects into space are mainly ruled by this interaction). In the nano-world, where sub-atomic particles live (electrons, protons…) the masses at stake are infinitely small; too small for this gravitational interaction to be dominant. It is usually neglected when investigating the interactions between particles and atoms.&lt;/p&gt;
+
+&lt;h3 id=&quot;electric-charge-electric-force&quot;&gt;Electric charge, electric force&lt;/h3&gt;
+
+&lt;p&gt;Now onto the &lt;em&gt;electric charge&lt;/em&gt;. The electric charge of an electron is negative and measured in Coulomb (about &lt;script type=&quot;math/tex&quot;&gt;-1.6\cdot 10^{-19}&lt;/script&gt; C which we’ll write &lt;script type=&quot;math/tex&quot;&gt;-e&lt;/script&gt;) whereas the one of a proton is positive (&lt;script type=&quot;math/tex&quot;&gt;+e&lt;/script&gt;) and the one of a neutron is null. Two electric charges of the same sign (for example, two electrons) repel each other while two electric charges of the opposite sign attract each other. The amplitude of this attracting / repulsing force is:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F = k \frac{q_1 q_2}{r^2}&lt;/script&gt;
+
+&lt;p&gt;(where &lt;script type=&quot;math/tex&quot;&gt;F&lt;/script&gt; is the electrique force, also called &lt;em&gt;electrostatic force&lt;/em&gt;, &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; is a constant (the &lt;em&gt;Coulomb’s constant&lt;/em&gt;), &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;q_2&lt;/script&gt; are the electric charge of the particles and &lt;script type=&quot;math/tex&quot;&gt;r&lt;/script&gt; is the distance separating the charges).&lt;/p&gt;
+
+&lt;p&gt;In conductive materials, such as most metals, electrons can freely move and hop from one atom to the other where there is some space available while atomic nucleus are fixed. Using the electric attraction/repulsion forces, we can force electrons to move through a conductive material. This creates a current (= moving eletric charges).&lt;/p&gt;
+
+&lt;h3 id=&quot;moving-electrons&quot;&gt;Moving electrons&lt;/h3&gt;
+
+&lt;p&gt;How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large &lt;em&gt;fixed&lt;/em&gt; charge &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt;. The other way to make them move is by using a current generator (see next posts).&lt;/p&gt;
+
+&lt;h3 id=&quot;spin--the-magnetic-force&quot;&gt;Spin &amp;amp; the magnetic force&lt;/h3&gt;
+
+&lt;p&gt;The fundamental force we are using is actually called the &lt;em&gt;electromagnetic&lt;/em&gt; force. This is because the electric force is tightly coupled with the magnetic force, which is another type of interaction.&lt;/p&gt;
+
+&lt;p&gt;The magnetic force can be produced by two mechanisms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a moving charge&lt;/li&gt;
+  &lt;li&gt;a piece of matter that has special properties, that we call a permanent magnet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;force-fields&quot;&gt;Force fields&lt;/h4&gt;
+
+&lt;p&gt;To make it easier to study the forces in some cases, physicits have defined a quantity called a &lt;em&gt;field&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A field represents a quantity that has a value in each point of the space.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, you can define the “wind field” as being the intensity of the wind on each point of the Earth’s surface.&lt;/p&gt;
+
+&lt;p&gt;Fields have been invented by physicists to easily describe the interactions that are applied on a single particle at a position in space. For example in the case of force fields, it describes the forces applied to a given particle at a given position in space.&lt;/p&gt;
+
+&lt;p&gt;Taking back the electrostatic force equation between two particles, we can transform it as follows:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;F = k \frac{q_1 q_2}{r^2} = q_1 \cdot \left( k \frac{q_2}{r^2} \right) = q_1 \cdot E&lt;/script&gt;
+
+&lt;p&gt;Then we define the quantity &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt; as the electric field. If we had several particles around &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt;, we could sum them up into &lt;script type=&quot;math/tex&quot;&gt;E&lt;/script&gt; to describe the resulting force applied to &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-electromagnetic-field&quot;&gt;The electromagnetic field&lt;/h4&gt;
+
+&lt;p&gt;The equation derived above gives the force applied on a single charged particle (of charge &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt;) when it is &lt;em&gt;static&lt;/em&gt;. This is why we call it the &lt;em&gt;electrostatic&lt;/em&gt; force. When the charge &lt;script type=&quot;math/tex&quot;&gt;q_1&lt;/script&gt; is moving, an additional component comes into play in the resulting force applied to it:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\vec{F} = q\vec{E} + q\vec{v} \times \vec{B}&lt;/script&gt;
+
+&lt;p&gt;This force is called the &lt;em&gt;Lorentz’s force&lt;/em&gt;. &lt;script type=&quot;math/tex&quot;&gt;\vec{v}&lt;/script&gt; is the velocity of the particle and &lt;script type=&quot;math/tex&quot;&gt;\vec{B}&lt;/script&gt; is the magnetic field. The magnetic field is a field that can be generated by two physical mechanisms:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;a moving charge&lt;/li&gt;
+  &lt;li&gt;a piece of matter called a &lt;em&gt;permanent magnet&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;permanent-magnets-and-spins&quot;&gt;Permanent magnets and spins&lt;/h4&gt;
+
+&lt;p&gt;A permanent magnetic is a material that generates a static magnetic field &lt;script type=&quot;math/tex&quot;&gt;\vec{B}&lt;/script&gt;. These types of materials are called ferromagnetic materials and can actually be &lt;em&gt;magnetized&lt;/em&gt; (by applying a large magnetic field on them) to become permanent magnets.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;spin&lt;/strong&gt; of particles, an intrinsic property of elementary particles such as electrons and protons/neutrons, is responsible for the magnetic orientation of atoms. The magnetic orientation is also called the &lt;em&gt;magnetic moment&lt;/em&gt;. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to algin with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet.&lt;/p&gt;
+
+&lt;p&gt;In summary, a ferro-magnetic material:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can be &lt;em&gt;magnetized&lt;/em&gt; in order to create a permanent magnet – a material that creates a permanent static magnetic field.&lt;/li&gt;
+  &lt;li&gt;can be modified so that its magnetic orientation changes by applying a large magnetic field.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This allows to encode information into ferromagnetic pieces by changing the magnetic orientation / probing the magnetic field of each ferromagnetic piece, as we’ll see on a next post about hard drives.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;In summary, we saw that matter is interacting by mechanisms that are modelled as forces. These forces are ruled by intrinsic properties of matter; of which the &lt;em&gt;eletric charge&lt;/em&gt; and &lt;em&gt;spin&lt;/em&gt; are important properties that we use to store information in our computers.&lt;/p&gt;
+
+&lt;p&gt;Of the 4 fundamental forces ruling our world, we use the &lt;em&gt;electromagnetic&lt;/em&gt; force based on the electric charge and spin of particles to make them interact.&lt;/p&gt;
+
+&lt;p&gt;We can store information using the electric charge of electrons, that can freely move inside metals. We can also store information using the magnetic field of a ferromagnetic material.&lt;/p&gt;
+
+&lt;p&gt;In the next post, we’ll see how to glue this together: how we can create devices to move electric charges and change or generate magnetic fields.&lt;/p&gt;</content><author><name>CompuToms</name></author><summary type="html">Physical interactions and properties of matter As we know, matter is composed of molecules that are in turn composed of atoms – electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a mass, an electric charge and a spin. Some of these properties are interesting to store and process information. To understand how we can use these physical properties, we need to understand how matter interacts. Specifically, we need to understand the concept of force. A force is a representation of the physical interaction between two bodies (particles, molecules, objects); where one body is capable of giving an acceleration to the other (that is, to change its speed). In nature, there are only 4 fundamental forces that can explain all the interactions of our world: The gravitational force The electromagnetic force The strong nuclear force The weak nuclear force The two last forces relate to interactions inside sub-atomic particles and only take part in nuclear reactions. In this post, we’ll focus on the two first fundamental forces. Weight &amp;amp; the gravitational force Let’s start by using the mass property of matter to show some physical interactions, that are very similar to the ones we actually use to store data in our computers. If you hold an apple with your hand and suddenly drop it, it will fall on the floor. This is due to its weight. Its “weight” is actually the force applied on it by the Earth’s mass. Two masses attract each other by a force that is proportional to their distance and to their masses: (where if the force between the two masses, is a constant, and are the masses and is the distance between the masses). This interaction is considered a long-distance interaction, meaning that it is usually the dominant interaction for objects that are heavy and can act at very long distances (stars, planets and all sorts of objects into space are mainly ruled by this interaction). In the nano-world, where sub-atomic particles live (electrons, protons…) the masses at stake are infinitely small; too small for this gravitational interaction to be dominant. It is usually neglected when investigating the interactions between particles and atoms. Electric charge, electric force Now onto the electric charge. The electric charge of an electron is negative and measured in Coulomb (about C which we’ll write ) whereas the one of a proton is positive () and the one of a neutron is null. Two electric charges of the same sign (for example, two electrons) repel each other while two electric charges of the opposite sign attract each other. The amplitude of this attracting / repulsing force is: (where is the electrique force, also called electrostatic force, is a constant (the Coulomb’s constant), and are the electric charge of the particles and is the distance separating the charges). In conductive materials, such as most metals, electrons can freely move and hop from one atom to the other where there is some space available while atomic nucleus are fixed. Using the electric attraction/repulsion forces, we can force electrons to move through a conductive material. This creates a current (= moving eletric charges). Moving electrons How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large fixed charge . The other way to make them move is by using a current generator (see next posts). Spin &amp;amp; the magnetic force The fundamental force we are using is actually called the electromagnetic force. This is because the electric force is tightly coupled with the magnetic force, which is another type of interaction. The magnetic force can be produced by two mechanisms: a moving charge a piece of matter that has special properties, that we call a permanent magnet Force fields To make it easier to study the forces in some cases, physicits have defined a quantity called a field. A field represents a quantity that has a value in each point of the space. For example, you can define the “wind field” as being the intensity of the wind on each point of the Earth’s surface. Fields have been invented by physicists to easily describe the interactions that are applied on a single particle at a position in space. For example in the case of force fields, it describes the forces applied to a given particle at a given position in space. Taking back the electrostatic force equation between two particles, we can transform it as follows: Then we define the quantity as the electric field. If we had several particles around , we could sum them up into to describe the resulting force applied to . The electromagnetic field The equation derived above gives the force applied on a single charged particle (of charge ) when it is static. This is why we call it the electrostatic force. When the charge is moving, an additional component comes into play in the resulting force applied to it: This force is called the Lorentz’s force. is the velocity of the particle and is the magnetic field. The magnetic field is a field that can be generated by two physical mechanisms: a moving charge a piece of matter called a permanent magnet Permanent magnets and spins A permanent magnetic is a material that generates a static magnetic field . These types of materials are called ferromagnetic materials and can actually be magnetized (by applying a large magnetic field on them) to become permanent magnets. The spin of particles, an intrinsic property of elementary particles such as electrons and protons/neutrons, is responsible for the magnetic orientation of atoms. The magnetic orientation is also called the magnetic moment. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to algin with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet. In summary, a ferro-magnetic material: can be magnetized in order to create a permanent magnet – a material that creates a permanent static magnetic field. can be modified so that its magnetic orientation changes by applying a large magnetic field. This allows to encode information into ferromagnetic pieces by changing the magnetic orientation / probing the magnetic field of each ferromagnetic piece, as we’ll see on a next post about hard drives. Summary In summary, we saw that matter is interacting by mechanisms that are modelled as forces. These forces are ruled by intrinsic properties of matter; of which the eletric charge and spin are important properties that we use to store information in our computers. Of the 4 fundamental forces ruling our world, we use the electromagnetic force based on the electric charge and spin of particles to make them interact. We can store information using the electric charge of electrons, that can freely move inside metals. We can also store information using the magnetic field of a ferromagnetic material. In the next post, we’ll see how to glue this together: how we can create devices to move electric charges and change or generate magnetic fields.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://computoms.github.io/assets/default-social-image.png" /></entry><entry><title type="html">Data storage</title><link href="https://computoms.github.io/storage/2019/03/31/Data-storage/" rel="alternate" type="text/html" title="Data storage" /><published>2019-03-31T21:00:00+02:00</published><updated>2019-03-31T21:00:00+02:00</updated><id>https://computoms.github.io/storage/2019/03/31/Data-storage</id><content type="html" xml:base="https://computoms.github.io/storage/2019/03/31/Data-storage/">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/computoms.com/wp-content/uploads/2019/03/Illustration.png?resize=768%2C283&amp;amp;ssl=1&quot; alt=&quot;Binary representation illustration&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://computoms.com/2019/03/31/data-storage/&quot;&gt;This article is also available on computoms.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-structures-algorithms&quot;&gt;Data structures, algorithms&lt;/h2&gt;
+
+&lt;p&gt;When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance.&lt;/p&gt;
+
+&lt;figure class=&quot;figure  figure--center&quot;&gt;
+  &lt;img class=&quot;image&quot; src=&quot;https://i0.wp.com/computoms.com/wp-content/uploads/2019/03/Untitled-Diagram.png?w=431&amp;amp;ssl=1&quot; alt=&quot;Parallel between data structures / algorithms and memory / processor&quot; width=&quot;&quot; height=&quot;&quot; /&gt;
+  &lt;figcaption class=&quot;caption&quot;&gt;Parallel between data structures / algorithms and memory / processor&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Choosing the right data structure for your algorithm or program usually involves thinking about how to efficiently store and retrieve the data associated to your problem.&lt;/p&gt;
+
+&lt;p&gt;To correctly understand how the different data structures work, it is then important to know how we store data in a computer.&lt;/p&gt;
+
+&lt;h1 id=&quot;computer-memory&quot;&gt;Computer memory&lt;/h1&gt;
+
+&lt;p&gt;Basically, there are three “data storage” types in a computer:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hard drive storage&lt;/li&gt;
+  &lt;li&gt;Random-access memory&lt;/li&gt;
+  &lt;li&gt;Processor cache memory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hard-drive&quot;&gt;Hard drive&lt;/h2&gt;
+
+&lt;p&gt;Hard drives are non-volatile data storage. This means that data remains unchanged when power is turned off. It is usually the cheapest and biggest memory in a computer, and is where you typically save your files, photos and other data you want to keep. One of the disadvantage of this type of memory is that it is usually slow (mostly due to hardware implementation as we’ll see in a futur post).&lt;/p&gt;
+
+&lt;h2 id=&quot;random-access-memory&quot;&gt;Random-access memory&lt;/h2&gt;
+
+&lt;p&gt;Random-access memory (RAM) is where the non-persistent data is stored on your computer. It is a volatile data storage. When starting a program, the operating system loads the content of the program into the RAM memory and the program’s data is stored within the RAM memory.&lt;/p&gt;
+
+&lt;p&gt;The RAM memory is relatively fast to access, as we’ll see below, but &lt;strong&gt;looses its data when power is turned off&lt;/strong&gt;. As we’ll see in futur posts on the hardware implementation of RAM memory, it needs a certain amount of power to be refreshed and to avoid loosing its data.&lt;/p&gt;
+
+&lt;p&gt;This is the memory type we’ll be interested when talking about data structures. Its most common hardware implementation is interesting to study as it allows to have a clearer insight into how data structures actually work and why some are better than others for solving particular problems.&lt;/p&gt;
+
+&lt;h2 id=&quot;processor-cache-memory&quot;&gt;Processor cache memory&lt;/h2&gt;
+
+&lt;p&gt;In order to have an even faster memory, processors implements a part of memory directly onto their chips, called the cache memory. Its hardware implementation and location (closer to logic area of the processor) makes it the fastest storage accessible from the processor. This memory is also a type of random-access memory, and shares its drawback (loss of data when power turns off).&lt;/p&gt;
+
+&lt;p&gt;Before data is loaded into processor registers from the RAM memory, it is actually transferred from RAM to cache memory. Knowing this is important to understand the performance of data structures and some algorithms.&lt;/p&gt;
+
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;Here is a summary of the characteristics of each computer memory.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Data access&lt;/th&gt;
+      &lt;th&gt;Persistence&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hard drive&lt;/td&gt;
+      &lt;td&gt;Slowest&lt;/td&gt;
+      &lt;td&gt;Persistent&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;RAM&lt;/td&gt;
+      &lt;td&gt;Fast&lt;/td&gt;
+      &lt;td&gt;Non-persistent&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Processor cache&lt;/td&gt;
+      &lt;td&gt;Fastest&lt;/td&gt;
+      &lt;td&gt;Non-persistent&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Next posts will present an overview of the standard hardware implementations of these memories in order to have a better understanding of how they work and how they can be used.&lt;/p&gt;</content><author><name>CompuToms</name></author><summary type="html">This article is also available on computoms.com Data structures, algorithms When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance. Parallel between data structures / algorithms and memory / processor Choosing the right data structure for your algorithm or program usually involves thinking about how to efficiently store and retrieve the data associated to your problem. To correctly understand how the different data structures work, it is then important to know how we store data in a computer. Computer memory Basically, there are three “data storage” types in a computer: Hard drive storage Random-access memory Processor cache memory Hard drive Hard drives are non-volatile data storage. This means that data remains unchanged when power is turned off. It is usually the cheapest and biggest memory in a computer, and is where you typically save your files, photos and other data you want to keep. One of the disadvantage of this type of memory is that it is usually slow (mostly due to hardware implementation as we’ll see in a futur post). Random-access memory Random-access memory (RAM) is where the non-persistent data is stored on your computer. It is a volatile data storage. When starting a program, the operating system loads the content of the program into the RAM memory and the program’s data is stored within the RAM memory. The RAM memory is relatively fast to access, as we’ll see below, but looses its data when power is turned off. As we’ll see in futur posts on the hardware implementation of RAM memory, it needs a certain amount of power to be refreshed and to avoid loosing its data. This is the memory type we’ll be interested when talking about data structures. Its most common hardware implementation is interesting to study as it allows to have a clearer insight into how data structures actually work and why some are better than others for solving particular problems. Processor cache memory In order to have an even faster memory, processors implements a part of memory directly onto their chips, called the cache memory. Its hardware implementation and location (closer to logic area of the processor) makes it the fastest storage accessible from the processor. This memory is also a type of random-access memory, and shares its drawback (loss of data when power turns off). Before data is loaded into processor registers from the RAM memory, it is actually transferred from RAM to cache memory. Knowing this is important to understand the performance of data structures and some algorithms. Summary Here is a summary of the characteristics of each computer memory.   Data access Persistence Hard drive Slowest Persistent RAM Fast Non-persistent Processor cache Fastest Non-persistent Next posts will present an overview of the standard hardware implementations of these memories in order to have a better understanding of how they work and how they can be used.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://computoms.github.io/assets/default-social-image.png" /></entry></feed>
