@@ -12,6 +12,7 @@ published: true
 
 Metals have the interesting property that electrons can freely move inside them. One way to store information is to use the _electric charge_ of electrons. But how do we move electrons?
 
+
 ### Current generator
 
 A current generator is a device that converts mechanical motion into electrical current. It is based on the magnetic part of the Lorentz' force. That is, when no electric field are present in a region of space:
