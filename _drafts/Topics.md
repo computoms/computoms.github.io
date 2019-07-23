@@ -6,9 +6,11 @@
 *- Interacting with matter
 *- Electronic components
 - Memories
-  - DRAM - - > direct access through address
-  - SRAM - - > same here
+*  - DRAM - - > direct access through address
+*  - SRAM - - > same here
   - Hard Drives
+
+-> Make a summary of this data storage part with links to sub-articles. 
  
 - Storing numbers
 
