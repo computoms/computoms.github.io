@@ -6,15 +6,17 @@ categories: storage
 published: false
 ---
 
-![Magnetic Hard Drive]({{site.url}}/images/posts/05_Hard-drive.jpg)
+{% include figure.html image="images/posts/05_Hard-drive.jpg" caption="Image by blickpixel from Pixabay" %}
 
 ## From storing charges to the DRAM
 
-A capacitor is a small electronic component which is composed of two metal sheets that are separated by an isolating material. 
+A capacitor is a small electronic component which is composed of two metal sheets that are separated by an isolating material. It is mainly used to store an electric charge. 
 
-This component can be used to store an electric charge. Using a current generator to force electrons to go from one of the metal sheets to the other, we are storing a charge on the capacitor. Using a series of these components can be used to store information: either charge one of them to represent a 1 at its position; or discharge it to represent a 0. 
+The capacitors are used inside DRAM memories to represent bits as a charged capacitor (bit 1) or discharged capacitor (bit 0). One important aspect of a DRAM (Dynamic Random Access Memory) is the *Random Access* part. It means each bit can be access independently in the same amount of time. Let's look at the most common hardware implementation.
 
-Let's imagine we use lots of these components in an array with possibility to choose which one we want to connect. This allows us to charge or discharge a particular capacitor from this array. This allows to store and access information by encoding it using the electric charge stored on capacitors. This is the base principle of a DRAM memory (Dynamic Random Access Memory), the type of memory used for the [Random-access memory](https://computoms.com/2019/03/31/data-storage/) of the computer. 
+
+
+the type of memory used for the [Random-access memory](https://computoms.com/2019/03/31/data-storage/) of the computer. 
 
 ## From storing magnets to the hard drive
 
