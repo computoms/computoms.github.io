@@ -17,7 +17,7 @@ The DRAM is the main memory used as a working memory in computers. The fundament
 
 {% include figure.html image="images/posts/05_DRAM-Cell.png" caption="DRAM Cell." %}
 
-This consists of what is called a memory cell. These memory cells are usually arragned in a rectangle that can go to thousands of cells in width and height.
+This consists of what is called a memory cell. These memory cells are usually arranged in a rectangle that can go to thousands of cells in width and height.
 
 Due to inherant characteristics of capacitors, these devices are prone to electrical leakage and easily discharge over time. This has to be compensated by constantly re-writing the data stored in a DRAM. This is usually done every tenth of miliseconds (see the [JEDEC standard](https://www.jedec.org)). 
 
