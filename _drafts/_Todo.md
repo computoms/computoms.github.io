@@ -6,20 +6,23 @@
 *- Interacting with matter
 *- Electronic components
 - Memories
-*  - DRAM - - > direct access through address
-*  - SRAM - - > same here
-  - Hard Drives
+*  - RAM memories (DRAM, SRAM)
+  - Persistent memories (Magnetic hard drives, flash, SSD)
 
 -> Make a summary of this data storage part with links to sub-articles. 
  
+## Information storage 
 - Storing numbers
+- Storing letters
+- Memory usage (stack vs. heap)
 
 - (?) How memory is used (stack / heap)
 
 ## Data processing
 
-- Processing data using electronic gates
+- Processing data using electronic gates (ref. post on logic circuits)
 - Structure of the processor
+  - Caches, logic parts, layers etc.
 
 ## Data structures
 
