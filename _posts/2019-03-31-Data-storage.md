@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage"
 date:   2019-03-31 21:00:00 +0200
-categories: storage
+categories: [Data Storage]
 published: true
 ---
 

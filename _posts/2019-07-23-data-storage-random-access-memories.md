@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage: Random Access Memories"
 date:   "2019-07-23 14:00:00 +0200"
-categories: storage
+categories: [Data Storage]
 published: true
 ---
 

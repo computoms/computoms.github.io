@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage: Interacting with matter"
 date:   2019-04-16 14:00:00 +0200
-categories: physics storage
+categories: [Data Storage]
 published: true
 ---
 
