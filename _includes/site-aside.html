@@ -18,6 +18,12 @@
       {% include nav-categories.html %}
     </section>
 
+  {% elsif page.layout == "about" %}
+  <section class="section  section--about-index">
+    <h3>About</h3>
+    {% include nav-about.html %}
+  </section>
+
   {% endif %}
 
 </aside>
