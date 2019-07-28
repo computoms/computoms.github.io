@@ -4,11 +4,9 @@
       {% for page in paginator.posts %}
         <li class="item  item--post">
           <article class="article  article--post">
-
-            <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
-            {% include post-meta.html %}
-            <p>{{ page.subject }}</p>
-
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            <span style="display:inline-block; width: 10pt;"></span>
+            {% include post-meta.html show_categories=true %}
           </article>
         </li>
       {% endfor %}
@@ -21,10 +19,8 @@
       {% for page in site.posts %}
         <li class="item  item--post">
           <article class="article  article--post">
-
-            <h5><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h5>
-            {% include post-meta.html %}
-
+            <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+            {% include post-meta.html show_categories=true %}
           </article>
         </li>
       {% endfor %}
