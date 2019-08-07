@@ -4,6 +4,7 @@ title:  "Data storage"
 date:   2019-03-31 21:00:00 +0200
 categories: [Data Storage]
 published: true
+permalink: /data-storage/2019/03/31/Data-storage/
 ---
 
 ![Binary representation illustration]({{site.url}}/images/posts/01_Binary-numbers.png)

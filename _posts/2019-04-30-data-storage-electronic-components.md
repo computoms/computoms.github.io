@@ -4,6 +4,7 @@ title:  "Data storage: electronic components"
 date:   "2019-04-30 14:00:00 +0200"
 categories: [Data Storage]
 published: true
+permalink: /data-storage/2019/04/30/electronic-components/
 ---
 
 {% include figure.html image="images/posts/04_Electronic-circuit.jpg" caption="Image by axonite from Pixabay" %}

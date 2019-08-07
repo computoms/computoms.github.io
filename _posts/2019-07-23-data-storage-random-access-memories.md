@@ -4,6 +4,7 @@ title:  "Data storage: Random Access Memories"
 date:   "2019-07-23 14:00:00 +0200"
 categories: [Data Storage]
 published: true
+permalink: /data-storage/2019/07/23/data-storage-random-access-memories/
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -39,5 +40,5 @@ This memory is more expansive and faster, so it is usually not used as the main 
 
 ## Summary
 
-This short post presents the specificities and electrical implementations of the two main types of random access memories used for computer main memory and process caches (ref [article on the overview of computer memories]({{site.url}}/storage/2019/03/31/Data-storage/)).
+This short post presents the specificities and electrical implementations of the two main types of random access memories used for computer main memory and process caches (ref [article on the overview of computer memories]({{site.url}}/data-storage/2019/03/31/Data-storage/)).
 
