@@ -40,5 +40,5 @@ This memory is more expansive and faster, so it is usually not used as the main 
 
 ## Summary
 
-This short post presents the specificities and electrical implementations of the two main types of random access memories used for computer main memory and process caches (ref [article on the overview of computer memories]({{site.url}}/data-storage/2019/03/31/Data-storage/)).
+This short post presents the specificities and electrical implementations of the two main types of random access memories used for computer main memory and processor caches (ref [article on the overview of computer memories]({{site.url}}/data-storage/2019/03/31/Data-storage/)).
 
