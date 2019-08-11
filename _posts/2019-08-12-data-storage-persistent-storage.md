@@ -3,6 +3,7 @@ layout: post
 title:  "Data storage: persistent storage"
 date:   2019-08-12 14:00:00 +0200
 categories: storage
+permalink: /data-storage/2019/08/12/persistent-storage/
 ---
 
 {% include figure.html image="images/posts/06_Hard-drive.jpg" caption="Image by blickpixel from Pixabay" %}
@@ -72,3 +73,5 @@ Solid State Drives (SSDs) are usually a packaged form of NAND flash memories wit
 ## Summary
 
 Through this article we saw the two main principles behind persistent storage in a computer; magnetic hard drives and flash memories. Despite some disadvantages, such as the wearing and cost of flash memory based storages; it is becoming the main storage for laptop and desktop computers thanks to its improved read/write speed compared to magnetic disks. 
+
+This article is the last article of the data storage series. Next, we'll see how the different data *types* are stored in a series of articles about information storage. 

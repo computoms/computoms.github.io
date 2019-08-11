@@ -3,7 +3,7 @@ layout: post
 title:  "Data storage: fundamental principles"
 date:   2019-04-09 14:00:00 +0200
 categories: [Data Storage]
-published: true
+permalink: /data-storage/2019/04/09/fundamental-principles/
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

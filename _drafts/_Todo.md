@@ -2,19 +2,21 @@
 
 ## Data storage
 
-*- Fundamental principles
-*- Interacting with matter
-*- Electronic components
-- Memories
-*  - RAM memories (DRAM, SRAM)
-  - Persistent memories (Magnetic hard drives, flash, SSD)
+* - Fundamental principles
+* - Interacting with matter
+* - Electronic components
+* - Memories
+*   - RAM memories (DRAM, SRAM)
+*   - Persistent memories (Magnetic hard drives, flash)
 
-## Communication
+Summary? TLDR?
+
+<!-- ## Communication
 
 - Communication buses (SATA, eSATA etc...)
 
 -> Missing: how to read a magnetic field, how to read a current (in interacting with matter)
--> Make a summary of this data storage part with links to sub-articles. 
+-> Make a summary of this data storage part with links to sub-articles.  -->
  
 ## Information storage 
 - Storing numbers
