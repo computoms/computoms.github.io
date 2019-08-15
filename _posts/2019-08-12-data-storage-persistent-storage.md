@@ -4,7 +4,6 @@ title:  "Data storage: persistent storage"
 date:   2019-08-12 14:00:00 +0200
 categories: storage
 permalink: /data-storage/2019/08/12/persistent-storage/
-comments: true
 ---
 
 {% include figure.html image="images/posts/06_Hard-drive.jpg" caption="Image by blickpixel from Pixabay" %}
