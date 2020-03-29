@@ -37,6 +37,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 author: Thomas
 email: thomas@computoms.com
 avatar: assets/images/avatar.jpg
+url: www.computoms.com
 
 # You'll want to customize url and baseurl for your own site:
 baseurl: "/" # the subpath of your site, e.g. /blog
