@@ -1,25 +1,25 @@
 ---
 layout: default
 ---
+{%- include header.html -%}
 
-{% include site-header.html %}
+<!-- Main -->
+<div id="main">
+	<!-- Post -->
+	<article class="shade-two">
+	  <div class="container">
+			<header>
+				<h2>{{- page.title -}}</h2>
+				<p>{% if page.author %}{{ page.author }}, {% endif %}{{- page.date | date_to_long_string -}}</p>
+			</header>
 
-<main class="main  container">
-
-  <article class="article  article--post  content  typeset">
-
-    <h1>{{ page.title }}</h1>
-    {% include post-meta.html show_categories=true %}
-    {{ content }}
-
-    {% include nav-share.html %}
-
-    {% include post-comments.html %}
-
-  </article>
-
-  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
-
-</main>
-
-{% include site-footer.html %}
+		{% if page.image != blank %}
+			<figure class="figure  figure--center">
+			  <img class="image" src="{{ site.url }}/images/posts/{{ page.image }}" alt="{{ page.imagecaption | default: 'Post Image' }}" width="100%" height="auto">
+			  {% if include.caption %}<figcaption class="caption"><sub>{{ page.imagecaption }}</sub></figcaption>{% endif %}
+			</figure>
+		{% endif %}
+	    {{- content -}}
+	  </div>
+	</article>
+</div>

@@ -4,9 +4,9 @@ title:  "Data storage: persistent storage"
 date:   2019-08-12 14:00:00 +0200
 categories: storage
 permalink: /data-storage/2019/08/12/persistent-storage/
+image: 06_Hard-drive.jpg
+imagecaption: "Image by blickpixel from Pixabay"
 ---
-
-{% include figure.html image="images/posts/06_Hard-drive.jpg" caption="Image by blickpixel from Pixabay" %}
 
 Persistent storage are used in computer to store information for a long time. Files, pictures, videos should be stored in a persistent manner such that it is not lost when the computer is powered down. Here I will explain briefly what are the two major persistent storages used in computers: _magnetic hard drives_ and _flash memories_ or _solid state drives_. 
 

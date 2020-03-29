@@ -1,146 +1,64 @@
-# Site configuration
-# 1. Files excluded from Jekyll builds
-# 2. Installed Gems
-# 3. Gem settings
-# 4. Jekyll settings
-# 5. Collections
-# 6. Jekyll collections settings
-# 7. Site settings
-# 8. Site favicons & manifest icons
-# 9. Site navigation
+# Developer's Note: This is a sample _config.yml file offered with
+# jekyll-theme-prologue for your convenience. To use it, move it to your
+# project's root directory. Please note that the following lines are
+# NECESSARY for Prologue to work correctly:
+#
+# theme: jekyll-theme-prologue
+# collections: [sections]
+#
+# They activate the theme and tell Jekyll to find your homepage content
+# in /_sections. Note where "sections" starts with an underscore
+# and where it doesn't. The social settings will make links to
+# Twitter, etc., but only if you give the URL.
+#
+# Also, be sure to customize url and baseurl for your site.
+#
+# ---------------------------------------------------------------
+#
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# 1. Files excluded from Jekyll builds
-exclude:
-- README.md
-- CODE_OF_CONDUCT.md
-- CONTRIBUTING.md
-- screenshot.png
-- LICENSE
-- CNAME
-- Gemfile
-- Gemfile.lock
-- alembic-jekyll-theme.gemspec
-- .jekyll-cache
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Computoms
+subtitle: Computer programming
+description: >- # this means to ignore newlines until "baseurl:"
+  Add a description
+author: Thomas
+email: thomas@computoms.com
+avatar: assets/images/avatar.jpg
 
-# 2. Installed Gems
-plugins:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-default-layout
-- jekyll-feed
-- jekyll-commonmark
-- jekyll-include-cache
-- jemoji
+# You'll want to customize url and baseurl for your own site:
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "computoms.github.io" # the base hostname & protocol for your site
 
-# 3. Gem settings
-paginate: 30 # jekyll-paginate > items per page
-paginate_path: blog/page:num # jekyll-paginate > blog page
-#jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
-#twitter:
-#  username: computoms # jekyll-seo-tag > Owners twitter username
-author: CompuToms # jekyll-seo-tag > default author
-#social: # jekyll-seo-tag > social overrides
-#  name: Name # jekyll-seo-tag > real name
-#  links:  # jekyll-seo-tag > social aliases (sameAs)
-#    - https://twitter.com/Name
-#    - https://www.facebook.com/Name
-#    - https://www.linkedin.com/in/Name
-#    - https://plus.google.com/+Name
-#    - https://github.com/Name
-# markdown: CommonMark # Markdown parse settings, CommonMark performs slightly better an others in build time
-# commonmark:
-  # options: ["SMART", "FOOTNOTES"]
-  # extensions: ["strikethrough", "autolink", "table"]
+# Social settings
+# Make sure to include the full url including protocol, e.g. https://github.com/chrisbobbe
+twitter_url:
+facebook_url:
+googleplus_url:
+instagram_url:
+linkedin_url:
+github_url:
+stackoverflow_url:
+pinterest_url:
+slack_url:
+dribbble_url:
 
-# 4. Jekyll settings
-sass:
-  style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
-excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Europe/Paris # Timezone for blog posts and alike
+# Google Analytics Tracking ID goes here:
+google_analytics:
 
-# 5. Collections
-collections:
-  posts:
-    title: Posts # Needed for Siteleaf
-    output: true
-    description: "All posts" # The post list page content
-    feature_text: |
-      Welcome to CompuToms' Blog!
-    #feature_image: "https://computoms.com/wp-content/uploads/2019/04/hard-drive-656121_1920.jpg"
-
-# 6. Jekyll collections settings
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      image: "/assets/default-social-image.png" # Default image for sharing
-      comments: true
-
-# 7. Site settings
-encoding: utf-8 # Make sure the encoding is right
-lang: en-GB # Set the site language
-title: "CompuToms" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logos/logo120.png" # Site logo, also used in jekyll-seo-tag
-description: "Welcome to CompuToms website!" # Site description and default description, also used in jekyll-seo-tag
-url: "https://computoms.github.io" # Site url, also used in jekyll-seo-tag
-baseurl: ""
-repo: "https://github.com/computoms/computoms.github.io"
-email: "thomas@computoms.com"
-future: false # Do not build futur dated posts
-disqus: "computoms" # Blog post comments, uncomment the option and set the site ID from your Disqus account
-# google_analytics: ''
-# service_worker: false # Will turn off the service worker if set to false
-css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
-
-# 8. Site favicons & manifest icons
-favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
-  16: '/assets/logos/logo16.png'
-  32: '/assets/logos/logo32.png'
-  96: '/assets/logos/logo96.png'
-  120: '/assets/logos/logo120.png'
-  144: '/assets/logos/logo144.png'
-  180: '/assets/logos/logo180.png'
-  512: '/assets/logos/logo512.png'
-  1024: '/assets/logos/logo1024.png'
-
-# 9. Site navigation
-navigation_header:
-  Home: /
-  Blog: /blog/
-  Categories: /categories/
-  Search: /search/
-  About: /about/
-
-navigation_footer:
-  Created by CompuToms: https://computoms.com
-
-social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-#  Twitter: https://twitter.com/Name
-#  LinkedIn: https://www.linkedin.com/in/Name
-#  Google+: https://plus.google.com/+Name
-  GitHub: https://github.com/computoms
-  link: https://computoms.com
-#  RSS: /feed.xml
-
-sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
-  #Twitter: "#0d94e7"
-  #facebook: "#3B5998"
-  #Google+: "#DC4E41"
-  # Pinterest: "#BD081C"
-  # LinkedIn: "#0077B5"
-  # tumblr: "#36465D"
-  # Reddit: "#FF4500"
-  # Hacker News: "#ff6600"
-  # Designer News: "#2D72D9"
-  # Email: ""
-
-# Disqus comments
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "computoms"
+# The following settings are NECESSARY for the Prologue theme to run:
+theme: jekyll-theme-prologue
+collections: 
+  - sections

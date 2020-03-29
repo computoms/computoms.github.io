@@ -4,14 +4,13 @@ title:  "Data storage: Interacting with matter"
 date:   2019-04-16 14:00:00 +0200
 categories: [Data Storage]
 permalink: /data-storage/2019/04/16/interacting-with-matter/
+image: 03_Interaction-with-matter.jpg
+imagecaption: "Wind trubines"
 ---
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-![Wind turbines]({{site.url}}/images/posts/03_Interaction-with-matter.jpg)
 
 Metals have the interesting property that electrons can freely move inside them. One way to store information is to use the _electric charge_ of electrons. But how do we move electrons?
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 ### Current generator
 

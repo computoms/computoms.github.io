@@ -5,9 +5,9 @@ date:   "2019-04-30 14:00:00 +0200"
 categories: [Data Storage]
 published: true
 permalink: /data-storage/2019/04/30/electronic-components/
+image: 04_Electronic-circuit.jpg
+imagecaption: "Image by axonite from Pixabay"
 ---
-
-{% include figure.html image="images/posts/04_Electronic-circuit.jpg" caption="Image by axonite from Pixabay" %}
 
 Electronic components form the basis of computers and how data is processed and stored. Here are a few of the most used electronic components.
 

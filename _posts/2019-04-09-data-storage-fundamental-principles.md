@@ -4,11 +4,14 @@ title:  "Data storage: fundamental principles"
 date:   2019-04-09 14:00:00 +0200
 categories: [Data Storage]
 permalink: /data-storage/2019/04/09/fundamental-principles/
+image: 02_Light-bulbs.jpg
+imagecaption: "Light bulbs"
+excerpt_separator: </p>
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<p>To store data, we rely on the different physical mechanisms that are part of Nature. Here is a quick review of the physical principles used by the most common data storage media.</p>
 
-![Light bulbs]({{site.url}}/images/posts/02_Light-bulbs.jpg)
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 ## Physical interactions and properties of matter
 

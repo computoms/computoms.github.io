@@ -5,11 +5,9 @@ date:   2019-03-31 21:00:00 +0200
 categories: [Data Storage]
 published: true
 permalink: /data-storage/2019/03/31/Data-storage/
+image: 01_Binary-numbers.png
+imagecaption: "Beinary representation illustration"
 ---
-
-![Binary representation illustration]({{site.url}}/images/posts/01_Binary-numbers.png)
-
-## Data structures, algorithms
 
 When speaking about algorithms, “data structures” is almost always the expression that comes along. Data structures and algorithms go in pair. An algorithm is fundamentally the manipulation of data from one form to another. The way we store this data is usually one of the important aspects to look at when designing an algorithm and looking at its performance.
 
