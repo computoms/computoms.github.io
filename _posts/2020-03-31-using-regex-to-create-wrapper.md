@@ -138,7 +138,20 @@ We also have to remove point references. This can be done using
 
 _Find_: `return (.*)\*` & _Replace_: `return \1`
 
+## Summary
+
+Here is the summary of the regex Find & Replace commands I've used to make this library wrapper:
+
+| Find                           | Replace                      | Meaning                      |
+|--------------------------------|------------------------------|------------------------------|
+| `^(?!LIBEXPORT)(.*)`           | None                         | Remove extra lines           |
+| `^\n`                          | None                         | Remove empty lines           |
+| `^([^\s]*)\s`                  | `\1 MyLibWrapper::`          | Add class reference          |
+| `([^\s]*)(.*)\((.*)\);`        | `\1\2(\3)\n{\n    return ::\2(\3);\n}\n` | Create function bodies |
+| `return (.*)double([^\s]*)\s`  | `return \1`                  | Remove parameter types in calls |
+| `return (.*)\*`                | `return \1`                  | Remove extra pointer symbols in function calls |
+
 
 ## Conclusion
 
-By using a series of _Find_ and _Replace_ operations using a text editor that supports regular expressions, such as Sublime Text 3, we were able to very quickly clean-up and create a new C++ class that acts as a parser for a C library. This class can then be derived in a sub-class for testing or to modify some behavior of the library. I am sure there are still more clever ways to do it, and if you have one, please let me know in a comment.
+By using a series of _Find_ and _Replace_ operations using a text editor that supports regular expressions, such as Sublime Text 3, we were able to very quickly clean-up and create a new C++ class that acts as a parser for a C library. This class can then be derived in a sub-class for testing or to modify some behavior of the library. Obviously, this needs to be adapted to the particular library you are interesting so that every symbol and call is correct. I am sure there are still more clever ways to do it, and if you have one, please let me know in a comment.
