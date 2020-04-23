@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage: fundamental principles"
 date:   2019-04-09 14:00:00 +0200
-categories: [Data Storage]
+categories: data-storage
 permalink: /data-storage/2019/04/09/fundamental-principles/
 image: 02_Light-bulbs.jpg
 imagecaption: "Light bulbs"

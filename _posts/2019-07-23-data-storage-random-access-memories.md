@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage: Random Access Memories"
 date:   "2019-07-23 14:00:00 +0200"
-categories: [Data Storage]
+categories: data-storage
 published: true
 permalink: /data-storage/2019/07/23/data-storage-random-access-memories/
 image: 05_DRAM-Image.jpg

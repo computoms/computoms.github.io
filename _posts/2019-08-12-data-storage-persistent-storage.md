@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage: persistent storage"
 date:   2019-08-12 14:00:00 +0200
-categories: storage
+categories: data-storage
 permalink: /data-storage/2019/08/12/persistent-storage/
 image: 06_Hard-drive.jpg
 imagecaption: "Image by blickpixel from Pixabay"

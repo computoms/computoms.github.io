@@ -1,0 +1,4 @@
+{%- for _cat in site.categories -%}
+  {%- assign _title = _cat | first -%}
+  <li><a href="{{ site.url }}/categories/{{- _title -}}" class="scrolly"><span class="icon">{{ _title }}</span></a></li>
+{%- endfor -%}

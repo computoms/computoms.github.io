@@ -2,24 +2,45 @@
 layout: default
 ---
 {%- assign _posts = site.posts | sort: 'date' | reverse -%}
-{%- include header.html -%}
+{%- assign _categories = site.categories -%}
+
+
+<div id="header">
+  <div class="top">
+    {%- include logo.html -%}
+    {%- include nav-main.html nav-sub='nav-categories.html' -%}
+  </div>
+  <div class="bottom">
+    {%- include social_icons.html -%}
+  </div>
+</div>
+
+
 <!-- Main -->
 <div id="main">
 	{%- if page.content != "" -%}
 		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
 	{%- endif -%}
-	<!-- Posts List -->
-	{%- for _post in _posts -%}
+
+	{%- for _category in _categories -%}
+		{%- assign _category-title = _category | first -%}
+		{%- assign _category-number-posts = _category[1].size -%}
 		{%- capture _title -%}
-			<a href="{{- _post.url | absolute_url -}}">{{- _post.title -}}</a>
+			<h3 id="{{ _category-title }}">{{ _category-title }}</h3>
 		{%- endcapture -%}
 		{%- capture _subtitle -%}
-			{% if _post.author -%}{{- _post.author }} | {% endif %}
-			{{- _post.date | date_to_long_string -}}
+			<p>{{ _category-number-posts }} post{%- if _category-number-posts > 1 -%}s{%- endif -%}</p>
 		{%- endcapture -%}
-		{%- capture _excerpt -%}<p>{{- _post.excerpt | strip_html -}}</p>{%- endcapture -%}
-		{%- capture _link -%}<a href="{{- _post.url | absolute_url -}}">read more</a>{%- endcapture -%}
-		{%- assign _content = _excerpt | append: _link -%}
+		{%- capture _excerpt -%}
+			<p>
+				{%- assign _posts = _category[1] | sort: 'date' | reverse -%}
+				{%- for _post in _posts limit:5 -%}
+					<a href="{{- _post.url | absolute_url -}}">{{ _post.title }}</a><br/>
+				{%- endfor -%}
+			</p>
+			<p><a href="{{ site.url }}/categories/{{- _category-title -}}">...</a></p>
+		{%- endcapture -%}
+		{%- assign _content = _excerpt -%}
 		{%- include section.html title=_title subtitle=_subtitle content=_content -%}
 	{%- endfor -%}
 </div>

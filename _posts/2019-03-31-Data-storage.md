@@ -2,7 +2,7 @@
 layout: post
 title:  "Data storage"
 date:   2019-03-31 21:00:00 +0200
-categories: [Data Storage]
+categories: data-storage
 published: true
 permalink: /data-storage/2019/03/31/Data-storage/
 image: 01_Binary-numbers.png

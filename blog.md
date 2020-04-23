@@ -8,5 +8,5 @@ main: true
 
 <p>
 	Welcome to CompuToms blog. <br/>
-	Here are the latest articles:
+	Posts are organized by categories.
 </p>
