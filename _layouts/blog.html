@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{%- assign _posts = site.posts | sort: 'date' | reverse -%}
-{%- assign _categories = site.categories -%}
 
 
 <div id="header">
@@ -22,23 +20,25 @@ layout: default
 		{%- include section.html title=page.title photo=page.cover-photo photo-alt=page.cover-photo-alt auto-header=page.auto-header content=page.content -%}
 	{%- endif -%}
 
-	{%- for _category in _categories -%}
-		{%- assign _category-title = _category | first -%}
-		{%- assign _category-number-posts = _category[1].size -%}
+	{%- for _category in site.blog-categories -%}
+		{%- assign _category-number-posts = site.categories[_category.category].size -%}
 		{%- capture _title -%}
-			<h3 id="{{ _category-title }}">{{ _category-title }}</h3>
+			<h3 id="{{ _category.title }}"><a href="{{ _category.url }}">{{ _category.title }}</a></h3>
 		{%- endcapture -%}
 		{%- capture _subtitle -%}
 			<p>{{ _category-number-posts }} post{%- if _category-number-posts > 1 -%}s{%- endif -%}</p>
 		{%- endcapture -%}
 		{%- capture _excerpt -%}
-			<p>
-				{%- assign _posts = _category[1] | sort: 'date' | reverse -%}
+			<table>
+				{%- assign _posts = site.categories[_category.category]  -%}
 				{%- for _post in _posts limit:5 -%}
-					<a href="{{- _post.url | absolute_url -}}">{{ _post.title }}</a><br/>
+					<tr>
+						<td><a href="{{- _post.url | absolute_url -}}">{{ _post.title }}</a></td>
+						<td>{{ _post.date | date_to_long_string }}</td>
+					</tr>
 				{%- endfor -%}
-			</p>
-			<p><a href="{{ site.url }}/categories/{{- _category-title -}}">...</a></p>
+			</table>
+			<a href="{{ _category.url | absolute_url }}">...</a>
 		{%- endcapture -%}
 		{%- assign _content = _excerpt -%}
 		{%- include section.html title=_title subtitle=_subtitle content=_content -%}
