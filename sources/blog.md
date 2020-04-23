@@ -4,6 +4,7 @@ title: Blog
 icon: fa-pencil-alt
 order: 2
 main: true
+permalink: blog
 ---
 
 <p>
