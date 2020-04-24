@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage: fundamental principles"
+title:  "Fundamental principles behind data storage"
 date:   2019-04-09 14:00:00 +0200
 categories: data-storage
 permalink: /data-storage/2019/04/09/fundamental-principles/

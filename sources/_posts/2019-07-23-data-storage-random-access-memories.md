@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage: Random Access Memories"
+title:  "Random Access Memories"
 date:   "2019-07-23 14:00:00 +0200"
 categories: data-storage
 published: true
@@ -9,7 +9,7 @@ image: 05_DRAM-Image.jpg
 imagecaption: Image by PublicDomainPictures from Pixabay
 ---
 
-A random access memory is a type of memory where each single information can be access (read / written) in a constant amount of time. No matter if the information is stored at the start, middle or end of the memory. This is achieved using a multiplexer that allows to address single specific memory bits.
+A random access memory is a type of memory where each single information can be accessed (read / written) in a constant amount of time. No matter if the information is stored at the start, middle or end of the memory. This is achieved using a multiplexer that allows to address single specific memory bits.
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 

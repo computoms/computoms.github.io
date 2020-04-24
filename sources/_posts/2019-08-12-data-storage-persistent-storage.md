@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage: persistent storage"
+title:  "Persistent storage medias"
 date:   2019-08-12 14:00:00 +0200
 categories: data-storage
 permalink: /data-storage/2019/08/12/persistent-storage/

@@ -29,8 +29,9 @@ layout: default
 			<p>{{ _category-number-posts }} post{%- if _category-number-posts > 1 -%}s{%- endif -%}</p>
 		{%- endcapture -%}
 		{%- capture _excerpt -%}
+			<p>{{ _category.excerpt }}</p>
 			<table>
-				{%- assign _posts = site.categories[_category.category]  -%}
+				{%- assign _posts = site.categories[_category.category] | sort: 'date' | reverse -%}
 				{%- for _post in _posts limit:5 -%}
 					<tr>
 						<td><a href="{{- _post.url | absolute_url -}}">{{ _post.title }}</a></td>

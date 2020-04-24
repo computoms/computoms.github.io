@@ -4,4 +4,5 @@ title: Tools
 category: tools
 ---
 
-<p>This is the Tools category</p>
+
+The Tools category regroups articles relating tips and usage of programming tools in general. 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage: electronic components"
+title:  "Electronic components"
 date:   "2019-04-30 14:00:00 +0200"
 categories: data-storage
 published: true

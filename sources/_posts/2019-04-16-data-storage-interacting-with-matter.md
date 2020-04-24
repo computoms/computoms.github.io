@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage: Interacting with matter"
+title:  "Interacting with matter"
 date:   2019-04-16 14:00:00 +0200
 categories: data-storage
 permalink: /data-storage/2019/04/16/interacting-with-matter/

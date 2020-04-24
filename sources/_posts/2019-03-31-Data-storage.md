@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Data storage"
+title:  "Computer data storage"
 date:   2019-03-31 21:00:00 +0200
 categories: data-storage
 published: true
