@@ -43,7 +43,7 @@ Now, we usually do not store numbers in 6 bits data types, but rather in multipl
 
 The byte data type (`uint8_t` in C and C++ languages, which usually refers to `unsigned char`) is thus a number represented on 8 bits, that can store decimal numbers from 0 to 255 ($$0000 0000_2$$ to $$1111 1111_2$$).
 
-For bigger numbers, we have the 16-bits representation (`uint16_t` usually `unsigned short` in C) that can store numbers from 0 to 65 535, and the 32-bits representation (`uint32-t`, usually `unsigned int`) storing numbers from 0 to 4 294 967 295. Sometimes, we also have the 64-bits data type (usually `unsigned long long`, depending on processor and compiler) that stores very big numbers, from 0 to 18 446 744 073 709 551 615.
+For bigger numbers, we have the 16-bits representation (`uint16_t` usually `unsigned short` in C) that can store numbers from 0 to 65 535, and the 32-bits representation (`uint32_t`, usually `unsigned int`) storing numbers from 0 to 4 294 967 295. Sometimes, we also have the 64-bits data type (usually `unsigned long long`, depending on processor and compiler) that stores very big numbers, from 0 to 18 446 744 073 709 551 615.
 
 
 ## Negative numbers
@@ -179,7 +179,7 @@ The `double` data type, as for double precision floating-point, is a data type e
 
 #### Range and Precision
 
-The 52 bits of the fractional part allows between 15 and 17 significant digits ($$2^{52} \approx 4.5 \times 10^{15}$$). The exponent is stored on 11 bits, which allows numbers from $$2^{-1023}$$ to $$2^{1024}$$ although sometimes these two bounds are reserved for special purposes.
+The 52 bits of the fractional part allows between 14 and 16 significant digits ($$2^{52} \approx 4.5 \times 10^{15}$$). The exponent is stored on 11 bits, which allows numbers from $$2^{-1023} \approx 1.11 \times 10^{308}$$ to $$2^{1024} \approx 1.8 \times 10^{308}$$ although sometimes these two bounds are reserved for special purposes.
 
 
 ## Conclusion
