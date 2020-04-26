@@ -36,8 +36,8 @@ There exists two main types of MOSFET transistors that we call n-type and p-type
 
 In electronics we usually represent devices with symbols. Here are the symbols for the nMOSFET and pMOSFET transistors.
 
-{% include figure.html image="images/posts/04_nMOS.png" caption="nMOSFET symbol" %}
-{% include figure.html image="images/posts/04_pMOS.png" caption="pMOSFET symbol" %}
+{% include figure.html image="images/posts/04_nMOS.png" caption="nMOSFET symbol" width="200px" %}
+{% include figure.html image="images/posts/04_pMOS.png" caption="pMOSFET symbol" width="200px" %}
 
 The _p_ and _n_ letters corresponds to the doping of the semiconductor, such as Silicon, used for these devices. Implanting atoms that have more electrons (_n_ type) or less electrons (_p_ type) than Silicon allows to modify the electrical properties of the semiconductor. See [the Wikipedia article on semiconductor doping](https://en.wikipedia.org/wiki/Doping_(semiconductor)) and [the Wikipedia article on MOSFETs](https://en.wikipedia.org/wiki/MOSFET) for more information. 
 
@@ -55,7 +55,7 @@ An inverter is a simple electronic component, part of the _logic gate_ family of
 
 Connecting two MOSFET transistors of the different types in a row between Vdd and Vss (as shown below), and connecting the two gates of the transistors together as the input of the component, we'll have the output that inverts the signal. Inputting a positive voltage (Vdd), the pMOS transistor will be blocking, preventing current to flow from the upper Vdd to the output, but the nMOS transistor will be passing, making the output signal at the level of Vss. Conversely, inputting a 0 voltage (Vss), the pMOS will be passing (because the voltage on the gate will be negative with respect to the source, which is at Vdd) making the output signal to Vdd and the nMOS will be blocking. 
 
-{% include figure.html image="images/posts/04_NOT-Gate.png" caption="NOT Gate implementation with CMOS" %}
+{% include figure.html image="images/posts/04_NOT-Gate.png" caption="NOT Gate implementation with CMOS" width="50%" %}
 
 
 #### OR and AND gates
@@ -77,7 +77,7 @@ A capacitor is a pair of metal plates that is used to store electric charge. The
 
 Here is its schematic symbol
 
-{% include figure.html image="images/posts/04_Capacitor.png" caption="Capactior symbol." %}
+{% include figure.html image="images/posts/04_Capacitor.png" caption="Capactior symbol." width="200px" %}
 
 One of its advantages is that it can be charged and discharged very fast; as compared for example to a battery. 
 
