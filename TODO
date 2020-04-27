@@ -1,0 +1,13 @@
+Articles:
+    Data storage:
+        ☐ Storing characters: character encodings
+        ☐ Storing variables: the stack and heap memories
+        ☐ Storing "objects"
+        ☐ Storing a program and its data
+    Data processing:
+        ☐ Processing numbers: arithmetics
+            Speak about endianess
+        ☐ Comparisons and logic operations
+            Ref to electronic logic gates
+        ☐ Compilation
+        ☐ Program execution (startup, virtual address space)
