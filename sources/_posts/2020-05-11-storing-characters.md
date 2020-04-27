@@ -5,7 +5,6 @@ date:   2020-05-11 14:00:00 +0200
 categories: data-storage
 permalink: /data-storage/2020/05/11/storing-characters/
 image: 10_Storing-Characters.png
-published: false
 ---
 
 Next on the list, is to understand how we can store characters and strings of characters into computer memories?
@@ -59,10 +58,17 @@ By using a variable length enconding like this one, we are saving space on the m
 
 ### UTF-16 encoding
 
-...
+UTF-16 is another variable length format, that follows the same principle that UTF-8. The difference is that its base unit is coded on 16 bits instead of 8, meaning each character is taking at least 16 bits of memory. Characters are either 16 bits or 32 bits. 
 
 ### Notes
 
 Although UTF-32 is using more memory, the main advantage of such a fixed-size encoding is search speed: the access to the Nth character is a constant time lookup. In variable-length encodings, it requires the algorithm to parse all the N characters in order to find the correct byte to read. 
 
+## Other encodings
+
+A lot of other encodings exist, most of them very old but still used. The majority of other encodings are 8-bit encodings that are specific to one country or one language / alphabet, usually with ASCII compliant encoding for the first 127 letters and specific to the region on the 128 remainings. Amongst others, the ISO-8859 group of encodings define different encodings for different regions of the world, such as ISO8859-1 for Western Europe, ISO 8859-5 for Cyrillic alphabet, ISO 8859-6 for Arabic and so on. Another set of character encodings include the different Windows character sets, Mac OS Roman, TSCII, ISCII, MIK. Different Chinese, Taiwanese and Korean encodings exist as well.
+
+## Conclusion
+
+Storing characters is like storing decimal numbers: we need to encode the information into binary in such a way that we know how to convert between characters to binary and vice versa. The main encodings used are based upon the ASCII encoding, and vary from region specific encodings to unicode encodings with the UTF-8, UTF-16 and UTF-32. These different types of encodings provide different optimizations for memory or search speed, depending on the application targeted. 
 
