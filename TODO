@@ -1,5 +1,6 @@
 Articles:
     Data storage:
+        ☐ Clean-up first articles images and explanations
         ☐ Storing characters: character encodings
         ☐ Storing variables: the stack and heap memories
         ☐ Storing "objects"
