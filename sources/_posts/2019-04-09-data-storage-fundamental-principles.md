@@ -37,7 +37,7 @@ If you hold an apple with your hand and suddenly drop it, it will fall on the fl
 
 $$\vec{W} = G\frac{m_1 m_2}{r^2}$$
 
-(where $$\vec{W}$$ if the force between the two masses, $$G$$ is a constant, $$m_1$$ and $$m_2$$ are the masses and $$r$$ is the distance between the masses). This interaction is considered a long-distance interaction, meaning that it is usually the dominant interaction for objects that are heavy and can act at very long distances (stars, planets and all sorts of objects into space are mainly ruled by this interaction). In the nano-world, where sub-atomic particles live (electrons, protons...) the masses at stake are infinitely small; too small for this gravitational interaction to be dominant. It is usually neglected when investigating the interactions between particles and atoms.
+(where $$\vec{W}$$ is the force between the two masses, $$G$$ is a constant, $$m_1$$ and $$m_2$$ are the masses and $$r$$ is the distance between the masses). This interaction is considered a long-distance interaction, meaning that it is usually the dominant interaction for objects that are heavy and can act at very long distances (stars, planets and all sorts of objects into space are mainly ruled by this interaction). In the nano-world, where sub-atomic particles live (electrons, protons...) the masses at stake are infinitely small; too small for this gravitational interaction to be dominant. It is usually neglected when investigating the interactions between particles and atoms.
 
 
 ### Electric charge, electric force
@@ -52,7 +52,7 @@ In conductive materials, such as most metals, electrons can freely move and hop 
 
 ### Moving electrons
 
-How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge $$q_1$$. The other way to make them move is by using a current generator (see next posts).
+How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge $$q_1$$ (i.e. a battery). The other way to make them move is by using a current generator (see next posts).
 
 ### Spin & the magnetic force
 
@@ -93,9 +93,9 @@ This force is called the _Lorentz's force_. $$\vec{v}$$ is the velocity of the p
 
 #### Permanent magnets and spins
 
-A permanent magnetic is a material that generates a static magnetic field $$\vec{B}$$. These types of materials are called ferromagnetic materials and can actually be _magnetized_ (by applying a large magnetic field on them) to become permanent magnets. 
+A permanent magnet is a material that generates a static magnetic field $$\vec{B}$$. These types of materials are called ferromagnetic materials and can actually be _magnetized_ (by applying a large magnetic field on them) to become permanent magnets. 
 
-The **spin** of particles, an intrinsic property of elementary particles such as electrons and protons/neutrons, is responsible for the magnetic orientation of atoms. The magnetic orientation is also called the _magnetic moment_. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to algin with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet.
+The **spin** of particles, an intrinsic property of elementary particles such as electrons and protons/neutrons, is responsible for the magnetic orientation of atoms. The magnetic orientation is also called the _magnetic moment_. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to align with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet.
 
 In summary, a ferro-magnetic material:
 

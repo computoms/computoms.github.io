@@ -11,6 +11,16 @@ imagecaption: "Image by axonite from Pixabay"
 
 Electronic components form the basis of computers and how data is processed and stored. Here are a few of the most used electronic components.
 
+## Capacitors
+
+A capacitor is a pair of metal plates that is used to store an electric charge. The metal plates are separated by an oxide (= non conductive material) and are usually rolled together in a cylinder to gain space. It acts similarly to a battery, can be charged and discharged. But unlike batteries which use a chemical reaction to store electrical energy, the capacitor directly uses the electrons and keeps them on one of the metal plates while the other one is depleted (electrons are removed).
+
+Here is its schematic symbol
+
+{% include figure.html image="images/posts/04_Capacitor.png" caption="Capactior symbol." width="200px" %}
+
+One of its advantages is that it can be charged and discharged very fast; as compared for example to a battery. Capacitors are heavily used in electronics boards when filtering electronic signals for example. They are also used in computer memories, as we'll see in the next post.
+
 ## Transistors
 
 The transistor is the most important electronic component for electronics and computers. It forms the basis of almost all logic operations on data and is also used for storing data (for example, in SRAM memories).
@@ -70,16 +80,6 @@ On this gate, the two nMOS transistors of the left part are in parallel (that is
 
 To design the AND gate, we can take the circuit above and reverse the order in which pMOS and nMOS are connected together: make the pMOS in parallel and the nMOS in series. This way, the only possible option to have a high-signal at the output Q is to have both A and B at 1. Other inputs give a low-signal at the output. 
 
-
-## Capacitors
-
-A capacitor is a pair of metal plates that is used to store electric charge. The metal plates are separated by an oxide and are usually rolled together in a cylinder to gain space. It acts similarly to a battery, can be charged and discharged. But unlike batteries which use a chemical reaction to store electrical energy, the capacitor directly uses the electrons and keeps them on one of the metal plates while the other one is depleted (electrons are removed).
-
-Here is its schematic symbol
-
-{% include figure.html image="images/posts/04_Capacitor.png" caption="Capactior symbol." width="200px" %}
-
-One of its advantages is that it can be charged and discharged very fast; as compared for example to a battery. 
 
 ## Summary
 
