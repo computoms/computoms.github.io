@@ -17,7 +17,7 @@ A random access memory is a type of memory where each single information can be 
 
 The DRAM is the main memory used as a working memory in computers. The fundamental building block of a DRAM is composed of a transistor -- that allows addressing the bit for reading / writting -- and a capacitor -- that stores the information. Its electrical schematic is shown below.
 
-{% include figure.html image="images/posts/05_DRAM-Cell.png" caption="DRAM Cell." %}
+{% include figure.html image="images/posts/05_DRAM-Cell.png" caption="DRAM Cell." width="50%" %}
 
 This consists of what is called a memory cell. Storing a bit -- 1 or 0 -- means charging or discharging the capacitor in this memory cell. To read the content of a cell, the transistor is opened and the capacitor current charge is read. These memory cells are usually arranged in a rectangle that can go to thousands of cells in width and height.
 
@@ -29,7 +29,7 @@ When starting a program on a computer, the operating system loads the entier pro
 
 The SRAM is the main memory used as cache memory in processors. Its fundamental building block is composed of 6 transistors, that are connected to form 2 logic inverters (using 4 transistors) and 2 control transistors allowing to access the data for reading and writing. Below is the electrical schematic representing an SRAM cell.
 
-{% include figure.html image="images/posts/05_SRAM-Cell.png" caption="SRAM Cell." %}
+{% include figure.html image="images/posts/05_SRAM-Cell.png" caption="SRAM Cell." width="60%" %}
 
 M1, M2 and M3, M4 are the transistors that form the two inverters. M5 and M6 are the control transistors. To write a bit into the memory cell, the couple of inverters are forced into a state, either with <M1, M2> inverter output to high or low, by applying a slightly higher voltage that would normally be used for these components. Once the state has been written, it can be read by opening the transistors M5 and M6 and reading the lines $$BL$$ and $$\bar{BL}$$. 
 

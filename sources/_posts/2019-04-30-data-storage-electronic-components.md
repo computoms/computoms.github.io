@@ -36,7 +36,7 @@ The typical implementation of a transistor for computer and logic operations is 
 
 This stack of materials gives part of the name to the transistor (the MOS part). 
 
-{% include figure.html image="images/posts/04_Mosfet.png" caption="MOSFET transistor composition" %}
+{% include figure.html image="images/posts/04_Mosfet.png" caption="MOSFET transistor composition" width="60%" %}
 
 The three terminals of a MOSFET transistor are usually called the Drain and Source (for input/output terminals) and the Gate terminal, that acts as the switch control. When a given voltage (which value is given by transistor intrisic characteristics) is applied on the gate, the Source/Drain connection becomes like a wire. The fourth connection on the image above (Body) is not necessary in most of the cases and is usually wired to the source. The n+ and p corresponds to the doping type of the semiconductor, which will determine the type of the transistor (see below MOSFET types). 
 
@@ -46,8 +46,12 @@ There exists two main types of MOSFET transistors that we call n-type and p-type
 
 In electronics we usually represent devices with symbols. Here are the symbols for the nMOSFET and pMOSFET transistors.
 
-{% include figure.html image="images/posts/04_nMOS.png" caption="nMOSFET symbol" width="200px" %}
-{% include figure.html image="images/posts/04_pMOS.png" caption="pMOSFET symbol" width="200px" %}
+<table>
+	<tr>
+		<td>{% include figure.html image="images/posts/04_nMOS.png" caption="nMOSFET symbol" width="200px" %}</td>
+		<td>{% include figure.html image="images/posts/04_pMOS.png" caption="pMOSFET symbol" width="200px" %}</td>
+	</tr>
+</table>
 
 The _p_ and _n_ letters corresponds to the doping of the semiconductor, such as Silicon, used for these devices. Implanting atoms that have more electrons (_n_ type) or less electrons (_p_ type) than Silicon allows to modify the electrical properties of the semiconductor. See [the Wikipedia article on semiconductor doping](https://en.wikipedia.org/wiki/Doping_(semiconductor)) and [the Wikipedia article on MOSFETs](https://en.wikipedia.org/wiki/MOSFET) for more information. 
 
@@ -72,7 +76,7 @@ Connecting two MOSFET transistors of the different types in a row between Vdd an
 
 Similarly, we can create gates to implement the logical OR and AND operators. It gets a bit more complicated. Here is the OR gate
 
-{% include figure.html image="images/posts/04_OR-Gate.png" caption="OR Gate implementation with CMOS technology." %}
+{% include figure.html image="images/posts/04_OR-Gate.png" caption="OR Gate implementation with CMOS technology." width="60%" %}
 
 We remark that the last piece on the right is an inverter (NOT gate) as described above. Inputting a high-signal on either A or B or both of them will activate the bottom nMOS transistors which will drain the low-signal from Vss to the inverter gate, while one of the pMOS transistors will be in a blocking state because of the one high-signal on either A or B. The inverter will invert the signal to the high-signal (Vdd). The only way to have a low-signal at the end of this circuit is to input low-signal on both A and B. This is thus the definition of the OR operator. 
 

@@ -1,10 +1,15 @@
+
 Articles:
     Data storage:
-        ☐ Clean-up first articles images and explanations
-        ☐ Storing characters: character encodings
         ☐ Storing variables: the stack and heap memories
         ☐ Storing "objects"
         ☐ Storing a program and its data
+    Data structures:
+        ☐ Arrays
+        ☐ Linked lists, stacks and queues
+        Remark: why are we saying that an array has O(1) lookup instead of O(k) for a linked-list => link to DRAM/SRAM structures
+        ☐ Hash tables, sets, dictionaries
+        ☐ Graphs and Trees
     Data processing:
         ☐ Processing numbers: arithmetics
             Speak about endianess

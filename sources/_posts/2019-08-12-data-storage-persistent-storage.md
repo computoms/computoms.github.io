@@ -28,7 +28,7 @@ The flash memory is a kind of memory that is faster and has a smaller form facto
 
 The electronic component that forms the basis of a flash memory is called a *Floating gate transistor* (FG Transistor). It is a MOSFET transistor (see [article on the electronic components]({{site.url}}/data-storage/2019/04/30/electronic-components/)) with the MOS structure -- that contains the gate of the transistor -- modified. Instead of having the three-layer structure metal-oxide-semiconductor; we have a five-layer structure: metal-oxide-metal-oxide-semiconductor (MOMOS). The structure is represented in the following image.
 
-{% include figure.html image="images/posts/06_Floating-Gate-Transistor.png" caption="Floating-gate transistor composition" %}
+{% include figure.html image="images/posts/06_Floating-Gate-Transistor.png" caption="Floating-gate transistor composition" width="60%" %}
 
 The middle part is composed of a metallic gate, that is stacked over an insulator (usually, an oxide such as silicon oxide) on top of a second metallic part -- called the floating-gate -- on top of another insulator layer of a slightly different thickness which in turn is placed over the semiconductor substrate that form the backbone of the transistor.
 

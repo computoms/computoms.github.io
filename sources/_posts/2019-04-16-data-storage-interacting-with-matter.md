@@ -20,7 +20,7 @@ $$\vec{F} = q \vec{v} \times \vec{B}$$
 
 Now let's imagine we have a fixed piece of metal inside which electrons can move if they feel a force $$\vec{F}$$. If we take this metal close to a fixed permanent magnet and move it along the magnet, the electrons inside the metal will have a speed, with respect to the magnet, equal to the speed at which we are moving the metal. The resulting force of amplitude $$F = q v B$$ (if the metal is moved perpendicularly to the magnetic field $$B$$ of the magnet at speed $$v$$) will be applied on each electron of charge $$q$$ (in the perpendicular direction of moving electrons). 
 
-{% include figure.html image="images/posts/03_Current-generator-principle.png" caption="Current generator principle" width="300" position="center" %}
+{% include figure.html image="images/posts/03_Current-generator-principle.png" caption="Current generator principle" width="300" %}
 
 Now mechanically, this is not very efficient. What if we take a wire that we bend into a coil around the magnet; and make the coil rotate around the magnet. This would actually result in a force on electrons that would make them move along the coil's wire (the rotation makes the electrons have a speed that is perpendicular to the wire, in which case electrons will sense a force in the direction of the wire).
 
