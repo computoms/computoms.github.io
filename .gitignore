@@ -3,3 +3,4 @@ _site/
 backups/
 start-local.sh
 .DS_Store
+archive.zip
