@@ -1,6 +1,4 @@
-_site/
-.sass-cache/
-backups/
 start-local.sh
 .DS_Store
 archive.zip
+.build/
