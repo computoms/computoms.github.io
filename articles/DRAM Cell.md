@@ -1,12 +1,10 @@
 {
     "Title": "DRAM Cell",
-    "Abstract": "",
+    "Abstract": "A digital memory that uses capacitors to register bit values.",
     "Parents": ["Random Access Memories"],
     "Children": ["MOSFET Transistors", "Capacitors"],
     "Date": "2020-08-24"
 }
-
-# Dynamic Random Access Memories
 
 The DRAM is the main memory used as a working memory in computers. The fundamental building block of a DRAM is composed of a transistor -- that allows addressing the bit for reading / writting -- and a capacitor -- that stores the information. Its electrical schematic is shown below.
 

@@ -1,6 +1,6 @@
 {
     "Title": "UTF-32",
-    "Abstract": "",
+    "Abstract": "An heavy text-encoding.",
     "Parents": ["UTF"],
     "Children": [""],
     "Date": "2020-12-21"

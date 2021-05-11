@@ -1,12 +1,10 @@
 {
     "Title": "Random Access Memories",
-    "Abstract": "",
+    "Abstract": "Digital memory to store program data and information. It needs to be fast but cheap.",
     "Parents": ["Computer Memories"],
     "Children": ["DRAM Cell"],
     "Date": "2020-09-07"
 }
-
-# Random Access Memories
 
 Random access memory (RAM) is where the non-persistent data is stored on your computer. It is a volatile data storage. When starting a program, the operating system loads the content of the program into the RAM memory and the program's data is stored within the RAM memory.
 

@@ -1,12 +1,10 @@
 {
     "Title": "OR Gate",
-    "Abstract": "",
+    "Abstract": "Electronic component that performs the OR logic operation on electronic signals.",
     "Parents": ["Logic Circuits"],
     "Children": [""],
     "Date": "2020-06-15"
 }
-
-# OR Gate
 
 The OR Gate is a logic gate, an electronic component that can perform logic operations on the voltage it is applied on its input pins. It allows to apply the OR logic operation on its two input pins.
 

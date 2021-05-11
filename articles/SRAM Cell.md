@@ -1,15 +1,12 @@
 {
     "Title": "SRAM Cell",
-    "Abstract": "",
+    "Abstract": "A super-fast digital memory that needs power.",
     "Parents": ["Processor Cache Memories"],
     "Children": ["MOSFET Transistors"],
     "Date": "2021-05-10"
 }
 
-# Static Random Access Memory Cell
-
-
-The SRAM is the main memory used as cache memory in processors. Its fundamental building block is composed of 6 transistors, that are connected to form 2 logic inverters (using 4 transistors) and 2 control transistors allowing to access the data for reading and writing. Below is the electrical schematic representing an SRAM cell.
+The Static Random Access Memory (SRAM) is the main memory used as cache memory in processors. Its fundamental building block is composed of 6 transistors, that are connected to form 2 logic inverters (using 4 transistors) and 2 control transistors allowing to access the data for reading and writing. Below is the electrical schematic representing an SRAM cell.
 
 <table class="w3-center" width="100%">
 	<tr><th>

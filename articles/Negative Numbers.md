@@ -1,12 +1,10 @@
 {
     "Title": "Negative Numbers",
-    "Abstract": "",
+    "Abstract": "To represent negative numbers, just halve the number of possibilities and take one of the half as representing negative numbers instead of positive.",
     "Parents": ["Number Encodings"],
     "Children": ["Why Twos Complement"],
     "Date": "2020-11-02"
 }
-
-# Negative Numbers
 
 In mathematics, we are representing the negative numbers using the minus sign `-`. In computer hardware, there's no such thing. Only 0 and 1, so we needed to find a way to encode our negative numbers in binary form without using an extra symbol.
 

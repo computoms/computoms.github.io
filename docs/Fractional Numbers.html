@@ -126,8 +126,11 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <div class="w3-light-grey">
 	  <div class="w3-content w3-padding-64" id="band">
       <p class="w3-text-grey">October 26, 2020</p>
-	    <h1>Fractional Numbers</h1>
-<p>Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (<code>float</code> type in C) and 64 bits (<code>double</code> type in C).</p>
+      <h1>Fractional Numbers</h1>
+      <div class="w3-round-large w3-khaki w3-panel w3-padding-16">
+        Storing numbers with comma is just another encoding to convert a number into a fixed-size memory data.
+      </div>
+	    <p>Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (<code>float</code> type in C) and 64 bits (<code>double</code> type in C).</p>
 <p>Recall how to construct a decimal number using powers of tens. For fractional numbers, it is the same, but with negative powers of tens after the comma: the number 12.345 can be written:</p>
 <p>12.345 = 1 * 10^1 + 2 * 10^0 + 3 * 10^(-1) + 4 * 10^(-2) + 5 * 10^(-3)</p>
 <p>We can use the same approach to represent a binary number:</p>

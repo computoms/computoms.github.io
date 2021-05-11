@@ -1,12 +1,10 @@
 {
     "Title": "Storing Numbers",
-    "Abstract": "How to store numbers into the memory?",
+    "Abstract": "We need data types and encodings.",
     "Parents": ["Storing Information on a Computer"],
     "Children": ["Data Types", "Number Encodings"],
     "Date": "2020-10-05"
 }
-
-# Storing Numbers
 
 Computer memories are based on physical and electrical principles that only allow to store two states. These states are represented by convention with 0 and 1. It is called a _binary state_.
 

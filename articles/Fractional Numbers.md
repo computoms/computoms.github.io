@@ -1,12 +1,10 @@
 {
     "Title": "Fractional Numbers",
-    "Abstract": "",
+    "Abstract": "Storing numbers with comma is just another encoding to convert a number into a fixed-size memory data.",
     "Parents": ["Number Encodings"],
     "Children": ["Single Precision Numbers", "Double Precision Numbers"],
     "Date": "2020-10-26"
 }
-
-# Fractional Numbers
 
 Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (`float` type in C) and 64 bits (`double` type in C).
 

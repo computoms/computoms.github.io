@@ -1,12 +1,10 @@
 {
-	"Abstract": "", 
+	"Abstract": "An electronic component that acts as a switch: turn on or off the connection between Source pin and Drain pin by changing the voltage on its Gate pin.", 
 	"Parents": ["DRAM Cell", "SRAM Cell", "Logic Circuits"], 
 	"Children": ["Electric Force"], 
 	"Title": "MOSFET Transistors",
 	"Date": "2020-06-08"
 }
-
-# MOSFET Transistors
 
 ## Transistors
 

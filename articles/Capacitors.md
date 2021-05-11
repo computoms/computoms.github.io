@@ -1,12 +1,10 @@
 {
-	"Abstract": "", 
+	"Abstract": "An electronic component that can store electrons.", 
 	"Parents": ["Flash Drives", "DRAM Cell"], 
 	"Children": ["Electric Force"], 
 	"Title": "Capacitors",
 	"Date": "2020-07-13"
 }
-
-# Capacitors
 
 A capacitor is a pair of metal plates that is used to store an electric charge. The metal plates are separated by an oxide (= non conductive material) and are usually rolled together in a cylinder to gain space. It acts similarly to a battery, can be charged and discharged. But unlike batteries which use a chemical reaction to store electrical energy, the capacitor directly uses the electrons and keeps them on one of the metal plates while the other one is depleted (electrons are removed).
 

@@ -1,12 +1,10 @@
 {
     "Title": "Data Types",
-    "Abstract": "",
+    "Abstract": "A convention to convert numbers into bits inside a digital memory.",
     "Parents": ["Storing Numbers"],
     "Children": [""],
     "Date": "2020-10-19"
 }
-
-# Data Types
 
 A data type is a convention by which we store numbers of a fixed range (for example 0-255) with a fixed amount of memory.
 

@@ -1,12 +1,10 @@
 {
     "Title": "Storing Characters",
-    "Abstract": "How to store characters into the memory?",
+    "Abstract": "Just another conversion between data types.",
     "Parents": ["Storing Information on a Computer"],
     "Children": ["ASCII", "UTF"],
     "Date": "2020-11-29"
 }
-
-# Storing Characters
 
 In a computer, we often need to store text, so we need a way to store characters.
 

@@ -1,12 +1,10 @@
 {
     "Title": "Double Precision Numbers",
-    "Abstract": "",
+    "Abstract": "Numbers stored in memory with double the precision of the floating point data type.",
     "Parents": ["Fractional Numbers"],
     "Children": [""],
     "Date": "2020-11-09"
 }
-
-# Double Precision Numbers
 
 The `double` data type, as for double precision floating-point, is a data type encoded on 64 bits: 1 sign bit, 11 exponent bits and 52 fractional bits.
 

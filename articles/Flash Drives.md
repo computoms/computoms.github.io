@@ -1,13 +1,10 @@
 {
 	"Title": "Flash Drives",
-	"Abstract": "", 
+	"Abstract": "Data storage combining the rapidity of a random access memory with the retention of information when power has been switched off.", 
 	"Parents": ["Hard Drives"], 
 	"Children": ["Floating-Gate Transistors","Capacitors"],
 	"Date": "2020-08-10"
 }
-
-
-# Flash Drives
 
 ## The flash memory
 

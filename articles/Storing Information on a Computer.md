@@ -10,8 +10,6 @@
 	"Date": "2020-09-28"
 }
 
-# Storing information on a computer
-
 Computer programs need to store and get access information on computer memories. But how exactly does that happen? What are the mechanisms behind data storing in a computer?
 
 ## Storing Characters

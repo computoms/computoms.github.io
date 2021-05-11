@@ -51,6 +51,10 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <div class="w3-light-grey">
 	  <div class="w3-content w3-padding-64" id="band">
       <p class="w3-text-grey">{{ post.publication_date }}</p>
+      <h1>{{ post.title }}</h1>
+      <div class="w3-round-large w3-khaki w3-panel w3-padding-16">
+        {{ post.abstract }}
+      </div>
 	    {{ post.content }}
 	  </div>
   </div>

@@ -1,6 +1,6 @@
 {
     "Title": "UTF-8",
-    "Abstract": "",
+    "Abstract": "The well known, light and versatile, variable-length text-enconding by excellence.",
     "Parents": ["UTF"],
     "Children": [""],
     "Date": "2021-01-04"

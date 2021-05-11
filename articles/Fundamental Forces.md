@@ -1,12 +1,10 @@
 {
     "Title": "Fundamental Forces",
-    "Abstract": "",
+    "Abstract": "The 4 fundamental forces that attract or repulse 'things'.",
     "Parents": ["Magnetic Force", "Electric Force"],
     "Children": [""],
     "Date": "2020-05-18"
 }
-
-# Fundamental Forces
 
 Matter is composed of molecules that are in turn composed of atoms -- electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a mass, an electric charge and a spin. 
 

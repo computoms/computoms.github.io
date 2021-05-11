@@ -1,12 +1,10 @@
 {
     "Title": "Number Encodings",
-    "Abstract": "",
+    "Abstract": "Storing numbers into a digital memory means translating these numbers into binary.",
     "Parents": ["Storing Numbers"],
     "Children": ["Negative Numbers", "Fractional Numbers"],
     "Date": "2020-10-12"
 }
-
-# Number Encodings
 
 ## Encoding positive integral numbers
 

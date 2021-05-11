@@ -1,12 +1,10 @@
 {
     "Title": "ASCII",
-    "Abstract": "",
+    "Abstract": "Simple text encoding on 7 bits (per character).",
     "Parents": ["Storing Characters"],
     "Children": [],
     "Date": "2020-12-14"
 }
-
-# ASCII
 
 _American Standard Code for Information Interchange_
 

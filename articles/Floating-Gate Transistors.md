@@ -1,12 +1,10 @@
 {
-	"Abstract": "", 
+	"Abstract": "An electronic component that allows to store electrons as well as switch on/off an electronic line.", 
 	"Parents": ["Flash Drives", "SSD"], 
 	"Children": ["Electric Force"], 
 	"Title": "Floating-Gate Transistors",
 	"Date": "2020-07-20"
 }
-
-# Floating-Gate Transistors
 
 The electronic component that forms the basis of a flash memory is called a *Floating gate transistor* (FG Transistor). It is a MOSFET transistor with the MOS structure -- that contains the gate of the transistor -- modified. Instead of having the three-layer structure metal-oxide-semiconductor; we have a five-layer structure: metal-oxide-metal-oxide-semiconductor (MOMOS). The structure is represented in the following image.
 

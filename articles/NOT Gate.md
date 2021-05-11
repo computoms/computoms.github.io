@@ -1,12 +1,10 @@
 {
     "Title": "NOT Gate",
-    "Abstract": "",
+    "Abstract": "How to invert an electronic signal.",
     "Parents": ["Logic Circuits"],
     "Children": [""],
     "Date": "2020-06-29"
 }
-
-# NOT / Inverter Gate
 
 An inverter is a simple electronic component, part of the _logic gate_ family of components, that inverts a signal. If we have a high-signal on one side of this component (bit 1, or 5V) we'll have a low-signal on the output (bit 0, 0V). 
 

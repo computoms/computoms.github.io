@@ -112,8 +112,11 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <div class="w3-light-grey">
 	  <div class="w3-content w3-padding-64" id="band">
       <p class="w3-text-grey">November 02, 2020</p>
-	    <h1>Negative Numbers</h1>
-<p>In mathematics, we are representing the negative numbers using the minus sign <code>-</code>. In computer hardware, there's no such thing. Only 0 and 1, so we needed to find a way to encode our negative numbers in binary form without using an extra symbol.</p>
+      <h1>Negative Numbers</h1>
+      <div class="w3-round-large w3-khaki w3-panel w3-padding-16">
+        To represent negative numbers, just halve the number of possibilities and take one of the half as representing negative numbers instead of positive.
+      </div>
+	    <p>In mathematics, we are representing the negative numbers using the minus sign <code>-</code>. In computer hardware, there's no such thing. Only 0 and 1, so we needed to find a way to encode our negative numbers in binary form without using an extra symbol.</p>
 <h2>The Two's Complement Encoding</h2>
 <p>There are several ways to encode a negative number into binary, but the main technique that is used nowadays by processors is called two's complement.</p>
 <p>Let's take a 4-bits chuck of memory as an example. In regular encoding, as seen above, this chunk can store numbers from 0 (0000 in binary) to 15 (1111 in binary). With 4 bits, we can only store 16 different values, so the idea with the two's complement method is to shift the values in order to represent numbers from -8 to 7 instead - so that we can represent negative numbers.</p>

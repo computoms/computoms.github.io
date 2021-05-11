@@ -1,6 +1,6 @@
 {
     "Title": "Magnetic Force",
-    "Abstract": "",
+    "Abstract": "Another force between particles.",
     "Parents": ["Magnetic Drives"],
     "Children": ["Fundamental Forces", "Electrons Spin"],
     "Date": "2020-06-01"

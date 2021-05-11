@@ -1,6 +1,6 @@
 {
     "Title": "UTF",
-    "Abstract": "",
+    "Abstract": "Encoding foreign languages and symbols.",
     "Parents": ["Storing Characters"],
     "Children": ["UTF-32", "UTF-8", "UTF-16"],
     "Date": "2020-12-07"

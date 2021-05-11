@@ -1,6 +1,6 @@
 {
     "Title": "Single Precision Numbers",
-    "Abstract": "",
+    "Abstract": "Storing numbers with comma means translating into binary without taking too much space.",
     "Parents": ["Fractional Numbers"],
     "Children": [""],
     "Date": "2020-11-15"

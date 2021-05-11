@@ -1,7 +1,10 @@
-{"Abstract": "", "Parents": ["MOSFET Transistors", "Capacitors", "Floating-Gate Transistors"], "Children": ["Fundamental Forces", "Electron Charge"], "Title": "Electric Force",
-"Date": "2020-05-25"}
-
-# Electric Force
+{
+	"Abstract": "The force applied by charged-particles to charged-particles.", 
+	"Parents": ["MOSFET Transistors", "Capacitors", "Floating-Gate Transistors"], 
+	"Children": ["Fundamental Forces", "Electron Charge"], 
+	"Title": "Electric Force",
+	"Date": "2020-05-25"
+}
 
 The electric force is the force applied by a particle of charge `q` to other particles with a charge. The following formula gives the value of the electric force that a particle of charge `q_1` applies on another particle of charge `q_2` separated by distance `r`: 
 

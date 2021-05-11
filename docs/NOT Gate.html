@@ -126,8 +126,11 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <div class="w3-light-grey">
 	  <div class="w3-content w3-padding-64" id="band">
       <p class="w3-text-grey">June 29, 2020</p>
-	    <h1>NOT / Inverter Gate</h1>
-<p>An inverter is a simple electronic component, part of the <em>logic gate</em> family of components, that inverts a signal. If we have a high-signal on one side of this component (bit 1, or 5V) we'll have a low-signal on the output (bit 0, 0V). </p>
+      <h1>NOT Gate</h1>
+      <div class="w3-round-large w3-khaki w3-panel w3-padding-16">
+        How to invert an electronic signal.
+      </div>
+	    <p>An inverter is a simple electronic component, part of the <em>logic gate</em> family of components, that inverts a signal. If we have a high-signal on one side of this component (bit 1, or 5V) we'll have a low-signal on the output (bit 0, 0V). </p>
 <p>Connecting two MOSFET transistors of the different types in a row between Vdd and Vss (as shown below), and connecting the two gates of the transistors together as the input of the component, we'll have the output that inverts the signal. Inputting a positive voltage (Vdd), the pMOS transistor will be blocking, preventing current to flow from the upper Vdd to the output, but the nMOS transistor will be passing, making the output signal at the level of Vss. Conversely, inputting a 0 voltage (Vss), the pMOS will be passing (because the voltage on the gate will be negative with respect to the source, which is at Vdd) making the output signal to Vdd and the nMOS will be blocking. </p>
 <table class="w3-center" width="100%">
     <tr><th>

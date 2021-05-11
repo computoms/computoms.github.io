@@ -1,12 +1,10 @@
 {
     "Title": "AND Gate",
-    "Abstract": "",
+    "Abstract": "An electronic component that performs the AND logic operation on its input signals giving the result at its output.",
     "Parents": ["Logic Circuits"],
     "Children": [""],
     "Date": "2020-06-22"
 }
-
-# AND Gate
 
 The AND Gate is a logic gate, an electronic component that can perform logic operations on the voltage it is applied on its input pins. It allows to apply the AND logic operation on its two input pins.
 

@@ -1,12 +1,10 @@
 {
     "Title": "Electron Charge",
-    "Abstract": "",
+    "Abstract": "An instrinsic property of electrons and sub-atomic particles.",
     "Parents": ["Electric Force"],
     "Children": [""],
     "Date": "2020-05-04"
 }
-
-# Electron Charge
 
 The _electric charge_ of an electron is an intrisic quantity of sub-atomic particles. It is negative and measured in Coulomb (about `-1.6 10^-19` C which we'll write `-e`) whereas the one of a proton is positive (`+e`) and the one of a neutron is null. Two electric charges of the same sign (for example, two electrons) repel each other while two electric charges of the opposite sign attract each other. The amplitude of this attracting / repulsing force is:
 

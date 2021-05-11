@@ -1,12 +1,10 @@
 {
     "Title": "Processor Cache Memories",
-    "Abstract": "",
+    "Abstract": "Digital memories found in processors, that needs to be very fast.",
     "Parents": ["Computer Memories"],
     "Children": ["SRAM Cell"],
     "Date": "2020-09-14"
 }
-
-# Processor Cache Memories
 
 In order to have an even faster memory, processors implement a part of memory directly onto their chips, called the cache memory. Its hardware implementation and location (closer to logic area of the processor) makes it the fastest storage accessible from the processor. This memory is also a type of random access memory, and shares its drawbacks (loss of data when power turns off).
 

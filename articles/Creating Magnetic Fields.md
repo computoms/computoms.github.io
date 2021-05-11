@@ -1,6 +1,6 @@
 {
     "Title": "Creating Magnetic Fields",
-    "Abstract": "",
+    "Abstract": "Two ways: use a ferromagnetic material or move electrons.",
     "Parents": ["Magnetic Drives"],
     "Children": [""],
     "Date": "2020-06-02"
