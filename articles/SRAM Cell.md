@@ -32,7 +32,7 @@ Now, on the internal structure of the SRAM are 4 transistors that are arranged t
 	</th></tr>
 </table>
 
-The inverter is presented in the article about the <a href="Not Gate.html">Not Gate</a>.
+The inverter is presented in the article about the <a href="NOT Gate.html">Not Gate</a>.
 
 To write a bit into the memory cell, the couple of inverters are forced into a state, either with <M1, M2> inverter output to high or low, by applying a slightly higher voltage that would normally be used for these components. Once the state has been written, it can be read by opening the transistors M5 and M6 and reading the lines BL and BL bar. 
 
