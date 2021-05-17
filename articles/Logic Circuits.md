@@ -1,10 +1,12 @@
 {
-	"Title": "Logic Circuits",
-	"Abstract": "Or how to make logic operations with electrical components and signals.", 
-	"Parents": ["Computer Memories","SSD"], 
-	"Children": ["NOT Gate","AND Gate","OR Gate","MOSFET Transistors"],
-	"Date": "2020-07-06"
+"Title": "Logic Circuits",
+"Abstract": "Or how to make logic operations with electrical components and signals.", 
+"Parents": ["Making Operations on Data"], 
+"Children": ["NOT Gate","AND Gate","OR Gate","MOSFET Transistors"], 
+"Date": "2020-07-06" 
 }
+
+
 
 Using only transistors, we can already implement data processing using logic operations. Let's look at several examples of implementation of logic operations using transistors. 
 

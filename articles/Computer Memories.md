@@ -1,10 +1,11 @@
 {
-	"Abstract": "Electronic device that allows to store information.", 
-	"Parents": ["Storing Information on a Computer"], 
-	"Children": ["Hard Drives", "Random Access Memories", "Processor Cache Memories", "Logic Circuits"], 
-	"Title": "Computer Memories",
-    "Date": "2020-09-21"
+"Title": "Computer Memories",
+"Abstract": "Electronic device that allows to store information.", 
+"Parents": ["Storing Information on a Computer"], 
+"Children": ["Hard Drives","Random Access Memories","Processor Cache Memories"], 
+"Date": "2020-09-21" 
 }
+
 
 In a computer, there are three categories of hardware components that can store data. These categories each have their own characteristics and are used for different steps of data transfer, storage and processing.
 

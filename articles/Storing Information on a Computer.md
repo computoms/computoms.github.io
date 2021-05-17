@@ -1,7 +1,7 @@
 {
 	"Title": "Storing Information on a Computer",
 	"Abstract": "How do we store information on a computer?",
-	"Parents": [""],
+	"Parents": ["Computer Programs"],
 	"Children": [
 		"Storing Characters", 
 		"Storing Numbers",
