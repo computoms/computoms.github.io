@@ -61,8 +61,65 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <div id="tour" style="overflow-x: scroll;">
     <div class="w3-container w3-content w3-padding-32">
       {{ post.graph }}
+
+      <!-- Buttons to Move SVG -->
+      <div style="position: relative; top: -750px; left: 0px; background-color: white; width: 150px; border: 1px solid black;">
+        <table>
+          <tr>
+            <td width="40"></td>
+            <td width="30" align="center"><button onclick="pan(0,-100)" d="M25 45 l6 -10 a20, 35 0 0,1 -12,0z">&uarr;</button></td>
+            <td width="40" align="center"></td>
+            <td width="25" align="center"><button cx="25" cy="29.5" r="4" onclick="zoom(1.25)">+</button></td>
+          </tr>
+          <tr>
+            <td width="40" align="center"><button onclick="pan(-100, 0)" d="M45 25 l-10 -6 a35 20 0 0 1 0 12z">&larr;</button></td>
+            <td width="30" align="center"></td>
+            <td width="40" align="center"><button onclick="pan(100, 0)" d="M5 25 l10 -6 a35 20 0 0 0 0 12z">&rarr;</button></td>
+            <td width="25" align="center"></td>
+          </tr>
+          <tr>
+            <td width="40" align="center"></td>
+            <td width="30" align="center"><button onclick="pan(0, 100)" d="M25 5 l6 10 a20 35 0 0 0 -12 0z">&darr;</button></td>
+            <td width="40" align="center"></td>
+            <td width="25" align="center"><button cx="25" cy="20.5" r="4" onclick="zoom(0.8)">-</button></td>
+          </tr>
+        </table>
+      </div>
+      <!-- End of Move Buttons -->
     </div>
   </div>
+
+
+  <script type="text/javascript">
+    var transformMatrix = [1, 0, 0, 1, 0, 500];
+    var svg = document.getElementsByTagName('svg')[0];
+    var viewbox = svg.getAttributeNS(null, "viewBox").split(" ");
+    var centerX = parseFloat(viewbox[2]) / 2;
+    var centerY = parseFloat(viewbox[3]) / 2;
+    var matrixGroup = svg.getElementById("graph0");
+    matrixGroup.setAttributeNS(null, "transform", "matrix(" + transformMatrix.join(' ') + ")");
+
+
+    function pan(dx, dy) {
+      transformMatrix[4] += dx;
+      transformMatrix[5] += dy;
+                
+      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
+      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+    }
+
+    function zoom(scale) {
+      for (var i = 0; i < 4; i++) {
+        transformMatrix[i] *= scale;
+      }
+      transformMatrix[4] += (1 - scale) * centerX;
+      transformMatrix[5] += (1 - scale) * centerY;
+                
+      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
+      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+    }
+
+    </script>
 
 </body>
 </html>
