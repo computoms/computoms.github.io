@@ -60,6 +60,7 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
   <!-- The Graph Section -->
   <div id="tour" style="overflow-x: scroll;">
     <div class="w3-container w3-content w3-padding-32">
+      <div class="w3-text-gray w3-small"><p>Use your mouse wheel to zoom in/out and click-drag the image to move on the graph.</p></div>
       {{ post.graph }}
 
       <!-- Buttons to Move SVG -->
@@ -99,6 +100,31 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
     var matrixGroup = svg.getElementById("graph0");
     matrixGroup.setAttributeNS(null, "transform", "matrix(" + transformMatrix.join(' ') + ")");
 
+    svg.addEventListener("wheel", handle_wheel);
+    svg.addEventListener("mousemove", handle_move);
+    svg.addEventListener("mousedown", handle_down);
+    svg.addEventListener("mouseup", handle_up);
+    var isPressed = false;
+
+    function handle_wheel(event) {
+      event.preventDefault();
+      zoom(1.0 + (event.deltaY * 0.01));
+    }
+
+    function handle_move(event) {
+      if (isPressed) {
+        event.preventDefault();
+        pan(event.movementX, event.movementY);
+      }
+    }
+
+    function handle_down(event) {
+      isPressed = true;
+    }
+
+    function handle_up(event) {
+      isPressed = false;
+    }
 
     function pan(dx, dy) {
       transformMatrix[4] += dx;
