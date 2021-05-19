@@ -70,7 +70,7 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
             <td width="40"></td>
             <td width="30" align="center"><button onclick="pan(0,-100)" d="M25 45 l6 -10 a20, 35 0 0,1 -12,0z">&uarr;</button></td>
             <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="29.5" r="4" onclick="zoom(1.25)">+</button></td>
+            <td width="25" align="center"><button cx="25" cy="29.5" r="4" onclick="zoom_center(1.25)">+</button></td>
           </tr>
           <tr>
             <td width="40" align="center"><button onclick="pan(-100, 0)" d="M45 25 l-10 -6 a35 20 0 0 1 0 12z">&larr;</button></td>
@@ -82,7 +82,7 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
             <td width="40" align="center"></td>
             <td width="30" align="center"><button onclick="pan(0, 100)" d="M25 5 l6 10 a20 35 0 0 0 -12 0z">&darr;</button></td>
             <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="20.5" r="4" onclick="zoom(0.8)">-</button></td>
+            <td width="25" align="center"><button cx="25" cy="20.5" r="4" onclick="zoom_center(0.8)">-</button></td>
           </tr>
         </table>
       </div>
@@ -92,13 +92,8 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 
 
   <script type="text/javascript">
-    var transformMatrix = [1, 0, 0, 1, 0, 500];
     var svg = document.getElementsByTagName('svg')[0];
     var viewbox = svg.getAttributeNS(null, "viewBox").split(" ");
-    var centerX = parseFloat(viewbox[2]) / 2;
-    var centerY = parseFloat(viewbox[3]) / 2;
-    var matrixGroup = svg.getElementById("graph0");
-    matrixGroup.setAttributeNS(null, "transform", "matrix(" + transformMatrix.join(' ') + ")");
 
     svg.addEventListener("wheel", handle_wheel);
     svg.addEventListener("mousemove", handle_move);
@@ -106,15 +101,31 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
     svg.addEventListener("mouseup", handle_up);
     var isPressed = false;
 
+    function get_mouse_position_in_svg(event)
+    {
+      // Get mouse position in SVG Viewbox coordinates
+      var pt = svg.createSVGPoint();
+      pt.x = event.clientX;
+      pt.y = event.clientY;
+      return pt.matrixTransform(svg.getScreenCTM().inverse());
+    }
+
     function handle_wheel(event) {
       event.preventDefault();
-      zoom(1.0 + (event.deltaY * 0.01));
+      var loc = get_mouse_position_in_svg(event);
+      zoom(loc.x, loc.y, 1.0 + (event.deltaY * 0.01));
     }
 
     function handle_move(event) {
       if (isPressed) {
         event.preventDefault();
-        pan(event.movementX, event.movementY);
+        var ptStart = get_mouse_position_in_svg(event);
+        var ptEnd = get_mouse_position_in_svg(event);
+        ptEnd.x += event.movementX;
+        ptEnd.y += event.movementY;
+        var locStart = ptStart.matrixTransform(svg.getScreenCTM().inverse());
+        var locEnd = ptEnd.matrixTransform(svg.getScreenCTM().inverse());
+        pan(locEnd.x - locStart.x, locEnd.y - locStart.y);
       }
     }
 
@@ -127,22 +138,28 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
     }
 
     function pan(dx, dy) {
-      transformMatrix[4] += dx;
-      transformMatrix[5] += dy;
-                
-      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
-      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+      viewbox[0] -= dx;
+      viewbox[1] -= dy;
+      svg.setAttributeNS(null, "viewBox", viewbox.join(' '));
     }
 
-    function zoom(scale) {
-      for (var i = 0; i < 4; i++) {
-        transformMatrix[i] *= scale;
-      }
-      transformMatrix[4] += (1 - scale) * centerX;
-      transformMatrix[5] += (1 - scale) * centerY;
-                
-      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
-      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+    function zoom(x, y, scale) {
+      viewbox[0] -= (x - viewbox[0]) * (scale - 1);
+      viewbox[1] -= (y - viewbox[1]) * (scale - 1);
+      viewbox[2] *= scale;
+      viewbox[3] *= scale;
+      svg.setAttributeNS(null, "viewBox", viewbox.join(' '));
+    }
+
+    function zoom_center(scale) {
+      var x = parseInt(viewbox[0])
+      var y = parseInt(viewbox[1])
+      var width = viewbox[2];
+      var height = viewbox[3];
+      var centerX = x + (width / 2.0);
+      var centerY = y + (height / 2.0);
+
+      zoom(centerX, centerY, scale);
     }
 
     </script>
