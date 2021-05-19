@@ -64,27 +64,28 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
       {{ post.graph }}
 
       <!-- Buttons to Move SVG -->
-      <div style="position: relative; top: -750px; left: 0px; background-color: white; width: 150px; border: 1px solid black;">
-        <table>
-          <tr>
-            <td width="40"></td>
-            <td width="30" align="center"><button onclick="pan(0,-100)" d="M25 45 l6 -10 a20, 35 0 0,1 -12,0z">&uarr;</button></td>
-            <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="29.5" r="4" onclick="zoom_center(1.25)">+</button></td>
-          </tr>
-          <tr>
-            <td width="40" align="center"><button onclick="pan(-100, 0)" d="M45 25 l-10 -6 a35 20 0 0 1 0 12z">&larr;</button></td>
-            <td width="30" align="center"></td>
-            <td width="40" align="center"><button onclick="pan(100, 0)" d="M5 25 l10 -6 a35 20 0 0 0 0 12z">&rarr;</button></td>
-            <td width="25" align="center"></td>
-          </tr>
-          <tr>
-            <td width="40" align="center"></td>
-            <td width="30" align="center"><button onclick="pan(0, 100)" d="M25 5 l6 10 a20 35 0 0 0 -12 0z">&darr;</button></td>
-            <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="20.5" r="4" onclick="zoom_center(0.8)">-</button></td>
-          </tr>
-        </table>
+      <div style="position: relative; top: -750px; left: 0px; background-color: white; width: 85px; height: 50px; border: 0px solid black;">
+        <svg style="margin-top: 5px;">
+          <g onclick="pan(-100,0)" transform="matrix(1 0 0 1 5 10)">
+          <path 
+          d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </g>
+          <g onclick="pan(100,0)" transform="matrix(1 0 0 1 35 10)">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </g>
+          <g onclick="pan(0, -100)" transform="matrix(1 0 0 1 20 0)">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+          </g>
+          <g onclick="pan(0, 100)" transform="matrix(1 0 0 1 20 20)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+          </g>
+          <g onclick="zoom_center(1.25)" transform="matrix(1 0 0 1 60 0)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </g>
+          <g onclick="zoom_center(0.8)" transform="matrix(1 0 0 1 60 20)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </g>
+        </svg>
       </div>
       <!-- End of Move Buttons -->
     </div>
