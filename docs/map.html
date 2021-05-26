@@ -653,27 +653,88 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 
 
       <!-- Buttons to Move SVG -->
-      <div style="position: relative; top: -750px; left: 0px; background-color: white; width: 150px; border: 1px solid black;">
-        <table>
-          <tr>
-            <td width="40"></td>
-            <td width="30" align="center"><button onclick="pan(0,-100)" d="M25 45 l6 -10 a20, 35 0 0,1 -12,0z">&uarr;</button></td>
-            <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="29.5" r="4" onclick="zoom(1.25)">+</button></td>
-          </tr>
-          <tr>
-            <td width="40" align="center"><button onclick="pan(-100, 0)" d="M45 25 l-10 -6 a35 20 0 0 1 0 12z">&larr;</button></td>
-            <td width="30" align="center"></td>
-            <td width="40" align="center"><button onclick="pan(100, 0)" d="M5 25 l10 -6 a35 20 0 0 0 0 12z">&rarr;</button></td>
-            <td width="25" align="center"></td>
-          </tr>
-          <tr>
-            <td width="40" align="center"></td>
-            <td width="30" align="center"><button onclick="pan(0, 100)" d="M25 5 l6 10 a20 35 0 0 0 -12 0z">&darr;</button></td>
-            <td width="40" align="center"></td>
-            <td width="25" align="center"><button cx="25" cy="20.5" r="4" onclick="zoom(0.8)">-</button></td>
-          </tr>
-        </table>
+      <div style="position: relative; top: -700px; left: 50px; background-color: white; width: 85px; height: 50px; border: 0px solid black;">
+        <svg style="margin-top: 5px;">
+          <ellipse
+              onclick="pan(-100,0)"
+             ry="8"
+             rx="8"
+             cy="18"
+             cx="7"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="pan(-100,0)" transform="matrix(1 0 0 1 5 10)">
+          <path 
+          d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+          </g>
+          <ellipse
+              onclick="pan(100,0)"
+             ry="8"
+             rx="8"
+             cy="18"
+             cx="43"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="pan(100,0)" transform="matrix(1 0 0 1 35 10)" background="white">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+          </g>
+          <ellipse
+              onclick="pan(0,-100)"
+             ry="8"
+             rx="8"
+             cy="8"
+             cx="28"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="pan(0, -100)" transform="matrix(1 0 0 1 20 0)">
+            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+          </g>
+          <ellipse
+              onclick="pan(0,100)"
+             ry="8"
+             rx="8"
+             cy="28"
+             cx="28"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="pan(0, 100)" transform="matrix(1 0 0 1 20 20)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+          </g>
+          <ellipse
+              onclick="zoom_center(1.25)"
+             ry="8"
+             rx="8"
+             cy="8"
+             cx="68"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="zoom_center(1.25)" transform="matrix(1 0 0 1 60 0)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            <rect
+               y="3.1"
+               x="5"
+               height="4.3887711"
+               width="5.9021401"
+               style="fill:#000000;fill-opacity:1" />
+            <rect
+               style="fill:#000000;fill-opacity:1"
+               width="5.9021401"
+               height="4.3887711"
+               x="5"
+               y="8.5" />
+          </g>
+          <ellipse
+              onclick="zoom_center(0.8)"
+             ry="8"
+             rx="8"
+             cy="28"
+             cx="68"
+             id="path845"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero" />
+          <g onclick="zoom_center(0.8)" transform="matrix(1 0 0 1 60 20)">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </g>
+        </svg>
       </div>
       <!-- End of Move Buttons -->
     </div>
@@ -681,13 +742,8 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 
 
   <script type="text/javascript">
-    var transformMatrix = [1, 0, 0, 1, 0, 500];
     var svg = document.getElementsByTagName('svg')[0];
     var viewbox = svg.getAttributeNS(null, "viewBox").split(" ");
-    var centerX = parseFloat(viewbox[2]) / 2;
-    var centerY = parseFloat(viewbox[3]) / 2;
-    var matrixGroup = svg.getElementById("graph0");
-    matrixGroup.setAttributeNS(null, "transform", "matrix(" + transformMatrix.join(' ') + ")");
 
     svg.addEventListener("wheel", handle_wheel);
     svg.addEventListener("mousemove", handle_move);
@@ -695,43 +751,67 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
     svg.addEventListener("mouseup", handle_up);
     var isPressed = false;
 
+    function get_mouse_position_in_svg(event)
+    {
+      // Get mouse position in SVG Viewbox coordinates
+      var pt = svg.createSVGPoint();
+      pt.x = event.clientX;
+      pt.y = event.clientY;
+      return pt.matrixTransform(svg.getScreenCTM().inverse());
+    }
+
     function handle_wheel(event) {
       event.preventDefault();
-      zoom(1.0 + (event.deltaY * 0.01));
+      var loc = get_mouse_position_in_svg(event);
+      zoom(loc.x, loc.y, 1.0 + (event.deltaY * 0.01));
     }
 
     function handle_move(event) {
       if (isPressed) {
         event.preventDefault();
-        pan(event.movementX, event.movementY);
+        var ptStart = get_mouse_position_in_svg(event);
+        var ptEnd = get_mouse_position_in_svg(event);
+        ptEnd.x += event.movementX;
+        ptEnd.y += event.movementY;
+        var locStart = ptStart.matrixTransform(svg.getScreenCTM().inverse());
+        var locEnd = ptEnd.matrixTransform(svg.getScreenCTM().inverse());
+        pan(locEnd.x - locStart.x, locEnd.y - locStart.y);
       }
     }
 
     function handle_down(event) {
+      event.preventDefault();
       isPressed = true;
     }
 
     function handle_up(event) {
+      event.preventDefault();
       isPressed = false;
     }
 
     function pan(dx, dy) {
-      transformMatrix[4] += dx;
-      transformMatrix[5] += dy;
-                
-      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
-      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+      viewbox[0] -= dx;
+      viewbox[1] -= dy;
+      svg.setAttributeNS(null, "viewBox", viewbox.join(' '));
     }
 
-    function zoom(scale) {
-      for (var i = 0; i < 4; i++) {
-        transformMatrix[i] *= scale;
-      }
-      transformMatrix[4] += (1 - scale) * centerX;
-      transformMatrix[5] += (1 - scale) * centerY;
-                
-      var newMatrix = "matrix(" +  transformMatrix.join(' ') + ")";
-      matrixGroup.setAttributeNS(null, "transform", newMatrix);
+    function zoom(x, y, scale) {
+      viewbox[0] -= (x - viewbox[0]) * (scale - 1);
+      viewbox[1] -= (y - viewbox[1]) * (scale - 1);
+      viewbox[2] *= scale;
+      viewbox[3] *= scale;
+      svg.setAttributeNS(null, "viewBox", viewbox.join(' '));
+    }
+
+    function zoom_center(scale) {
+      var x = parseInt(viewbox[0])
+      var y = parseInt(viewbox[1])
+      var width = viewbox[2];
+      var height = viewbox[3];
+      var centerX = x + (width / 2.0);
+      var centerY = y + (height / 2.0);
+
+      zoom(centerX, centerY, scale);
     }
 
     </script>
