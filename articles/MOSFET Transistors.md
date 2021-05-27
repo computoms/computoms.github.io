@@ -3,14 +3,25 @@
 	"Parents": ["DRAM Cell", "SRAM Cell", "Logic Circuits"], 
 	"Children": ["Electric Force"], 
 	"Title": "MOSFET Transistors",
-	"Date": "2020-06-08"
+	"Date": "2021-05-27"
 }
 
 ## Transistors
 
 The transistor is the most important electronic component for electronics and computers. It forms the basis of almost all logic operations on data and is also used for storing data (for example, in SRAM memories).
 
-A transistor is basically a 3 (or sometimes 4) terminal device that acts as an electronic switch. It has an input, output and a control terminal. It acts as a switch, so that in one "position" no electric current can flow from input to output terminals and in the other "position" a current can freely flow from input to output. The "position" of the switch is actually determined by the voltage (i.e. charge) applied on the control terminal.  
+A transistor is basically a 3 terminal device that acts as an electronic switch.
+
+<table width="100%" class="w3-center">
+	<tr><th>
+		<img src="images/articles/PushSwitch.svg" class="w3-center" width="60%" />
+	</th></tr>
+	<tr><td class="w3-text-gray">Example of a push-switch represented by its schematics.</td></tr>
+</table>
+
+Like a switch, it has an input (left terminal on the above schematics), output (right terminal) and a control terminal (the push mechanism on top). In one position (when open) no electric current can flow from input to output terminals and in the other position a current can freely flow from input to output. 
+
+In a transistor, the push part of the switch is actually determined by the voltage (i.e. charge) applied on the control terminal.
 
 ## MOSFET transistors
 
@@ -23,9 +34,10 @@ The typical implementation of a transistor for computer and logic operations is 
 This stack of materials gives part of the name to the transistor (the MOS part). 
 
 <table width="100%" class="w3-center">
-	<td><th>
+	<tr><th>
 		<img src="images/articles/MOSFET.png" class="w3-center" width="60%" />
-	</th></td>
+	</th></tr>
+	<tr><td class="w3-text-gray">Physical representation of a MOSFET transistor.</td></tr>
 </table>
 
 The three terminals of a MOSFET transistor are usually called the Drain and Source (for input/output terminals) and the Gate terminal, that acts as the switch control. When a given voltage (which value is given by transistor intrisic characteristics) is applied on the gate, the Source/Drain connection becomes like a wire. The fourth connection on the image above (Body) is not necessary in most of the cases and is usually wired to the source. The n+ and p corresponds to the doping type of the semiconductor, which will determine the type of the transistor (see below MOSFET types). 
