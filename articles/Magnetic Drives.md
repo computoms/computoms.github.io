@@ -2,7 +2,7 @@
     "Title": "Magnetic Drives",
     "Abstract": "Storing information using magnetism.",
     "Parents": ["Hard Drives"],
-    "Children": ["Magnetic Force", "Creating Magnetic Fields"],
+    "Children": ["Magnetic Force", "Creating Magnetic Fields", "Force Fields"],
     "Date": "2020-08-03"
 }
 
