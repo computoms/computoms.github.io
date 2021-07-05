@@ -3,9 +3,11 @@
 	"Abstract": "How do we store information on a computer?",
 	"Parents": ["Computer Programs"],
 	"Children": [
+		"Storing Songs",
+		"Storing Images",
 		"Storing Characters", 
 		"Storing Numbers",
-               "Computer Memories"
+        "Computer Memories"
 		],
 	"Date": "2020-09-28"
 }
