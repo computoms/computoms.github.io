@@ -19,7 +19,7 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 </style>
 <body>
 
-<!-- NavBar -->
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card logoBg">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -30,12 +30,10 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<!-- <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
-</div> -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="map.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BLOG</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GITHUB</a>
+</div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -154,6 +152,17 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
 <p><code>F = qE + qv x B</code></p>
 	  </div>
   </div>
+
+  <script>
+    function myFunction() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
 
 </body>
 </html>
