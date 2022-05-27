@@ -143,14 +143,12 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
         Three colors are enough to fool the eye.
       </div>
 	    <p>How to store graphical contents, such as images or videos, on a computer memory?</p>
-<p>As you can see on the <a href="Computer%20Memories.html">article on computer memories</a>, we can only store bits of information into the memory (<em>i.e.</em> state 0 or state 1).
-To store an image, we need a way to convert the content of an image into a list of 0s and ones. As described in <a href="Storing%20Numbers.html">storing numbers</a>, we already know how to store different kinds of numbers into the memory. 
-We thus need a way to transform the content of an image into numbers.</p>
+<p>Following the same principle explained in <a href="Storing%20Characters.html">Storing Characters</a>, images are stored in the memory using a convention that we define in advanced, saying how to convert an image into storable information. This convention is called a format or sometimes an encoding, like for numbers. The process to convert an image into a set of storable data is called digitization.</p>
+<h2>Basic principle</h2>
 <p>An image is usually a rectangle filled with different colors. As we saw in the description of <a href="Computer%20Memories.html">computer memories</a>, the memory of a computer can only store strings of data (uni-dimensional array of bits -- or numbers). 
-We need to find a way to transform a rectangle filled with colours into a string of numbers. </p>
-<ul>
-<li>The first step is digitalize the image: divide the image into a combination of small discrete regions. If we make the regions small enough, we can fool our eyes into believing the content is continus.</li>
-</ul>
+We need to find a way to transform a rectangle filled with colors into a string of numbers. </p>
+<h3>"Pixelization"</h3>
+<p>The first step is to divide the image into a combination of small discrete regions. If we make the regions small enough, we can fool our eyes into believing the content is continuous. </p>
 <table width="100%" class="w3-center">
     <tr><th>
         <img src="images/articles/image-digitalization.svg" class="w3-center" width="60%" />
@@ -158,9 +156,8 @@ We need to find a way to transform a rectangle filled with colours into a string
     <tr><td class="w3-text-gray">Image digitalization.</td></tr>
 </table>
 
-<ul>
-<li>To store each region -- called pixel -- into the memory, which is linear, we can define in a convention, that we'll store all the rows of the digitalized image rectangle one after the other in the memory. But this is not enough, we also need to now the row lengths in order to reconstruct the image from the memory. We also need to know the total length of the image (number of pixels) so that we now when to stop reading the memory to reconstruct the image. To do this, we can store the length of a row (width of the image) at first, then the total size of the image, and then all the rows one after the other. </li>
-</ul>
+<h3>Metadata</h3>
+<p>To store each region -- called pixel -- into the memory, which is linear, we can define in a convention, that we'll store all the rows of the digitalized image rectangle one after the other in the memory. But this is not enough, we also need to know the row lengths in order to reconstruct the image from the memory. We also need to know the total length of the image (number of pixels) so that we know when to stop reading the memory to reconstruct the image. To do this, we could for example store the length of a row (width of the image) at first, then the total size of the image, and then all the rows one after the other. </p>
 <table width="100%" class="w3-center">
     <tr><th>
         <img src="images/articles/image-format-memory.svg" class="w3-center" width="60%" />
@@ -168,16 +165,24 @@ We need to find a way to transform a rectangle filled with colours into a string
     <tr><td class="w3-text-gray">Image saved into memory with simple format.</td></tr>
 </table>
 
-<ul>
-<li>Scientists remarked that we can make almost all visible colours by mixing only three base colours: red, green and blue. Based on this, we can transform the colours of each pixel into a percentage of mixing for the red colour, a percentage of mixing for the green colour and a percentage of mixing for the blue colour. These are three numbers that completely define the pixel.</li>
-</ul>
+<p>In practice, how we store these extra information is defined in the image format. It is part of a header section that contains metadata (extra information that is not part of the raw data of the image itself) and many more information could be present depending on the format. Some formats even allow adding custom metadata into the image file directly.</p>
+<h2>Storing colors into the memory</h2>
+<p>Scientists remarked that we can make almost all visible colors by mixing only three base colors: <span style="color:red;">red</span>, <span style="color:green;">green</span> and <span style="color:blue;">blue</span>. 
+Based on this, we can transform the colors of each pixel into a percentage of mixing for the red color, a percentage of mixing for the green color and a percentage of mixing for the blue color. 
+These are three numbers that completely define the pixel's color.</p>
 <p>Let's take an example. For a pixel that is totally blue, the memory will look like (in numerical representation):</p>
-<pre><code>[ 0 ] [ 0 ] [ 100 ]
-</code></pre>
+<div style="text-align:center">
+[ 0 ] [ 0 ] [ <span style="color:blue">100</span> ]
+</div>
+
 <p>This is because for a pixel that is totally blue, we do not mix any red nor green. Yellow is the combination of red and green. Thus for a yellow pixel, we'd have:</p>
-<pre><code>[ 100 ] [ 100 ] [ 0 ]
-</code></pre>
-<p>These percentages can be store as an integer from 0 to 100, but to take advantage of the physical memories properties we usually at least store the number in the <code>unsigned char</code> data type (8 bits). To increase the range of colours accessible, we define that 0% corresponds to 0, and 100% corresponds to the maximum value of the <code>unsigned char</code> data type, which is 255. The data type used (usually <code>unsigned char</code> for bitmap images, but can be anything) is defined as a convention is the image data format. When reading an image from a comptuer memory, we need to know in advance its data <em>format</em> it was saved in (<em>i.e.</em> the convention we used to lay out the information into the memory). If we only look at the memory, all we see is a list of numbers without any way to know that it is an image. This is why we need data types and data formats to store and read data on a computer.</p>
+<div style="text-align:center">
+[ <span style="color:red">100</span> ] [ <span style="color:green">100</span> ] [ <span style="color:blue">0</span> ]
+</div>
+
+<h3>Improving the range of colors</h3>
+<p>These percentages could be stored as integers from 0 to 100. However, to take advantage of the physical memories properties, they are usually stored using a different transformation depending on the underlying encoding we are using.</p>
+<p>The simplest encoding uses the 8-bits data type to store each percentage, so that 0 corresponds to 0% and its maximum value (255) corresponds to 100%. Other formats exist, for example with 16-bits data types resulting in a increased color range available: from 0 to 65535.</p>
 	  </div>
   </div>
 
