@@ -15,7 +15,7 @@ Following the same principle explained in [Storing Characters](Storing%20Charact
 An image is usually a rectangle filled with different colors. As we saw in the description of [computer memories](Computer%20Memories.html), the memory of a computer can only store strings of data (uni-dimensional array of bits -- or numbers). 
 We need to find a way to transform a rectangle filled with colors into a string of numbers. 
 
-### "Pixelization"
+### "Pixelization" -- Rasterization
 
 The first step is to divide the image into a combination of small discrete regions. If we make the regions small enough, we can fool our eyes into believing the content is continuous. 
 
