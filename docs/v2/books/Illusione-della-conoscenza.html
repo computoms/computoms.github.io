@@ -1,0 +1,155 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+    .mySlides {display: none}
+    .logoBg {
+        background-image: url("/images/logo/logo32.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+        width: 100%;
+    }
+    h1 h2 {font-weight: bold;}
+    </style>
+    <body>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GITHUB</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GITHUB</a>
+  <a href="/blogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+</div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("navigationBar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-padding-64" id="band">
+<h1>L'illusione della conoscenza</h1>
+<blockquote>
+<p>Perché no pensiamo mai da soli</p>
+</blockquote>
+<p>Steven Sloman, Philip Fernbach</p>
+<h2>Introduction</h2>
+<p>L'esprit est un résolveur de problème flexible, il extrait seulement les informations les plus utiles pour guider nos décisions.
+Il ne stock pas des informations détaillées (prend trop d'énergie).</p>
+<p>Nous avons l'illusion de prendre les choses, alors qu'en réalité nous n'avons qu'une idée partielle de comment elles fonctionnent. Connaissance superficielle des choses.</p>
+<p>La pensée est un maître dans l'art de sélectionner uniquement les informations qui l'intéresse. Il extrait l'essence (capacité d'abstration). L'esprit n'est pas fait pour acquérir et stocker les moindre détails sur chaque objects, mais plutôt nous apprenons de l'expérience pour pouvoir étendre des principes généraux à de nouveaux objets et situations.</p>
+<p>Importance de la collaboration : "partager l'intention" (prêter attention ensemble et se diviser les tâches) est une forme de réflexion commune qui n'est pas observée chez d'autres espèces animales.</p>
+<p><strong>La complexité est abondante</strong> dans le monde, et probablement qui si tout le monde en était conscient, il y aurait <strong>moins de polarisation</strong>.</p>
+<h2>1 - Ce qu'on sait</h2>
+<p>Les personnes surestiment leur connaissance. Mais il suffit de leur demander d'expliquer pour qu'elles se rendent compte de leur illusion de connaissance.</p>
+<p>Capacité de la mémoire humaine, estimé celui certaines hypothèses : environ 500 Mo.</p>
+<p>Conclusion : les être humains ne sont pas un "dépôt de connaissance" ou des disques durs.</p>
+<h2>2 - Pourquoi pensons-nous ?</h2>
+<p>Condition "hypermesia" ou mémoire autobiographique supérieur : personnes qui se rappellent d'absolument tous les détails de tout évènement. "Je reparcours toute ma vie chaque jour et ceci me fait devenir fou !". Souvent, ces personnes sont dépressives. </p>
+<blockquote>
+<p>A quoi sert le cerveau ?</p>
+</blockquote>
+<p>Les réseaux de neurones servent à coordonner des actions complexes de notre corps. Le seul animal dépourvu de neurone, est <strong>l'éponge de mer</strong>. Dans une méduse, il y a environ 800 neurones. Le cerveau est une sorte d'algorithme reprogrammable. </p>
+<p>Ce qui fait de mieux le cerveau, c'est <strong>l'abstraction</strong>. L'hypermesia réduit la capacité de ces personnes à abstraire les choses et tirer des règles générales à partir de cas particuliers. Mémoriser les détails se révèle être inutile pour agir correctement d'un point de vue évolutif.</p>
+<h2>3 - Comment pensons-nous ?</h2>
+<p>Les souris sont en capacités d'associer des stimuli quand ils sont causales (Pavlov), mais pas quand ils ne le sont pas. La pensée causale nous permet d'anticiper le future en étudiant les causes et effets. C'est plus facile pour nous de raisonner "en avant" (vers le future), du à cette causalité.</p>
+<p>Les personnes ignorent les causes alternatives quand ils réfléchissent à un effet, puisque cela prend plus d'énergie mentale de réfléchir de l'effet vers la cause (à remonter le temps).
+Un raisonnement de "diagnostic" (de l'effet à la cause) est propre à l'humain dans sa généralité. </p>
+<h2>4 - Pourquoi pensons-nous ce qui n'est pas vrai ?</h2>
+<p>Expérience avec la piece de monnaie et la flèche qui roule sur une autre pièce.
+5 machinistes prennent 5 minutes pour construire 5 objets. Combien de temps cela prendra-t-il à 100 machinistes de produire 100 objets ?</p>
+<p>Certains processus sont encrés dans le câblage du cerveau et c'est ce qu'on appelle <strong>l'intuition</strong>. C'est un processus inconscient qui apparaît très rapidement (ex: certains anagrammes, ou certains mots mal écrits avec des lettres remplacés par des chiffres ou autres lettres mélangées). Le processus conscient lui prend plus de temps et d'énergie.</p>
+<p>La pensée délibérée (processus conscient) nous connecte aux autres. Expliquer notre raisonnement les rends explicite aux autres et donc permet un raisonnement collectif.</p>
+<p>L'illusion de la connaissance est un produit du raisonnement intuitif. </p>
+<h2>5 - Penser avec notre corps et le monde</h2>
+<p>Comment faisons nous pour passer une porte en prenant le centre, sans faire de calculs de trajectoires compliqués (ce que serait obligé de faire un robot) ? Réponse, nous nous assurons que le flux optique entre le côté droit et gauche de la porte est symétrique (les deux côtés se rapprochent à la même vitesse). [Expérience: avec des lunettes de réalité virtuelle, un des deux côté d'un couloir a été artificiellement accéléré. Résultat : les personnes ne parcours plus le couloir en son centre].</p>
+<p>Quand on regarde une photo avec un ustensile pointant vers la droite, on a automatiquement plus de facilité à utiliser notre main droite.
+Le corps joue un rôle important dans l'élaboration cognitive.</p>
+<p>Les activités cérébrales ne surviennent pas uniquement dans le cerveau.</p>
+<p>Les phobies communes tendent à relater à des situations dangereuse de notre passé préhistorique.</p>
+<p>L'esprit n'est pas dans le cerveau, le cerveau est dans l'esprit (avec le corps et d'autres choses qui font partie de l'esprit).</p>
+<h2>6 - Penser avec les autres personnes</h2>
+<p>L'intelligence de groupe est supérieur à la sommes des intelligence individuelles. Comme les abeilles, les humains ont la capacité de travailler ensemble pour produire une intelligence énorme. La chasse fut probablement une des premières activités qui requit un haut niveau de collaboration et de division des tâches. <strong>Division du travail cognitif</strong>. </p>
+<p>Si chacun est spécialiste dans son domaine de compétence, alors la connaissance/intelligence résultante est supérieur à la somme des intelligences individuelles.</p>
+<p>La masse cérébrales des humains actuels est 3 fois supérieur à celle de nos ancêtre les plus proches, ce qui prend une quantité énorme d'énergie. Effet boule de neige : plus les groupes étaient grands, plus le cerveau grandissait et plus les comportements de groupes devenait élaborés et permettait donc de mieux survivre (d'un point de vue évolutif). La dimension des groupes (tribus préhistoriques) et des cerveaux est très intimement corrélée. Le cerveau est donc particulièrement adapter à la vie en groupe.</p>
+<p>Ex: capacité de partager des idées d'une complexité arbitraire à travers le langage. </p>
+<p>L'humain possède une capacité qu'aucun autre animal ou intelligence artificielle n'est capable : celle de partager sa propre attention avec quelqu'un d'autre. Apprentissage par les pairs.
+Exemple de l'adulte qui joue avec un enfant à cacher des choses. Si l'adule, dans ce contexte, montre du doigt une boite fermée, alors l'enfant sera en capacité de deviner l'intention du père (montrer qu'il y a un objet caché dans cette boite), ce qu'aucun autre animal n'est en capacité de faire.</p>
+<p><strong>Culture cumulative</strong> : capacité (unique aux humains), de transmettre un savoir et des connaissances de générations en générations.</p>
+<p><strong>La malediction de la connaissance</strong> : quand nous connaissons quelque chose, il est difficile d'imaginer que les autres ne la connaissent pas. Penser que les choses qui sont dans notre tête sont dans la tête des autres. L'illusion de la connaissance est l'inverse : penser que ce qui est dans la tête des autres est dans la notre. </p>
+<h2>7 - Penser avec la technologie</h2>
+<p>Aucune machine ne peut partager l'intention, et ceci influe sur notre manière d'interagir avec les machines.</p>
+<p><strong>Crowdsourcing</strong> : se baser sur le volontariat et la connaissance de la population (ex: Wikipedia). Ne fonctionne vraiment bien que si les personnes qui contribuent sont expertes du domaine. Une superintelligence réside dans la communauté. </p>
+<h2>8 - Penser la science</h2>
+<p>Les comportement anti-scientifiques ne sont pas basés sur un raisonnement rationnel ; apporter des informations ne modifie pas ces comportements. Ces comportements sont dus à des effets contextuels et culturels qui les rendent résistant au changement. </p>
+<p>De façon individuelle, nous n'avons pas assez de connaissances pour se former des opinions conscientes sur la science en générale. Ceci nous force à se bases sur les opinions de ceux à qui nous faisons confiance (les experts). </p>
+<p>La première étape pour corriger les croyances fausses c'est d'ouvrir les esprits de ces personnes et de leurs communauté au fait qu'ils peuvent avoir une opinion fausse sur la science. Car personne ne veut se tromper. </p>
+<h2>9 - Penser la politique</h2>
+<p>En général, on se rend pas compte du peu de connaissances que nous avons. Il suffit d'une bribe de savoir pour nous sentir expert. </p>
+<p>Quand les membres d'un groupe ne savent pas beaucoup de choses sur un sujet mais partage une opinion, ils peuvent renforcer réciproquement leur sens de la compréhension.
+Pensée de groupe : quand des personnes discutent en groupe d'une opinion, ils deviennent <strong>plus polarisés</strong>.</p>
+<p>Tenter d'expliquer le fonctionnement d'une mesure réduit le niveau de compréhension des participants et <strong>dépolarise</strong> leurs opinions.</p>
+<p>L'<strong>explication causale</strong> permet d'expliquer et de comprendre les effets d'une cause. Les choix politiques sont souvent effectué, plutôt qu'en connaissant les explications causales des implications de nos choix, par des motivations de principes (comme être pour l'écologie). Mais cela ne prend pas en comptes les implications directes, le problèmes dans ces termes propres, les répercussions et les conséquences.</p>
+<p>Les réactions morales fortes ne demandent pas de réflexion. Les opinions politiques fortes, non plus. Si les positions des personnes sont basés sur des valeurs sacrés plutôt que sur les implications des choix, alors cela ne sert à rien de démontrer leur ignorance et cela ne les fera pas changer d'avis. Plutôt que de débattre sur les manières d'obtenir "le meilleur pour tout le monde" sur certaines questions, qui serait un débat ennuyeux et technique, les politiques préfères attirer l'attention sur des valeurs sacrés et des croyances.</p>
+<p>Les politiques prennent une position avant même d'étudier les pour et les contres des lois à voter. </p>
+<p>La population générale n'ont que rarement les compétences pour prendre une décision consciente concernant un problème social complexe. </p>
+<p><strong>Les données actuelles sur l'ignorance humaines fournissent un argument en faveur de la démocratie représentative.</strong></p>
+<h2>10 - Une nouvelle définition d'intelligent</h2>
+<p>Les grands succès requiert plus qu'une intelligence individuelle. 
+Intelligence fluide vs. cristallisée : l'intelligence cristallisée est la quantité de connaissances d'un individu. L'intelligence fluide est la capacité de raisonnement et d'arriver à des conclusions rapidement.</p>
+<p>Tests de QI : peu importe la manière de tester, tous arrivent plus ou moins au même résultats. Ils analysent la capacité prêter attention et à penser. Le QI est un des meilleurs facteurs prédisant la réussite professionnelle. </p>
+<p>L'intelligence (de groupe) est la capacité d'une personne à contribuer au raisonnement commun et au processus de résolution des problèmes. La conclusion est qu'un groupe n'as pas besoin de beaucoup de personnes avec un haut QI, mais plutôt d'une balance de personnes avec des compétences diverses.</p>
+<p>Une croyance populaire est qu'une start-up a besoin d'une bonne idée de départ. En réalité, elle a besoin d'une bonne équipe (les investisseurs parient sur des équipes, non des idées). </p>
+<p>On devrait reconnaître un plus grand mérite à la communauté en sciences, politiques, dans les affaires et dans la vie quotidienne.</p>
+<h2>11 - Rendre les personnes intelligentes</h2>
+<p>Exemple avec les enfants Brésilien qui n'ont pas reçu d'enseignement scolaire, mais qui ont passé leur enfance à vendre des produits dans la rue : ils réussissent mieux que les enfants scolarisés à estimer les proportions entre les grands nombres (quand ça tient à leur survie, l'expérience fonctionne mieux que l'apprentissage classique). </p>
+<p>Apprendre de manière statique (en mode "conférence") est plus difficile qu'en faisant de l'activité. Le cerveau est fait pour apprendre ce qui nous permet d'entreprendre des actions.</p>
+<p>L'illusion de la compréhension : penser avoir compris comment fonctionne quelque chose jusqu'à ce qu'on se confronte à l'expliquer. Cela rappelle l'illusion de la profondeur explicative. </p>
+<p>On confond souvent ce que savent les experts avec ce que nous savons nous même. </p>
+<p>Il faut éviter la conviction erroné que l'éducation sert à fournir aux personnes la connaissance et les capacités de raisonner indépendamment. L'indépendance intellectuelle n'existe pas. La connaissance dépend des autres. Exemple : un bon mécanicien aura accès au savoir, distribuée dans toute la communauté (constructeurs, autres garages, savoirs d'ingénierie etc).</p>
+<p>Il faut apprendre à prêter attention à la <strong>connaissance</strong> que nous <strong>n'avons pas</strong>. </p>
+<p>Les scientifiques travaillent à la frontière de leur domaine / champ d'expertise, en essayant de transformer ce qui n'est pas connu en quelque chose de connu. Apprendre à agir comme un scientifique, c'est découvrir ce qui n'est pas connu. La science est pratiquée par une communauté. La science est une justification : <strong>observation directe, inférence, ou l'autorité</strong>. 
+Permet de fournir une preuve quand la justification prendrait trop de temps ou serait trop coûteuse. Ce qui sépare la science des croyances religions est qu'il existe le "pouvoir" de la justification : un résultat doit pouvoir être reproductible par n'importe qui. </p>
+<p>La connaissance de ce que je suis légalement responsable ne se trouve pas forcément dans ma tête. </p>
+<p>Comment faire pour savoir si je suis en face d'un expert, et qu'on me raconte la vérité ? Savoir si ce qui est affirmé est basé sur un preuve réplicable. Est-ce que ce résultat a été publié dans une revue scientifique révisée par les pairs ? Avoir un esprit critique. </p>
+<h2>12 - Prendre des décisions de façon plus intelligente</h2>
+<p>La plupart des gens sont des "ennemis de l'explication". Un produit en vente avec trop de détails implique que le produit est trop compliqué pour la majeur partie des gens.
+L'approche des "nudge" : il est plus facile de changer le contexte / l'environnement que de changer une personne.</p>
+<h2>Conclusion</h2>
+<p>3 arguments principal :</p>
+<ul>
+<li>Ignorance</li>
+<li>L'illusion de la connaissance</li>
+<li>La communauté de connaissance</li>
+</ul>
+<p>Il faut une dose bien mesurée de scepticisme. </p>
+        </div>
+    </div>
+</body>
+</html>

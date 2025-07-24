@@ -1,0 +1,78 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+    .mySlides {display: none}
+    .logoBg {
+        background-image: url("/images/logo/logo32.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+        width: 100%;
+    }
+    h1 h2 {font-weight: bold;}
+    </style>
+    <body>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GITHUB</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GITHUB</a>
+  <a href="/blogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+</div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("navigationBar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-padding-64" id="band">
+<h1>Computer Architecture</h1>
+<p>Ever wondered how a computer really works, from programs/windows/buttons down to transistors and electric currents ?</p>
+<p>Here is my take on this challenging task: explaining how a computer works from electricity to desktop applications.</p>
+<h2>The physics behind computers</h2>
+<p>This section explains what is the physics behind computers and how electrons are used to store and process information.</p>
+<h2>The electronic components of a computer</h2>
+<p>This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors. </p>
+<ul>
+<li>Transistors and capacitors</li>
+<li>Logic circuits and logic gates</li>
+</ul>
+<h2>Computer hardware</h2>
+<p>Here are the best known computer hardware explained, such as hard drives, random access memories and processors.</p>
+<h2>Storing information : data formats and conventions</h2>
+<p>...</p>
+<h2>The computer brains : operating systems</h2>
+<h3>What are operating systems</h3>
+<h3>Booting and init of Linux operating systems</h3>
+        </div>
+    </div>
+</body>
+</html>
