@@ -17,6 +17,9 @@
         background-size: 40px;
         width: 100%;
     }
+    .nounder {
+        text-decoration: none;
+    }
     h1 h2 {font-weight: bold;}
     </style>
     <body>
@@ -35,9 +38,9 @@
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
   <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GITHUB</a>
-  <a href="/blogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
-  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
-  <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+  <a href="/blogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">BOOKS</a>
 </div>
 
 <script>
@@ -57,21 +60,66 @@
 <h1>Computer Architecture</h1>
 <p>Ever wondered how a computer really works, from programs/windows/buttons down to transistors and electric currents ?</p>
 <p>Here is my take on this challenging task: explaining how a computer works from electricity to desktop applications.</p>
-<h2>The physics behind computers</h2>
-<p>This section explains what is the physics behind computers and how electrons are used to store and process information.</p>
-<h2>The electronic components of a computer</h2>
-<p>This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors. </p>
-<ul>
-<li>Transistors and capacitors</li>
-<li>Logic circuits and logic gates</li>
-</ul>
-<h2>Computer hardware</h2>
-<p>Here are the best known computer hardware explained, such as hard drives, random access memories and processors.</p>
-<h2>Storing information : data formats and conventions</h2>
-<p>...</p>
-<h2>The computer brains : operating systems</h2>
-<h3>What are operating systems</h3>
-<h3>Booting and init of Linux operating systems</h3>
+<div class="w3-flex" style="flex-direction:row;">
+
+<div class="w3-card w3-hover-shadow w3-margin w3-padding">
+    <a href="physics.html" class="nounder">
+    <header class="w3-container">
+        <h3>Physics of the computer</h3>
+    </header>
+    <div class="w3-container">
+        This section explains what is the physics behind computers and how electrons are used to store and process information. 
+    </div>
+    </a>
+</div>
+
+<div class="w3-card w3-hover-shadow w3-margin w3-padding">
+    <a href="electronics.html" class="nounder">
+    <header class="w3-container">
+        <h3>Fundamental electronic components</h3>
+    </header>
+    <div class="w3-container">
+        This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors. <br/>
+        - Transistors and capacitors <br/>
+        - Logic circuits and logic gates
+    </div>
+    </a>
+</div>
+
+<div class="w3-card w3-hover-shadow w3-margin w3-padding">
+    <a href="hardware.html" class="nounder">
+    <header class="w3-container">
+        <h3>Computer hardware</h3>
+    </header>
+    <div class="w3-container">
+        Here are the best known computer hardware explained, such as hard drives, random access memories and processors.
+    </div>
+    </a>
+</div>
+
+<div class="w3-card w3-hover-shadow w3-margin w3-padding">
+    <a href="data.html" class="nounder">
+    <header class="w3-container">
+        <h3>Data formats and storage conventions</h3>
+    </header>
+    <div class="w3-container">
+        Storing and processing different types of information using binary and conventions.
+    </div>
+    </a>
+</div>
+
+<div class="w3-card w3-hover-shadow w3-margin w3-padding">
+    <a href="os.html" class="nounder">
+    <header class="w3-container">
+        <h3>Operating systems</h3>
+    </header>
+    <div class="w3-container">
+        ...
+    </div>
+    </a>
+</div>
+
+</div>
         </div>
     </div>
 </body>

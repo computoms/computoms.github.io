@@ -1,0 +1,126 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+    .mySlides {display: none}
+    .logoBg {
+        background-image: url("/images/logo/logo32.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+        width: 100%;
+    }
+    .nounder {
+        text-decoration: none;
+    }
+    h1 h2 {font-weight: bold;}
+    </style>
+    <body>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small">GITHUB</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOKS</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">GITHUB</a>
+  <a href="/blogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="myFunction()">BOOKS</a>
+</div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("navigationBar");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-padding-64" id="band">
+<h1>Fundamental forces</h1>
+<p>Matter is composed of molecules that are in turn composed of atoms -- electrons gravitating around a small dense nucleus of protons and neutrons. These tiny particles have different intrinsic physical properties, such as a mass, an electric charge and a spin. </p>
+<p>Elements composing matter are interacting with each other mainly through the concept of <em>forces</em>. </p>
+<blockquote>
+<p>A force is a representation of the physical interaction between two bodies (particles, molecules, objects); where one body is capable of giving an acceleration to the other (that is, to change its speed). </p>
+</blockquote>
+<p>In nature, there are only 4 fundamental forces that can explain all the interactions in our world: </p>
+<ul>
+<li>The gravitational force</li>
+<li>The electromagnetic force</li>
+<li>The strong nuclear force</li>
+<li>The weak nuclear force</li>
+</ul>
+<h2>Mass &amp; the gravitational force</h2>
+<p>The <em>mass</em> is one of the few intrinsic characteristics of matter. This property defines the quantity of inertia a body has. It plays a role in the relationship between a force and the resulting acceleration of a body, through Newton's second law of mechanics (stating that the force equals the mass of a body multiplied by its acceleration). This property also rules the gravitational interaction between two bodies. Indeed, Newton's also discovered that two bodies with given masses are interacting together by attracting each other with a force that depends on both masses. </p>
+<p>IF you hold an apple with your hand and suddenly drop it, it will fall down on the floor. This is due to what we call its "weight", which is a force applied by the Earth onto the apple. Two masses attract each other with a force that is proportional to their distance and to their masses:</p>
+<p><code>W = G. (m1m2)/r^2</code></p>
+<h2>Sub-atomic forces</h2>
+<p>The strong and weak nuclear forces are forces that rule the sub-atomic world. The distance on which these forces can act are very small, on the order of the size of the atom itself and they do not play a role in computers; but are indispensable to maintain the atoms and their composing particles together. </p>
+<h2>The Electromagnetic force: electrons charge &amp; spin</h2>
+<p>The electromagnetic force regroups the electric force that relates to the electric charge of electrons and the magnetic force that relates to the spin of electrons.</p>
+<p>The force applied on a moving particle <code>q</code> of velocity <code>v</code> inside an environment where an electric field <code>E</code> and a magnetic field <code>B</code> is present is equal to:</p>
+<p><code>F = qE + qv x B</code></p>
+<h1>Creating Magnetic Fields</h1>
+<h3>Creating a magnetic field</h3>
+<p>Some materials called <em>ferromagnetic</em> materials can be magnetized, using a large magnetic field to align their internal magnetic orientations. Once magnetized, these materials emit a constant magnetic field.</p>
+<p>Yet, there is another way of creating a magnetic field. When electric charges move, they actually create themselves a magnetic field. A constant electric current in a wire will generate a constant magnetic field. The equations that rule this phenomenon are called the <a href="https://en.wikipedia.org/wiki/Biot-Savart_law">Biot-Savart</a> equations. </p>
+<p>To make the magnetic field stronger, we usually use a coil instead of a single wire. This device is called an <strong>electro-magnet</strong>. You can generate a magnetic field by switching on this device (for example, connecting it to a current generator), and turn off the magnetic field by turning off the device. </p>
+<p>This device is actually using the reverse principle that is used for a current generator. Instead of moving a magnet inside a coil to move electrons, we move electrons to generate a magnetic field.</p>
+<h1>Force fields</h1>
+<p>First, it's been thought that electromagnetic forces were applied instantaneously between charged particles. But later experiments showed that it's not the case, there is an infinitesimal delay. If you make one particle oscillate around a position, another particle close by will feel the electric force, with a varying intensity (corresponding to its physical displacement) but with a small phase shift. This has big implications in terms of physics. </p>
+<p>Let's take the parallel of two floating tennis balls in a pool of water. If the two tennis balls are close enough, you could quickly move the first tennis ball and this will induce the second to move; through the water. If you didn't see the water, it would be like applying a force onto the second ball using the first one; just like the electric force. If the two balls are too far apart, you cannot do the same, i.e. the force that you can apply on the second ball depends on the distance. Now, if you make the tennis ball oscillate in the water, this will make the second ball move in a different way; because you created waves into the water. These waves propagate on the water surface and can have an effect much further away.</p>
+<p>This phase shift in the propagation of electric/magnetic forces means that it is possible, much like in the water analogy, to create electromagnetic <em>waves</em>. But waves usually propagate through a medium, and so physicists invented a name for this medium: a <em>field</em>. The <strong>electromagnetic field</strong> was born. The electromagnetic waves can have effects much much further than the static forces would allow. They are travelling at the speed of light, which is <code>299 792 458 m/s</code>.</p>
+<p>More theoretically, a force field has actually a mathematical definition; which basically defines "a non-contact force applied to a partile at various positions in space." [Wikipedia]</p>
+<h1>Electric force and electric field</h1>
+<p>The electric force is the force applied by a particle of charge <code>q</code> to other particles with a charge. The following formula gives the value of the electric force that a particle of charge <code>q_1</code> applies on another particle of charge <code>q_2</code> separated by distance <code>r</code>: </p>
+<p><code>F = k q_1 * q_2 / (r * r)</code></p>
+<p>where <code>k</code> is the Coulomb's constant.</p>
+<h2>Moving electrons, generating a current</h2>
+<p>How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large <em>fixed</em> charge <code>q_1</code> (i.e. a battery). The other way to make them move is by using a current generator (see next posts).</p>
+<h1>Magnetic Force</h1>
+<p>The magnetic force is the force generated by either:</p>
+<ul>
+<li>a charged moving particle</li>
+<li>a chuck of matter than has special properties, called a permanent magnet</li>
+</ul>
+<h2>Moving charges</h2>
+<p>When a charge is moving, it generates a magnetic force on other particles, that is proportional to its electric charge and speed. </p>
+<h2>Permanent magnets and spins</h2>
+<p>A permanent magnet is a material that generates a static magnetic field <code>B</code>. These types of materials are called ferromagnetic materials and can actually be <em>magnetized</em> (by applying a large magnetic field on them) to become permanent magnets. </p>
+<p>The <strong>spin</strong> of particles is responsible for the magnetic orientation of atoms. In most materials, these magnetic orientations are ordered randomly such that the resulting magnetic orientation of the material is zero. In ferromagnetic materials, the magnetic orientation of the atoms have a tendency to align with neighboring atoms. In such a case, it creates regions inside the material where the magnetic orientation is aligned. Applying a large magnetic field to these matter will cause the regions to align with each other so that the total magnetic orientation of a material is aligned to form a permanent magnet.</p>
+<p>In summary, a ferro-magnetic material:</p>
+<ul>
+<li>can be <em>magnetized</em> in order to create a permanent magnet -- a material that creates a permanent static magnetic field. </li>
+<li>can be modified so that its magnetic orientation changes by applying a large magnetic field. </li>
+</ul>
+<p>This allows to encode information into ferromagnetic pieces by changing the magnetic orientation / probing the magnetic field of each ferromagnetic piece.</p>
+<h2>Creating Magnetic Fields</h2>
+<h3>Creating a magnetic field</h3>
+<p>Some materials called <em>ferromagnetic</em> materials can be magnetized, using a large magnetic field to align their internal magnetic orientations. Once magnetized, these materials emit a constant magnetic field.</p>
+<p>Yet, there is another way of creating a magnetic field. When electric charges move, they actually create themselves a magnetic field. A constant electric current in a wire will generate a constant magnetic field. The equations that rule this phenomenon are called the <a href="https://en.wikipedia.org/wiki/Biot-Savart_law">Biot-Savart</a> equations. </p>
+<p>To make the magnetic field stronger, we usually use a coil instead of a single wire. This device is called an <strong>electro-magnet</strong>. You can generate a magnetic field by switching on this device (for example, connecting it to a current generator), and turn off the magnetic field by turning off the device. </p>
+<p>This device is actually using the reverse principle that is used for a current generator. Instead of moving a magnet inside a coil to move electrons, we move electrons to generate a magnetic field.</p>
+        </div>
+    </div>
+</body>
+</html>
