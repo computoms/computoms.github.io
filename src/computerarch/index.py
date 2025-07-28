@@ -11,21 +11,19 @@ def build_index():
     <p>Here is my take on this challenging task: explaining how a computer works from electricity to desktop applications.</p>
     <div class="w3-flex" style="flex-wrap: wrap;">
     """
-    index = htmlutils.titlecard('Physics of the computer', 
+    index = htmlutils.imagecard('Physics of the computer', 
             'This section explains what is the physics behind computers and how electrons are used to store and process information.', 
-            'physics.html') + \
-            htmlutils.titlecard('Fundamental electronic components',
+            'physics.html', 'images/physics.jpg') + \
+            htmlutils.imagecard('Fundamental electronic components',
             """
-            This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors. <br/>
-        - Transistors and capacitors <br/>
-        - Logic circuits and logic gates
-            """, 'electronics.html') + \
-            htmlutils.titlecard('Computer hardware',
+            This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors, as well as logic gates
+            """, 'electronics.html', 'images/electronics.jpg') + \
+            htmlutils.imagecard('Computer hardware',
         "Here are the best known computer hardware explained, such as hard drives, random access memories and processors.",
-        'hardware.html') + \
-            htmlutils.titlecard('Data formats and storage conventions',
+        'hardware.html', 'images/hardware.jpg') + \
+            htmlutils.imagecard('Data formats and storage conventions',
             'Storing and processing different types of information using binary and conventions.', 
-            'data.html') #+ \
+            'data.html', 'images/data.jpg') #+ \
             #htmlutils.titlecard('Operating systems',
             #'The human machine interface to control the electronics',
             #'os.html')
