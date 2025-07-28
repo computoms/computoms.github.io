@@ -1,0 +1,13 @@
+body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}

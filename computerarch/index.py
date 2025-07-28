@@ -1,0 +1,38 @@
+import utils
+import htmlutils
+import layout
+
+def build_index():
+    header = """
+    <h1>Computer Architecture</h1>
+
+    <p>Ever wondered how a computer really works, from programs/windows/buttons down to transistors and electric currents ?</p>
+
+    <p>Here is my take on this challenging task: explaining how a computer works from electricity to desktop applications.</p>
+    <div class="w3-flex" style="flex-wrap: wrap;">
+    """
+    index = htmlutils.titlecard('Physics of the computer', 
+            'This section explains what is the physics behind computers and how electrons are used to store and process information.', 
+            'physics.html') + \
+            htmlutils.titlecard('Fundamental electronic components',
+            """
+            This section explains what are the basic building blocks of computer hardware : the most used components such as transistors and capacitors. <br/>
+        - Transistors and capacitors <br/>
+        - Logic circuits and logic gates
+            """, 'electronics.html') + \
+            htmlutils.titlecard('Computer hardware',
+        "Here are the best known computer hardware explained, such as hard drives, random access memories and processors.",
+        'hardware.html') + \
+            htmlutils.titlecard('Data formats and storage conventions',
+            'Storing and processing different types of information using binary and conventions.', 
+            'data.html') #+ \
+            #htmlutils.titlecard('Operating systems',
+            #'The human machine interface to control the electronics',
+            #'os.html')
+    footer = "</div>"
+    return header + index + footer
+
+def gen():
+    utils.generate_markdowns_in_dir('computerarch')
+    utils.copy_images('computerarch')
+    utils.write_file('computerarch/index.html', layout.root(build_index()))

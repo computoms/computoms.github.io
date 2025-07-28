@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <h1 id="lillusione-della-conoscenza-the-knowledge-illusion">L'illusione della conoscenza - The Knowledge Illusion</h1>
+<div class="w3-flex">
+    <img class="w3-padding" src="images/illusione-della-conoscenza.png" alt="Illusione della Conoscenza - Cover" width="250px" />
+    <div style="width: 400px;" class="w3-padding">
+    <p><i>Perché non pensiamo mai da soli</i></p>
+    <p>Steven Sloman, Philip Fernbach</p>
+    </div>
+</div>
+
+<div class="toc">
+<ul>
+<li><a href="#lillusione-della-conoscenza-the-knowledge-illusion">L'illusione della conoscenza - The Knowledge Illusion</a><ul>
+<li><a href="#core-premise">🔍 Core Premise</a></li>
+<li><a href="#key-ideas-concepts">🧠 Key Ideas &amp; Concepts</a><ul>
+<li><a href="#1-the-illusion-of-understanding">1. The Illusion of Understanding</a></li>
+<li><a href="#2-the-mind-is-not-a-hard-drive">2. The Mind Is Not a Hard Drive</a></li>
+<li><a href="#3-thinking-is-distributed">3. Thinking Is Distributed</a></li>
+<li><a href="#4-reasoning-is-for-communication">4. Reasoning Is for Communication</a></li>
+<li><a href="#5-why-misinformation-spreads">5. Why Misinformation Spreads</a></li>
+<li><a href="#6-science-and-democracy-rely-on-shared-knowledge">6. Science and Democracy Rely on Shared Knowledge</a></li>
+</ul>
+</li>
+<li><a href="#final-message">📘 Final Message</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#1-what-we-know">1 – What We Know</a></li>
+<li><a href="#2-why-do-we-think">2 – Why Do We Think?</a></li>
+<li><a href="#3-how-do-we-think">3 – How Do We Think?</a></li>
+<li><a href="#4-why-do-we-think-things-that-arent-true">4 – Why Do We Think Things That Aren’t True?</a></li>
+<li><a href="#5-thinking-with-our-body-and-the-world">5 – Thinking with Our Body and the World</a></li>
+<li><a href="#6-thinking-with-other-people">6 – Thinking with Other People</a></li>
+<li><a href="#7-thinking-with-technology">7 – Thinking with Technology</a></li>
+<li><a href="#8-thinking-about-science">8 – Thinking About Science</a></li>
+<li><a href="#9-thinking-about-politics">9 – Thinking About Politics</a></li>
+<li><a href="#10-a-new-definition-of-intelligence">10 – A New Definition of Intelligence</a></li>
+<li><a href="#11-making-people-smarter">11 – Making People Smarter</a></li>
+<li><a href="#12-making-smarter-decisions">12 – Making Smarter Decisions</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><em>Here is a summary generated by ChatGPT</em></p>
+<h2 id="core-premise">🔍 <strong>Core Premise</strong></h2>
+<p>We think we understand much more than we actually do. Most of what we "know" resides not in our own minds but in the minds of others or in our environment. Human intelligence is largely <strong>collective</strong>—we think in communities.</p>
+<hr />
+<h2 id="key-ideas-concepts">🧠 <strong>Key Ideas &amp; Concepts</strong></h2>
+<h3 id="1-the-illusion-of-understanding">1. <strong>The Illusion of Understanding</strong></h3>
+<ul>
+<li>People consistently overestimate their understanding of how things work (e.g., toilets, zippers, government policies).</li>
+<li>When asked to explain in detail, this illusion is exposed—this is known as the <strong>"illusion of explanatory depth."</strong></li>
+</ul>
+<h3 id="2-the-mind-is-not-a-hard-drive">2. <strong>The Mind Is Not a Hard Drive</strong></h3>
+<ul>
+<li>Human memory is not built to store detailed information.</li>
+<li>Instead, the brain is optimized for <strong>abstracting</strong>, <strong>approximating</strong>, and <strong>interacting</strong> with others.</li>
+</ul>
+<h3 id="3-thinking-is-distributed">3. <strong>Thinking Is Distributed</strong></h3>
+<ul>
+<li>We rely on others (experts, tools, books, communities) to know and remember.</li>
+<li>Intelligence is <strong>not individual</strong>; it is <strong>distributed across people and systems</strong>.</li>
+<li>This explains why societies can build complex technologies, even though few individuals understand them fully.</li>
+</ul>
+<h3 id="4-reasoning-is-for-communication">4. <strong>Reasoning Is for Communication</strong></h3>
+<ul>
+<li>We developed reasoning not to uncover truth, but to <strong>justify our actions</strong> and <strong>communicate with others</strong>.</li>
+<li>We are biased reasoners (prone to confirmation bias), but these biases often serve a social function.</li>
+</ul>
+<h3 id="5-why-misinformation-spreads">5. <strong>Why Misinformation Spreads</strong></h3>
+<ul>
+<li>People form strong opinions with little understanding.</li>
+<li>Group dynamics, not individual reasoning, often drive political and scientific beliefs.</li>
+<li>Beliefs spread more through <strong>social identity</strong> than through facts or evidence.</li>
+</ul>
+<h3 id="6-science-and-democracy-rely-on-shared-knowledge">6. <strong>Science and Democracy Rely on Shared Knowledge</strong></h3>
+<ul>
+<li>Since no one can know everything, <strong>society depends on trusted systems</strong> (e.g., science, expert communities).</li>
+<li>Effective democratic decisions require humility and deference to expert knowledge.</li>
+<li><strong>Representative democracy</strong> is better than direct democracy for complex problems.</li>
+</ul>
+<hr />
+<h2 id="final-message">📘 <strong>Final Message</strong></h2>
+<blockquote>
+<p><strong>"We don’t think alone."</strong>
+Understanding our limits, recognizing our dependence on others, and building robust knowledge communities is essential in a complex world.
+True intelligence lies not in what we know individually, but in how well we <strong>collaborate</strong>, <strong>share</strong>, and <strong>question together</strong>.</p>
+</blockquote>
+<hr />
+<p><em>Here are my notes and personal highlights</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>The mind is a flexible problem-solver; it extracts only the most useful information to guide our decisions.
+It doesn’t store detailed information -- this would take too much energy.</p>
+<p>We live under the illusion that we grasp things, while in reality, we only have a partial idea of how they work. Our knowledge is superficial.</p>
+<p>Thought is a master at selecting only the information that interests it. It extracts the essence (the power of abstraction). The mind is not designed to acquire and store every little detail about each object -- instead, we learn from experience in order to apply general principles to new objects and situations.</p>
+<p>The importance of collaboration: "sharing intention" (paying attention together and dividing tasks) is a form of collective thinking not observed in other animal species.</p>
+<p><strong>Complexity is abundant</strong> in the world, and if more people were aware of it, there would likely be <strong>less polarization</strong>.</p>
+<hr />
+<h2 id="1-what-we-know">1 – What We Know</h2>
+<p>People tend to overestimate what they know. But just asking them to explain something can make them realize their illusion of understanding.</p>
+<p>The estimated human memory capacity, according to some hypotheses, corresponds to around 500 MB.</p>
+<p>Conclusion: humans are not “knowledge repositories” or hard drives.</p>
+<hr />
+<h2 id="2-why-do-we-think">2 – Why Do We Think?</h2>
+<p>Condition: <strong>Hyperthymesia</strong>, or superior autobiographical memory – people who remember every detail of every event.</p>
+<blockquote>
+<p>“I relive my entire life every day and it’s driving me mad!”
+These individuals are often depressed.</p>
+<p>What is the brain for?</p>
+</blockquote>
+<p>Neural networks coordinate the complex actions of our body. The only animal without neurons is the <strong>sea sponge</strong>. A jellyfish has about 800 neurons. The brain is like a reprogrammable algorithm.</p>
+<p>What the brain does best is <strong>abstraction</strong>. Hyperthymesia reduces the ability to abstract and to generalize rules from specific cases. Memorizing details turns out to be useless from an evolutionary perspective when it comes to effective action.</p>
+<hr />
+<h2 id="3-how-do-we-think">3 – How Do We Think?</h2>
+<p>Mice can associate stimuli when they are causally linked (Pavlov), but not otherwise.
+Causal thinking allows us to anticipate the future by understanding causes and effects. It’s easier for us to reason “forward” (into the future) due to this causal bias.</p>
+<p>People often ignore alternative causes when reasoning about an effect, because reasoning backward (from effect to cause) requires more mental energy.
+Diagnostic reasoning (from effect to cause) is a uniquely human capacity.</p>
+<hr />
+<h2 id="4-why-do-we-think-things-that-arent-true">4 – Why Do We Think Things That Aren’t True?</h2>
+<p>Experiment with a coin and an arrow rolling on another coin.
+5 machinists build 5 objects in 5 minutes. How long would it take 100 machinists to build 100 objects?</p>
+<p>Some processes are hardwired into the brain—this is what we call <strong>intuition</strong>. It’s an unconscious process that appears very quickly (e.g., certain anagrams, or words with jumbled letters replaced by numbers).
+Conscious thought, by contrast, takes more time and energy.</p>
+<p><strong>Deliberate thought</strong> (conscious reasoning) connects us to others. Explaining our reasoning makes it explicit and enables collective reasoning.</p>
+<p>The illusion of knowledge is a product of intuitive reasoning.</p>
+<hr />
+<h2 id="5-thinking-with-our-body-and-the-world">5 – Thinking with Our Body and the World</h2>
+<p>How do we pass through a doorway without calculating complex trajectories (which a robot would need to do)?
+Answer: we ensure that the optical flow from the left and right sides of the doorway is symmetrical (both sides approach at the same speed).
+[Experiment: with VR goggles, one side of a hallway was artificially sped up. Result: people no longer walked down the center.]</p>
+<p>Looking at a photo of a utensil pointing right makes it easier to use your right hand.
+The body plays an important role in cognition.</p>
+<p>Brain activity does not occur only in the brain.</p>
+<p>Common phobias relate to dangerous situations from our prehistoric past.</p>
+<p>The mind is not in the brain—the brain is part of the mind (along with the body and other systems).</p>
+<hr />
+<h2 id="6-thinking-with-other-people">6 – Thinking with Other People</h2>
+<p>Group intelligence is greater than the sum of individual intelligences. Like bees, humans can collaborate to produce tremendous collective intelligence. Hunting was probably one of the first activities that required a high level of collaboration and task division—<strong>cognitive division of labor</strong>.</p>
+<p>If everyone specializes in a different domain, the resulting collective intelligence exceeds the sum of its parts.</p>
+<p>Modern humans have brains three times larger than our closest ancestors—this requires a huge amount of energy.
+<strong>Snowball effect</strong>: as groups grew, brains grew larger, group behaviors became more complex, and survival improved. Group size and brain size are closely correlated. Our brains are adapted to group life.</p>
+<p>Example: sharing arbitrarily complex ideas through language.</p>
+<p>Humans have a unique ability: <strong>shared attention</strong>.
+Example: an adult playing with a child hides something. If the adult points to a closed box, the child can infer the adult’s intention (that the object is hidden there)—no animal can do this.</p>
+<p><strong>Cumulative culture</strong>: the uniquely human ability to pass knowledge across generations.</p>
+<p><strong>The curse of knowledge</strong>: once we know something, it’s hard to imagine that others don’t.
+The <strong>illusion of knowledge</strong> is the opposite: believing what others know is also in our own heads.</p>
+<hr />
+<h2 id="7-thinking-with-technology">7 – Thinking with Technology</h2>
+<p>No machine can share intention, and this affects how we interact with them.</p>
+<p><strong>Crowdsourcing</strong>: relying on voluntary knowledge from the public (e.g., Wikipedia). This only works well when contributors are domain experts. Superintelligence resides in communities.</p>
+<hr />
+<h2 id="8-thinking-about-science">8 – Thinking About Science</h2>
+<p>Anti-scientific behaviors are not based on rational thinking. Simply presenting information doesn’t change them. These behaviors stem from cultural and contextual factors, which make them resistant to change.</p>
+<p>Individually, we don’t have enough knowledge to form conscious opinions on science.
+We rely on the opinions of trusted experts.</p>
+<p>The first step to correcting false beliefs is to open people’s minds (and their communities) to the fact that they <em>may</em> be wrong. Nobody wants to be wrong.</p>
+<hr />
+<h2 id="9-thinking-about-politics">9 – Thinking About Politics</h2>
+<p>We’re generally unaware of how little we know. A tiny bit of knowledge can make us feel like experts.</p>
+<p>When group members know little but share an opinion, they reinforce each other’s sense of understanding.
+<strong>Groupthink</strong>: group discussions lead to <strong>greater polarization</strong>.</p>
+<p>Explaining how a policy works reduces perceived understanding and <strong>depolarizes</strong> opinions.</p>
+<p><strong>Causal explanation</strong> helps us understand the effects of causes.
+Political choices are often based on principles (e.g., being pro-environment) rather than understanding the direct implications of decisions.</p>
+<p>Strong moral reactions require no reflection. Strong political opinions don’t either.
+If opinions are based on sacred values rather than consequences, showing someone they’re wrong won’t change their mind.
+Rather than debating how to “do the best for everyone” (boring, technical debates), politicians prefer to emphasize sacred values and beliefs.</p>
+<p>Politicians often take a stance <strong>before</strong> studying the pros and cons of the law they’re voting on.</p>
+<p>The general public rarely has the tools to make informed decisions about complex social problems.</p>
+<p><strong>Current research on human ignorance supports representative democracy.</strong></p>
+<hr />
+<h2 id="10-a-new-definition-of-intelligence">10 – A New Definition of Intelligence</h2>
+<p>Big success requires more than individual intelligence.
+<strong>Fluid vs. crystallized intelligence</strong>:</p>
+<ul>
+<li>Crystallized: the amount of knowledge a person has.</li>
+<li>Fluid: the ability to reason and solve problems quickly.</li>
+</ul>
+<p>IQ tests: regardless of the method, results are similar. They measure attention and thinking ability. IQ is one of the best predictors of career success.</p>
+<p><strong>Group intelligence</strong> is the ability to contribute to collective reasoning and problem-solving.
+A group doesn’t need lots of high-IQ individuals, but rather a <strong>balance of diverse skills</strong>.</p>
+<p>Popular belief: a startup needs a great idea.
+Reality: it needs a great team (investors bet on teams, not ideas).</p>
+<p>We should give more credit to <strong>community</strong> in science, politics, business, and everyday life.</p>
+<hr />
+<h2 id="11-making-people-smarter">11 – Making People Smarter</h2>
+<p>Example: Brazilian children without schooling who sell goods in the street outperform schooled children in estimating large-number proportions. When survival is at stake, <strong>experience beats classical learning</strong>.</p>
+<p>Static learning (lecture-style) is harder than active learning.
+The brain is made to learn through <strong>action</strong>.</p>
+<p><strong>Illusion of understanding</strong>: thinking you understand something until you try to explain it. Related to the illusion of explanatory depth.</p>
+<p>We often confuse expert knowledge with our own.</p>
+<p>We must avoid the false belief that education provides people with knowledge and reasoning skills to be intellectually independent. <strong>Intellectual independence doesn’t exist</strong>—knowledge depends on others.
+Example: a good mechanic accesses knowledge spread throughout the community (manufacturers, other garages, engineering know-how, etc.).</p>
+<p>We must learn to pay attention to what we <strong>don’t know</strong>.</p>
+<p>Scientists work at the frontier of their field, trying to turn the unknown into the known. Learning to act like a scientist means discovering what is not yet known.</p>
+<p>Science is done <strong>by a community</strong>. Science is justified by <strong>direct observation, inference, or authority</strong>.</p>
+<p>Science provides evidence where other justifications would be too slow or costly.
+What separates science from belief systems is the <strong>power of justification</strong>: results must be reproducible.</p>
+<p>What I’m legally responsible for knowing may not be in my head.</p>
+<p>How do I know if I’m talking to an expert and hearing the truth?
+Check whether the claim is based on <strong>replicable evidence</strong>.
+Was it published in a peer-reviewed journal?
+Have a <strong>critical mindset</strong>.</p>
+<hr />
+<h2 id="12-making-smarter-decisions">12 – Making Smarter Decisions</h2>
+<p>Most people are "enemies of explanation." A product for sale with too many details implies that the product is too complicated for most people.
+The "nudge" approach: it’s easier to change the context/environment than to change a person.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>3 main arguments:</p>
+<ul>
+<li>Ignorance</li>
+<li>The illusion of knowledge</li>
+<li>The knowledge community</li>
+</ul>
+<p>A well-measured dose of skepticism is necessary.</p></div></div></body></html>

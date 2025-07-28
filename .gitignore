@@ -1,4 +1,2 @@
-start-local.sh
-.DS_Store
-archive.zip
-.build/
+**/*.DS_Store
+**/__pycache__

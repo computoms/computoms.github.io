@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <h1 id="1-computer-electronic-components">1. Computer electronic components</h1>
+<div class="toc">
+<ul>
+<li><a href="#1-computer-electronic-components">1. Computer electronic components</a><ul>
+<li><a href="#11-capacitors">1.1. Capacitors</a></li>
+<li><a href="#12-transistors">1.2. Transistors</a></li>
+<li><a href="#13-mosfet-transistors">1.3. MOSFET transistors</a></li>
+<li><a href="#14-mosfet-types">1.4. MOSFET types</a></li>
+<li><a href="#15-floating-gate-transistors">1.5. Floating-gate transistors</a></li>
+<li><a href="#16-principle-of-operation">1.6. Principle of operation</a></li>
+<li><a href="#17-physical-principle">1.7. Physical principle</a></li>
+<li><a href="#18-logic-circuits">1.8. Logic circuits</a></li>
+<li><a href="#19-logic-gates">1.9. Logic gates</a><ul>
+<li><a href="#191-and-gate">1.9.1. AND Gate</a></li>
+<li><a href="#192-or-gate">1.9.2. OR Gate</a></li>
+<li><a href="#193-not-gate">1.9.3. NOT Gate</a></li>
+</ul>
+</li>
+<li><a href="#110-more-advanced-logic-circuits">1.10. More advanced logic circuits</a><ul>
+<li><a href="#1101-dram-cell-for-ram-storage">1.10.1. DRAM Cell (for RAM storage)</a></li>
+<li><a href="#1102-sram-cell-for-processor-cache-storage">1.10.2. SRAM Cell (for processor cache storage)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="11-capacitors">1.1. Capacitors</h2>
+<p>A capacitor is a pair of metal plates that is used to store an electric charge. The metal plates are separated by an oxide (= non conductive material) and are usually rolled together in a cylinder to gain space. It acts similarly to a battery, can be charged and discharged. But unlike batteries which use a chemical reaction to store electrical energy, the capacitor directly uses the electrons and keeps them on one of the metal plates while the other one is depleted (electrons are removed).</p>
+<p>Here is its schematic symbol</p>
+<p><img src="images/Capacitor.png" class="w3-center" width="100px" /></p>
+<p>One of its advantages is that it can be charged and discharged very fast; as compared for example to a battery. Capacitors are heavily used in electronics boards when filtering electronic signals for example. </p>
+<h2 id="12-transistors">1.2. Transistors</h2>
+<p>The transistor is the most important electronic component for electronics and computers. It forms the basis of almost all logic operations on data and is also used for storing data (for example, in SRAM memories).</p>
+<p>A transistor is basically a 3 terminal device that acts as an electronic switch.</p>
+<table width="100%" class="w3-center">
+    <tr><th>
+        <img src="images/PushSwitch.svg" class="w3-center" width="60%" />
+    </th></tr>
+    <tr><td class="w3-text-gray">Example of a push-switch represented by its schematics.</td></tr>
+</table>
+
+<p>Like a switch, it has an input (left terminal on the above schematics), output (right terminal) and a control terminal (the push mechanism on top). In one position (when open) no electric current can flow from input to output terminals and in the other position a current can freely flow from input to output. </p>
+<p>In a transistor, the push part of the switch is actually determined by the voltage (i.e. charge) applied on the control terminal.</p>
+<h2 id="13-mosfet-transistors">1.3. MOSFET transistors</h2>
+<p>The typical implementation of a transistor for computer and logic operations is the so-called MOSFET transistor (Metal Oxide Semiconductor Field Effect Transistor). These are using the properties of semiconductor materials to implement the switch behavior by stacking 3 different materials:</p>
+<ul>
+<li>A semiconductor (typically silicon)</li>
+<li>An oxide (typically Silicon oxide for large technologies)</li>
+<li>A metal on top</li>
+</ul>
+<p>This stack of materials gives part of the name to the transistor (the MOS part). </p>
+<table width="100%" class="w3-center">
+    <tr><th>
+        <img src="images/MOSFET.png" class="w3-center" width="60%" />
+    </th></tr>
+    <tr><td class="w3-text-gray">Physical representation of a MOSFET transistor.</td></tr>
+</table>
+
+<p>The three terminals of a MOSFET transistor are usually called the Drain and Source (for input/output terminals) and the Gate terminal, that acts as the switch control. When a given voltage (which value is given by transistor intrisic characteristics) is applied on the gate, the Source/Drain connection becomes like a wire. The fourth connection on the image above (Body) is not necessary in most of the cases and is usually wired to the source. The n+ and p corresponds to the doping type of the semiconductor, which will determine the type of the transistor (see below MOSFET types). </p>
+<h2 id="14-mosfet-types">1.4. MOSFET types</h2>
+<p>There exists two main types of MOSFET transistors that we call n-type and p-type MOSFETs. Without going into the details of why we call them like this, the main difference is that a n-type MOSFET will let the current flow from Drain to Source only when a <strong>positive</strong> voltage is applied on its gate. The p-type will do so only when a <strong>negative</strong> voltage is applied on its gate (with respect to the source terminal voltage). </p>
+<p>In electronics we usually represent devices with symbols. Here are the symbols for the nMOSFET and pMOSFET transistors.</p>
+<p><img src="images/MOSFET.svg" height="300px" class="w3-center" width="100%" /></p>
+<p>The <em>p</em> and <em>n</em> letters corresponds to the doping of the semiconductor, such as Silicon, used for these devices. Implanting atoms that have more electrons (<em>n</em> type) or less electrons (<em>p</em> type) than Silicon allows to modify the electrical properties of the semiconductor. See <a href="https://en.wikipedia.org/wiki/Doping_(semiconductor)">the Wikipedia article on semiconductor doping</a> and <a href="https://en.wikipedia.org/wiki/MOSFET">the Wikipedia article on MOSFETs</a> for more information. </p>
+<h2 id="15-floating-gate-transistors">1.5. Floating-gate transistors</h2>
+<p>The electronic component that forms the basis of a flash memory is called a <em>Floating gate transistor</em> (FG Transistor). It is a MOSFET transistor with the MOS structure -- that contains the gate of the transistor -- modified. Instead of having the three-layer structure metal-oxide-semiconductor; we have a five-layer structure: metal-oxide-metal-oxide-semiconductor (MOMOS). The structure is represented in the following image.</p>
+<p><img src="images/FGTransistor.png" class="w3-center" width="60%" /></p>
+<p>The middle part is composed of a metallic gate, that is stacked over an insulator (usually, an oxide such as silicon oxide) on top of a second metallic part -- called the floating-gate -- on top of another insulator layer of a slightly different thickness which in turn is placed over the semiconductor substrate that form the backbone of the transistor.</p>
+<h2 id="16-principle-of-operation">1.6. Principle of operation</h2>
+<p>The FG transistor works a bit like a capacitor: its floating gate part can be electrically charged or discharged. Basically, when the floating gate of the transistor is charged, the transistor is passing -- it lets the current flow from its source to drain terminals. When the floating gate is not charged, it is blocking. This way, we can encode bit 1 (FG charged) or 0 (FG discharged). </p>
+<p>But, if the principle is similar to the capacitor, why do capacitors inside DRAMs loose their charge after a while and need a refresh mechanism whereas FG transistors do not?</p>
+<p>The answer lies in the physical principle that is at play in a floating-gate transistor.</p>
+<h2 id="17-physical-principle">1.7. Physical principle</h2>
+<p>The FG transistor is different from a capacitor: the electrons that are stored in the floating gate are forced into this area using a different physical principle than when charging a capacitor. </p>
+<p>When charging a capacitor, you typically apply a voltage between its terminals in order to move electrons from one plate to the other. Electrons are flowing through metallic plates and metallic wires -- conductive materials. </p>
+<p>To charge the floating-gate of a FG transistor, you apply a large voltage on its <em>gate</em> terminal while also applying a voltage on its source terminal. While a large voltage on the gate of the transistor opens its channel so that electrons can flow from source to drain, it also produces an electric field inside the MOMOS structure so that electrons are attracted to the gate terminal. Because of the oxide layers -- that are electrically insulating materials -- electrons cannot flow from source to gate. But if the voltage is large enough, and the oxide layer is thin enough, a physical phenomenon can occur that allows electrons to <em>jump</em> from the semiconductor to the metal of the floating-gate -- passing through the oxide layer. This phenomenon is called <strong>quantum tunnelling</strong>. </p>
+<p>When some electrons were able to jump from the semiconductor into the floating-gate, and we remove the voltages, they have no more the possibility to jump back to the semiconductor, because no more "large" voltage is applied. They stay here forever. That is what makes the Flash memories persistent. </p>
+<h2 id="18-logic-circuits">1.8. Logic circuits</h2>
+<p>Using only transistors, we can already implement data processing using logic operations. Let's look at several examples of implementation of logic operations using transistors. </p>
+<p>Electronics uses mainly the charge storage for processing data. As you probably know, data is stored and processed in binary numbers in computers and electronic circuits. Then a given charge (for example, 5 volts) will indicate a high signal (corresponding to bit 1) and a zero charge will indicate a low-signal (bit 0). So, in logic electronic circuits we usually have a high-signal voltage source, often called Vdd (usually corresponding to 5V) and a low-signal voltage source, often called Vss (usually corresponding to 0V).</p>
+<p>It is important to note that we usually try to reduce the energy loss in an electronic circuit (for example, to save battery life of a laptop computer). This means, we need to reduce the power dissipations which highly depend on the current that flows in the circuit. In logic parts of an electronic chip, the voltages (Vdd and Vss) are used to represent binary signals and only the voltage values will play a role in the logic (not the currents).</p>
+<p>The logic circuits that are implemented using n-type and p-type MOS transistors are called Complementary Metal Oxide Semiconductor logic circuits (CMOS logic), see <a href="MOSFET Transistors.html">MOSFET Transistors</a>.</p>
+<h2 id="19-logic-gates">1.9. Logic gates</h2>
+<h3 id="191-and-gate">1.9.1. AND Gate</h3>
+<p>The AND Gate is a logic gate, an electronic component that can perform logic operations on the voltage it is applied on its input pins. It allows to apply the AND logic operation on its two input pins.</p>
+<p>Here is the electronic schematics of the AND gate:</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/Gate-AND.svg" class="w3-center" width="60%" />
+    </th></tr>
+</table>
+
+<p>We can see that pretty simply, the only possibility to have a high voltage at the output (Out) is to have both A and B signals high. If one of them is low, the Vdd signal will not be able to come to the Out, but one of the Vss will pass through the PMOS transistors of the bottom. This represents the AND logic.</p>
+<h3 id="192-or-gate">1.9.2. OR Gate</h3>
+<p>The OR Gate is a logic gate, an electronic component that can perform logic operations on the voltage it is applied on its input pins. It allows to apply the OR logic operation on its two input pins.</p>
+<p>Here is the electronic schematic of the OR gate:</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/Gate-OR.svg" class="w3-center" width="90%" />
+    </th></tr>
+</table>
+
+<p>We remark that the last piece on the right is an inverter (NOT gate). Inputting a high-signal on either A or B or both of them will activate the bottom nMOS transistors which will drain the low-signal from Vss to the inverter gate, while one of the pMOS transistors will be in a blocking state because of the one high-signal on either A or B. The inverter will invert the signal to the high-signal (Vdd). The only way to have a low-signal at the end of this circuit is to input low-signal on both A and B. This is thus the definition of the OR operator. </p>
+<p>On this gate, the two nMOS transistors of the left part are in parallel (that is, each one is connected so that the signal at the output of the pair of transistor is Vss only if one of them is passing). The pMOS transistors are connected in series; such that the output depends on the state of both transistors. </p>
+<h3 id="193-not-gate">1.9.3. NOT Gate</h3>
+<p>An inverter is a simple electronic component, part of the <em>logic gate</em> family of components, that inverts a signal. If we have a high-signal on one side of this component (bit 1, or 5V) we'll have a low-signal on the output (bit 0, 0V). </p>
+<p>Connecting two MOSFET transistors of the different types in a row between Vdd and Vss (as shown below), and connecting the two gates of the transistors together as the input of the component, we'll have the output that inverts the signal. Inputting a positive voltage (Vdd), the pMOS transistor will be blocking, preventing current to flow from the upper Vdd to the output, but the nMOS transistor will be passing, making the output signal at the level of Vss. Conversely, inputting a 0 voltage (Vss), the pMOS will be passing (because the voltage on the gate will be negative with respect to the source, which is at Vdd) making the output signal to Vdd and the nMOS will be blocking. </p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/Gate-NOT.svg" class="w3-center" width="60%" />
+    </th></tr>
+</table>
+
+<h2 id="110-more-advanced-logic-circuits">1.10. More advanced logic circuits</h2>
+<h3 id="1101-dram-cell-for-ram-storage">1.10.1. DRAM Cell (for RAM storage)</h3>
+<p>The DRAM is the main memory used as a working memory in computers. The fundamental building block of a DRAM is composed of a transistor -- that allows addressing the bit for reading / writting -- and a capacitor -- that stores the information. Its electrical schematic is shown below.</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/DRAM.svg" class="w3-center" width="60%" />
+    </th></tr>
+</table>
+
+<p>This consists of what is called a memory cell. Storing a bit -- 1 or 0 -- means charging or discharging the capacitor in this memory cell. To read the content of a cell, the transistor is opened and the capacitor current charge is read. These memory cells are usually arranged in a rectangle that can go to thousands of cells in width and height.</p>
+<p>Due to inherant characteristics of capacitors, these devices are prone to electrical leakage and easily discharge over time. This has to be compensated by constantly re-writing the data stored in a DRAM. This is usually done every tenth of miliseconds (see the <a href="https://www.jedec.org">JEDEC standard</a>). </p>
+<p>When starting a program on a computer, the operating system loads the entier program instructions from the hard drive into the DRAM memory. It is then executed from this memory and into the processor, transiting by the processor's cache memory. </p>
+<h3 id="1102-sram-cell-for-processor-cache-storage">1.10.2. SRAM Cell (for processor cache storage)</h3>
+<p>The Static Random Access Memory (SRAM) is the main memory used as cache memory in processors. Its fundamental building block is composed of 6 transistors, that are connected to form 2 logic inverters (using 4 transistors) and 2 control transistors allowing to access the data for reading and writing. Below is the electrical schematic representing an SRAM cell.</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/SRAM.svg" class="w3-center" width="90%" />
+    </th></tr>
+</table>
+
+<p>Its working principle is easier to understand if we separate the different components. First, the M5 and M6 transistors are used to read/write the SRAM cell value (see below schematics). When a sufficient voltage is present on the WL line (called the "Word Line"), it opens the M5 and M6 transistors such that the signal on BL-bar line is the Q-bar signal and the signal on the BL line is the Q signal.</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/SRAM-Read-Write-Transistors.svg" class="w3-center" width="90%" />
+    </th></tr>
+</table>
+
+<p>Q is the signal that corresponds to the SRAM cell state (0 or 1), and Q-bar is the opposite (1 or 0). If the value stored (Q) is 1, the BL line will be used to read the SRAM cell value (1), and BL-bar line will be used to check that we are correctly reading the value (should be 0 on this line). Conversely, if the value Q is 0, it'll be read on the BL line and should be 1 on the BL-bar line.</p>
+<p>Now, on the internal structure of the SRAM are 4 transistors that are arranged to form two inverters in a loop: the output of the first one is fed into the input of the second and vice-versa. Here is the schematics of the internal cell part (left) that is decomposed into the two inverters (right):</p>
+<table class="w3-center" width="100%">
+    <tr><th>
+        <img src="images/SRAM-Inverters.svg" class="w3-center" width="90%" />
+    </th></tr>
+</table>
+
+<p>The inverter is presented in the article about the <a href="NOT Gate.html">Not Gate</a>.</p>
+<p>To write a bit into the memory cell, the couple of inverters are forced into a state, either with <M1, M2> inverter output to high or low, by applying a slightly higher voltage that would normally be used for these components. Once the state has been written, it can be read by opening the transistors M5 and M6 and reading the lines BL and BL bar. </p>
+<p>As opposed to the DRAM memory, SRAM do not need any refresh mechanism as long as the power is maintained in the circuit. When the inverters are in a given state, it will stay as long as the power is maintained: when the output of the first inverter is high, the input of the second inverter is high, which generates a low-signal at its output. This low-signal is directed again to the input of the first inverter. </p>
+<p>This memory is more expansive and faster, so it is usually not used as the main memory of computers but rather as the processor cache memory.</p></div></div></body></html>
