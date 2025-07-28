@@ -5,7 +5,7 @@ import markdown
 import glob
 import shutil
 
-OUTPUT_DIR = "./pub/"
+OUTPUT_DIR = "../docs/"
 
 def read_file(path):
     with open(path, 'r') as i:
