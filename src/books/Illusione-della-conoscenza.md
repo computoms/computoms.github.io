@@ -3,7 +3,7 @@
 <div class="w3-flex">
     <img class="w3-padding" src="images/illusione-della-conoscenza.png" alt="Illusione della Conoscenza - Cover" width="250px" />
     <div style="width: 400px;" class="w3-padding">
-    <p><i>Perché non pensiamo mai da soli</i></p>
+    <p><i>Perché non pensiamo mai da soli -- Why do we never think by our own</i></p>
     <p>Steven Sloman, Philip Fernbach</p>
     </div>
 </div>
