@@ -1,6 +1,21 @@
 import utils
 import layout
 
+def book_display(book):
+    return """
+    <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="max-width: 300px;">
+        <a href=\"""" + book['page'] + """\" class="nounder">
+            <header class="w3-container">
+                <img src=\"images/""" + book['image'] + """\" width="200px" style="width: auto; height: auto; max-width: 200px; max-height: 250px;" alt=\"""" + book['title'] + """\" />
+            </header>
+            <div class="w3-container">
+                """ + book['title'] + """
+            </div>
+        </a>
+    </div>
+    """
+
+
 def build_index():
     o = """
     <h1>Book Shelf</h1>
@@ -10,20 +25,13 @@ def build_index():
     <h2>Science</h2>
     """
 
-    for book in utils.list_articles('books'):
+    for book in [book for book in utils.list_articles('books') if book['category'] == 'science']:
+        o += book_display(book)
 
-        o += """
-        <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="max-width: 300px;">
-            <a href=\"""" + book['page'] + """\" class="nounder">
-                <header class="w3-container">
-                    <img src=\"images/""" + book['image'] + """\" width="200px" alt=\"""" + book['title'] + """\" />
-                </header>
-                <div class="w3-container">
-                    """ + book['title'] + """
-                </div>
-            </a>
-        </div>
-        """
+    o += "<h2>Tech</h2>"
+
+    for book in [book for book in utils.list_articles('books') if book['category'] == 'tech']:
+        o += book_display(book)
 
     return o
 
