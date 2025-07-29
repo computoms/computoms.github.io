@@ -10,9 +10,7 @@
 
 [TOC]
 
-_A ChatGPT's summary_:
-
-### **Summary of The Phoenix Project**
+## ChatGPT's summary
 
 #### **Premise:**
 

@@ -7,9 +7,9 @@ def build_latest_books():
     <div class="w3-container w3-content w3-padding-64" id="band">
         <h1><a href="/books">Books</a></h1>
         <p>
-            Essential science and tech books to have in its shelf.
+            My advice on science and tech books to read.
         </p>
-        <h3>Latest books:</h3>
+        <h3>Latest books</h3>
         <div class="w3-flex" style="flex-wrap: wrap">
 """
 

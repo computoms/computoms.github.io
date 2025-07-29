@@ -12,9 +12,7 @@
 
 This books tells the same story as [The Phoenix Project](the-phoenix-project.html) but in the eyes of a software developer, instead of the team manager. This change of perspective is very interesting!
 
-_A ChatGPT's summary_:
-
-## **Summary of *The Unicorn Project***
+## ChatGPT's summary
 
 ### **Premise:**
 
