@@ -5,7 +5,7 @@ def build_latest_books():
     lb += """
 <div class="w3-light-grey">
     <div class="w3-container w3-content w3-padding-64" id="band">
-        <h1>Books</h1>
+        <h1><a href="/books">Books</a></h1>
         <p>
             Essential science and tech books to have in its shelf.
         </p>
@@ -13,11 +13,14 @@ def build_latest_books():
         <div class="w3-flex" style="flex-wrap: wrap">
 """
 
-    books = sorted(utils.list_articles('books'), key=lambda x: x['date'])
+    books = sorted(utils.list_articles('books'), key=lambda x: x['date'], reverse=True)
     for book in books[:5]:
         lb += """
-        <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="max-width: 300px;">
+        <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="width: 300px;">
             <a href=\"books/""" + book['page'] + """\" class="nounder">
+                <h4>
+                    """ + book['category'].capitalize() + """
+                </h4>
                 <header class="w3-container">
                     <img src=\"books/images/""" + book['image'] + """\" width="200px" style="width: auto; height: auto; max-width: 200px; max-height: 250px;" alt=\"""" + book['title'] + """\" />
                 </header>

@@ -23,16 +23,27 @@ def build_index():
     <p>Here are interesting books to have in your shelf.</p>
 
     <h2>Science</h2>
+    <div class="w3-flex" style="flex-wrap: wrap">
     """
 
-    for book in [book for book in utils.list_articles('books') if book['category'] == 'science']:
+    science_books = [book for book in utils.list_articles('books') if book['category'] == 'science']
+    science_books = sorted(science_books, key=lambda x: x['date'], reverse=True)
+    tech_books = [book for book in utils.list_articles('books') if book['category'] == 'tech']
+    tech_books = sorted(tech_books, key=lambda x: x['date'], reverse=True)
+
+    for book in science_books:
         o += book_display(book)
 
+    o += "</div>"
     o += "<h2>Tech</h2>"
+    o += """
+    <div class="w3-flex" style="flex-wrap: wrap">
+    """
 
-    for book in [book for book in utils.list_articles('books') if book['category'] == 'tech']:
+    for book in tech_books:
         o += book_display(book)
 
+    o += "</div>"
     return o
 
 def gen():
