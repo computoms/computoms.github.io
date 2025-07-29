@@ -2,6 +2,7 @@ from os import path as os_path
 from os import makedirs as os_mkdirs
 import layout
 import markdown
+import yaml
 import glob
 import shutil
 
@@ -40,3 +41,18 @@ def copy_images(dir):
     if os_path.exists(dir + '/images'):
         shutil.copytree(dir + '/images', OUTPUT_DIR + dir + '/images', dirs_exist_ok=True)
 
+def read_metadata(filename):
+    with open(filename, 'r') as f:
+        try:
+            obj = yaml.safe_load(f)
+            return obj
+        except yaml.YAMLError as exc:
+            print(exc)
+
+def list_articles(dir):
+    yaml_files = glob.glob(dir + '/*.yml')
+    articles = []
+    for f in yaml_files:
+        metadata = read_metadata(f)
+        articles.append(metadata)
+    return articles

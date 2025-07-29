@@ -1,23 +1,5 @@
 import utils
 import layout
-import yaml
-import glob
-
-def read_metadata(filename):
-    with open(filename, 'r') as f:
-        try:
-            obj = yaml.safe_load(f)
-            return obj
-        except yaml.YAMLError as exc:
-            print(exc)
-
-def list_books():
-    yaml_files = glob.glob('books' + '/*.yml')
-    books = []
-    for f in yaml_files:
-        metadata = read_metadata(f)
-        books.append(metadata)
-    return books
 
 def build_index():
     o = """
@@ -28,7 +10,7 @@ def build_index():
     <h2>Science</h2>
     """
 
-    for book in list_books():
+    for book in utils.list_articles('books'):
 
         o += """
         <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="max-width: 300px;">
