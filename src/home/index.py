@@ -17,7 +17,7 @@ def build_latest_books():
     for book in books[:5]:
         lb += """
         <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="max-width: 300px;">
-            <a href=\"""" + book['page'] + """\" class="nounder">
+            <a href=\"books/""" + book['page'] + """\" class="nounder">
                 <header class="w3-container">
                     <img src=\"books/images/""" + book['image'] + """\" width="200px" alt=\"""" + book['title'] + """\" />
                 </header>
