@@ -34,7 +34,7 @@ Magnetic hard drives are still the predominant form of mass storage on computers
 
 #### 1.1.1.2. Flash drives
 
-The flash memory is a kind of memory that is faster and has a smaller form factor than magnetic drives. Its principle of operation is basically based on the [DRAM](electronics.html) but with different electronic components; that allows it to be persistent (without the need of a refresh mechanism): the floating-gate (FG) transistors.
+The flash memory is a kind of memory that is faster and has a smaller form factor than magnetic drives. Its principle of operation is basically based on the [DRAM](electronics.html) but with different electronic components; that allows it to be persistent (without the need of a refresh mechanism): the [floating-gate (FG) transistors](electronics.html#14-floating-gate-transistors).
 
 ##### 1.1.1.2.1. Architecture
 
@@ -62,7 +62,7 @@ Random access memory (RAM) is where the non-persistent data is stored on your co
 
 The RAM memory is relatively fast to access, but looses its data when power is turned off. It needs a certain amount of power to be refreshed and to avoid loosing its data.
 
-Most of the RAM storage available on the market are made from [DRAM cells](electronics.html#dram-cell-for-ram-storage).
+Most of the RAM storage available on the market are made from [DRAM cells](electronics.html#161-dram-cell-for-ram-storage).
 
 ### 1.1.3. Processor cache
 
@@ -70,4 +70,4 @@ In order to have an even faster memory, processors implement a part of memory di
 
 Before data is loaded into processor registers from the RAM memory, it is actually transferred from RAM to cache memory. Knowing this is important to understand the performance of data structures and of some algorithms.
 
-Most of cache storage are built using [SRAM cells](electronics.html#sram-cell-for-processor-cache-storage).
+Most of cache storage are built using [SRAM cells](electronics.html#162-sram-cell-for-processor-cache-storage).

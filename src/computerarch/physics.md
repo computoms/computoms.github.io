@@ -21,7 +21,7 @@ The _mass_ is one of the few intrinsic characteristics of matter. This property 
 
 IF you hold an apple with your hand and suddenly drop it, it will fall down on the floor. This is due to what we call its "weight", which is a force applied by the Earth onto the apple. Two masses attract each other with a force that is proportional to their distance and to their masses:
 
-`W = G. (m1m2)/r^2`
+$$ W = G \times \frac{m1 \times m2}{r^2} $$
 
 ## 1.2. Sub-atomic forces
 
@@ -33,7 +33,7 @@ The electromagnetic force regroups the electric force that relates to the electr
 
 The force applied on a moving particle `q` of velocity `v` inside an environment where an electric field `E` and a magnetic field `B` is present is equal to:
 
-`F = qE + qv x B`
+$$ F = q \times E + q \times v \times B $$
 
 # 2. Creating Magnetic Fields
 
@@ -59,15 +59,15 @@ More theoretically, a force field has actually a mathematical definition; which 
 
 # 4. Electric force and electric field
 
-The electric force is the force applied by a particle of charge `q` to other particles with a charge. The following formula gives the value of the electric force that a particle of charge `q_1` applies on another particle of charge `q_2` separated by distance `r`: 
+The electric force is the force applied by a particle of charge `q` to other particles with a charge. The following formula gives the value of the electric force that a particle of charge $ q_1 $ applies on another particle of charge $ q_2 $ separated by distance `r`: 
 
-`F = k q_1 * q_2 / (r * r)`
+$$ F = k q_1 \times \frac{q_2}{r^2} $$
 
 where `k` is the Coulomb's constant.
 
 ## 4.1. Moving electrons, generating a current
 
-How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge `q_1` (i.e. a battery). The other way to make them move is by using a current generator (see next posts).
+How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large _fixed_ charge $ q_1 $ (i.e. a battery). The other way to make them move is by using a current generator (see next posts).
 
 # 5. Magnetic Force
 

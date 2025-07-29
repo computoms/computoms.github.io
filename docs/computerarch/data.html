@@ -17,7 +17,22 @@
 .nounder {
     text-decoration: none;
 }
-h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card logoBg">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
@@ -64,41 +79,45 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <li><a href="#15-numbers">1.5. Numbers</a><ul>
 <li><a href="#151-encoding-positive-integral-numbers">1.5.1. Encoding positive integral numbers</a></li>
 <li><a href="#152-negative-numbers">1.5.2. Negative numbers</a></li>
+<li><a href="#153-the-twos-complement-encoding">1.5.3. The Two's Complement Encoding</a></li>
+<li><a href="#154-why-twos-complement">1.5.4. Why two's complement ?</a></li>
+<li><a href="#155-the-reason-behind-twos-complement-representation">1.5.5. The Reason behind Two's Complement Representation</a></li>
+<li><a href="#156-fractional-numbers">1.5.6. Fractional numbers</a></li>
+<li><a href="#157-single-precision-numbers">1.5.7. Single Precision Numbers</a><ul>
+<li><a href="#1571-sign-bit">1.5.7.1. Sign bit</a></li>
+<li><a href="#1572-exponent-encoding">1.5.7.2. Exponent encoding</a></li>
+<li><a href="#1573-fraction-encoding">1.5.7.3. Fraction encoding</a></li>
+<li><a href="#1574-range-and-precision">1.5.7.4. Range and Precision</a></li>
 </ul>
 </li>
-<li><a href="#16-the-twos-complement-encoding">1.6. The Two's Complement Encoding</a></li>
-<li><a href="#17-why-twos-complement">1.7. Why two's complement ?</a></li>
-<li><a href="#18-the-reason-behind-twos-complement-representation">1.8. The Reason behind Two's Complement Representation</a><ul>
-<li><a href="#181-single-precision-numbers">1.8.1. Single Precision Numbers</a><ul>
-<li><a href="#1811-sign-bit">1.8.1.1. Sign bit</a></li>
-<li><a href="#1812-exponent-encoding">1.8.1.2. Exponent encoding</a></li>
-<li><a href="#1813-fraction-encoding">1.8.1.3. Fraction encoding</a></li>
-<li><a href="#1814-range-and-precision">1.8.1.4. Range and Precision</a></li>
+<li><a href="#158-double-precision-numbers">1.5.8. Double-precision numbers</a><ul>
+<li><a href="#1581-range-and-precision">1.5.8.1. Range and Precision</a></li>
 </ul>
 </li>
-<li><a href="#182-double-precision-numbers">1.8.2. Double-precision numbers</a><ul>
-<li><a href="#1821-range-and-precision">1.8.2.1. Range and Precision</a></li>
 </ul>
 </li>
-<li><a href="#183-fractional-numbers">1.8.3. Fractional numbers</a></li>
+<li><a href="#16-storing-characters">1.6. Storing characters</a><ul>
+<li><a href="#161-ascii">1.6.1. ASCII</a></li>
+<li><a href="#162-utf">1.6.2. UTF</a></li>
+<li><a href="#163-utf-32">1.6.3. UTF-32</a><ul>
+<li><a href="#1631-advantages">1.6.3.1. Advantages</a></li>
+<li><a href="#1632-drawbacks">1.6.3.2. Drawbacks</a></li>
 </ul>
 </li>
-<li><a href="#19-storing-characters">1.9. Storing characters</a></li>
-<li><a href="#110-ascii">1.10. ASCII</a></li>
-<li><a href="#111-utf">1.11. UTF</a></li>
-<li><a href="#112-utf-32">1.12. UTF-32</a></li>
-<li><a href="#113-advantages">1.13. Advantages</a></li>
-<li><a href="#114-drawbacks">1.14. Drawbacks</a></li>
-<li><a href="#115-utf-8">1.15. UTF-8</a></li>
-<li><a href="#116-utf-16">1.16. UTF-16</a></li>
-<li><a href="#117-storing-images">1.17. Storing images</a></li>
-<li><a href="#118-basic-principle">1.18. Basic principle</a><ul>
-<li><a href="#1181-pixelization-rasterization">1.18.1. "Pixelization" -- Rasterization</a></li>
-<li><a href="#1182-metadata">1.18.2. Metadata</a></li>
+<li><a href="#164-utf-8">1.6.4. UTF-8</a></li>
+<li><a href="#165-utf-16">1.6.5. UTF-16</a></li>
 </ul>
 </li>
-<li><a href="#119-storing-colors-into-the-memory">1.19. Storing colors into the memory</a><ul>
-<li><a href="#1191-improving-the-range-of-colors">1.19.1. Improving the range of colors</a></li>
+<li><a href="#17-storing-images">1.7. Storing images</a><ul>
+<li><a href="#171-basic-principle">1.7.1. Basic principle</a><ul>
+<li><a href="#1711-pixelization-rasterization">1.7.1.1. "Pixelization" -- Rasterization</a></li>
+<li><a href="#1712-metadata">1.7.1.2. Metadata</a></li>
+</ul>
+</li>
+<li><a href="#172-storing-colors-into-the-memory">1.7.2. Storing colors into the memory</a><ul>
+<li><a href="#1721-improving-the-range-of-colors">1.7.2.1. Improving the range of colors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -143,14 +162,12 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 </li>
 </ul>
 <h3 id="151-encoding-positive-integral-numbers">1.5.1. Encoding positive integral numbers</h3>
-<p>Usually, we work with the decimal base to represent numbers, with digits from 0 to 9. The number 127 thus represents: 1<em>(10</em>10) + 2*(10) + 7.</p>
-<p>In computer memories, we only have access to two states (0 and 1) so we must convert integral numbers to binary. To "understand" a binary number, we can use the same formula but on base two: 1101 in binary represents: 1<em>(2</em>2<em>2) + 1</em>(2<em>2) + 0</em>(2) + 1.</p>
+<p>Usually, we work with the decimal base to represent numbers, with digits from 0 to 9. The number 127 thus represents: $ 1 * 1^2 + 2 * 10^1 + 7 * 10^0 $.</p>
+<p>In computer memories, we only have access to two states (0 and 1) so we must convert integral numbers to binary. To "understand" a binary number, we can use the same formula but on base two: 1101 in binary represents: $ 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 $.</p>
 <p>Explain in more details how to convert between number bases: Number base conversions</p>
-<p>-- Negative Numbers</p>
-<p>-- Fractional Numbers</p>
 <h3 id="152-negative-numbers">1.5.2. Negative numbers</h3>
 <p>In mathematics, we are representing the negative numbers using the minus sign <code>-</code>. In computer hardware, there's no such thing. Only 0 and 1, so we needed to find a way to encode our negative numbers in binary form without using an extra symbol.</p>
-<h2 id="16-the-twos-complement-encoding">1.6. The Two's Complement Encoding</h2>
+<h3 id="153-the-twos-complement-encoding">1.5.3. The Two's Complement Encoding</h3>
 <p>There are several ways to encode a negative number into binary, but the main technique that is used nowadays by processors is called two's complement.</p>
 <p>Let's take a 4-bits chuck of memory as an example. In regular encoding, as seen above, this chunk can store numbers from 0 (0000 in binary) to 15 (1111 in binary). With 4 bits, we can only store 16 different values, so the idea with the two's complement method is to shift the values in order to represent numbers from -8 to 7 instead - so that we can represent negative numbers.</p>
 <p>The two's complement method goes like this: for each strictly positive number, you can find it's negative counter-part by inverting all its bits and adding one. For example:</p>
@@ -240,7 +257,7 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
     </tr>
 </table>
 
-<p>More formally, the two's complement b of a binary number a encoded using n bits is the binary number such that a + b = 2^n with n the number of bits that encodes a and b. Thus, b = 2^n - a, and we can find our two special cases:</p>
+<p>More formally, the two's complement b of a binary number a encoded using n bits is the binary number such that $ a + b = 2^n $ with n the number of bits that encodes a and b. Thus, $ b = 2^n - a $, and we can find our two special cases:</p>
 <table class="w3-table-all w3-hoverable">
     <tr class="w3-green">
         <td>4-bit number a</td>
@@ -263,8 +280,8 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 </table>
 
 <p>As you can see, overflowing bits are thrown away (the fifth bit cannot be stored as we are using 4 bits to stored our numbers).</p>
-<h2 id="17-why-twos-complement">1.7. Why two's complement ?</h2>
-<h2 id="18-the-reason-behind-twos-complement-representation">1.8. The Reason behind Two's Complement Representation</h2>
+<h3 id="154-why-twos-complement">1.5.4. Why two's complement ?</h3>
+<h3 id="155-the-reason-behind-twos-complement-representation">1.5.5. The Reason behind Two's Complement Representation</h3>
 <p>Why are we using such a complicated formula? Because the goal of computers is to compute (perform operations on numbers) and this representation helps our electronic components handle the data. For example, using the two's complement reprsentation it is straightforward to add two numbers. The addition rule is the same as with positive numbers (adding bits one by one with the carry):</p>
 <table class="w3-table-all w3-hoverable">
     <tr class="w3-green">
@@ -281,20 +298,46 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
     </tr>
 </table>
 
-<p>The second advantage of this representation is we can easily implement subtraction: to perform a - b, we only need to transform b into its two's complement representation and then add the two numbers a + (-b).</p>
-<h3 id="181-single-precision-numbers">1.8.1. Single Precision Numbers</h3>
+<p>The second advantage of this representation is we can easily implement subtraction: to perform <script type="math/tex">a - b</script>, we only need to transform b into its two's complement representation and then add the two numbers <script type="math/tex">a + (-b)</script>.</p>
+<h3 id="156-fractional-numbers">1.5.6. Fractional numbers</h3>
+<p>Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (<code>float</code> type in C) and 64 bits (<code>double</code> type in C).</p>
+<p>Recall how to construct a decimal number using powers of tens. For fractional numbers, it is the same, but with negative powers of tens after the comma: the number 12.345 can be written:</p>
+<p>
+<script type="math/tex; mode=display"> 12.345 = 1 * 10^1 + 2 * 10^0 + 3 * 10^{-1} + 4 * 10^{-2} + 5 * 10^{-3} </script>
+</p>
+<p>We can use the same approach to represent a binary number:</p>
+<p>
+<script type="math/tex; mode=display"> 1100.101_2 = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0 + 1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{-3} </script>
+</p>
+<p>The idea behind encoding floating point numbers is like representing the numbers in scientific notation. Scientific notation, in decimal, is the representation of any number in the form</p>
+<p>
+<script type="math/tex; mode=display"> number = y.xxx * 10^e </script>
+</p>
+<p>for example: $ 1 345 673.12 = 1.34567312 * 10^6 $</p>
+<p>Thus the binary number scientific notation would be:</p>
+<p>
+<script type="math/tex; mode=display"> number_2 = 1.xxx * 2^e </script>
+</p>
+<p>for example: $ 1100.101_2 = 1.100101_2 * 2^{11_2} $</p>
+<p>This is what is used to encode fractional binary numbers: $ 1.[fraction] * 2^{[exponent]} $.</p>
+<h3 id="157-single-precision-numbers">1.5.7. Single Precision Numbers</h3>
 <p>On 32 bits, we divid the bits with 1 sign bit s, 8 exponent bits e and the remaining 23 bits for the fractional part:</p>
 <p>The formula for decoding a 32-bit floating point number is as follows:</p>
-<p>$$n_(10) = (-1)^s * 2^e * ( 1 + \sum_i b_(23-i) * 2^(-i))$$</p>
-<p>where n_(10) is the resulting decimal number, s is the sign bit (most significant bit), e is the decimal value corresponding to the 8 exponent bits and b_i are the bits number i.</p>
-<h4 id="1811-sign-bit">1.8.1.1. Sign bit</h4>
+<p>
+<script type="math/tex; mode=display"> n_{10} = (-1)^s * 2^e * \left( 1 + \sum_i b_{23-i} * 2^{-i} \right) </script>
+</p>
+<p>where $ n_{10} $ is the resulting decimal number, s is the sign bit (most significant bit), e is the decimal value corresponding to the 8 exponent bits and $ b_i $ are the bits number $ i $.</p>
+<h4 id="1571-sign-bit">1.5.7.1. Sign bit</h4>
 <p>The most significant bit (bit 31) is the sign bit. <code>0</code> means we encoded a positive number, and <code>1</code> is negative.</p>
-<h4 id="1812-exponent-encoding">1.8.1.2. Exponent encoding</h4>
-<p>The exponent e is not encoded using the two's complement representation, but with a different one: the offset-binary representation with the zero offset being 127. This means that 0000 \, 0000_2 represents -126, 1000 \, 0000_2 represents 0 and 1111 \, 1111_2 represents 127.</p>
-<h4 id="1813-fraction-encoding">1.8.1.3. Fraction encoding</h4>
+<h4 id="1572-exponent-encoding">1.5.7.2. Exponent encoding</h4>
+<p>The exponent e is not encoded using the two's complement representation, but with a different one: the offset-binary representation with the zero offset being 127. This means that $0000,0000_2$ represents $-126$, $1000,0000_2$ represents $0$ and $1111,1111_2$ represents $127$.</p>
+<h4 id="1573-fraction-encoding">1.5.7.3. Fraction encoding</h4>
 <p>The fractional part of the number is encoded with standard binary encoding. There is a simple method to convert a decimal fractional part into binary:</p>
 <ul>
-<li>multiply by two * take the integer part (either 0 or 1) which will be the binary bit number -1 (bit number 22 in our 32-bit floating-point encoding) * multiply the fractional part of the number obtained by 2 * repeat for bit number -2 ... -22 (bits 21 to 0 in 32-bit floating-point encoding)</li>
+<li>multiply by two </li>
+<li>take the integer part (either 0 or 1) which will be the binary bit number -1 (bit number 22 in our 32-bit floating-point encoding) </li>
+<li>multiply the fractional part of the number obtained by 2 </li>
+<li>repeat for bit number -2 ... -22 (bits 21 to 0 in 32-bit floating-point encoding)</li>
 </ul>
 <p>For example, for 0.345:</p>
 <table class="w3-table-all w3-hoverable">
@@ -316,26 +359,13 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
     <tr class="w3-hover-green"><td>0.880 * 2 = 1.760</td>   <td>1</td>  <td>0.760</td>  <td>0</td></tr>
 </table>
 
-<h4 id="1814-range-and-precision">1.8.1.4. Range and Precision</h4>
-<p>The fractional part is stored with 23 bits. This allows a precision of between 7 and 9 significant digits (2^(23) = 8 \, 388 \, 608). The exponent is stored on 8 bits, which allows numbers from 2^(-126) \approx 1.175 * 10^(-38) to 2^(127) \approx 1.701 * 10^(38).</p>
-<h3 id="182-double-precision-numbers">1.8.2. Double-precision numbers</h3>
+<h4 id="1574-range-and-precision">1.5.7.4. Range and Precision</h4>
+<p>The fractional part is stored with 23 bits. This allows a precision of between 7 and 9 significant digits ( $2^{23} = 8,388,608$). The exponent is stored on 8 bits, which allows numbers from $2^{-126} \approx 1.175 * 10^{-38}$ to $2^{127} \approx 1.701 * 10^{38}$.</p>
+<h3 id="158-double-precision-numbers">1.5.8. Double-precision numbers</h3>
 <p>The <code>double</code> data type, as for double precision floating-point, is a data type encoded on 64 bits: 1 sign bit, 11 exponent bits and 52 fractional bits.</p>
-<h4 id="1821-range-and-precision">1.8.2.1. Range and Precision</h4>
-<p>The 52 bits of the fractional part allows between 14 and 16 significant digits (2^(52) \approx 4.5 * 10^(15)). The exponent is stored on 11 bits, which allows numbers from 2^(-1023) \approx 1.11 * 10^(308) to 2^(1024) \approx 1.8 * 10^(308) although sometimes these two bounds are reserved for special purposes.</p>
-<h3 id="183-fractional-numbers">1.8.3. Fractional numbers</h3>
-<p>Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (<code>float</code> type in C) and 64 bits (<code>double</code> type in C).</p>
-<p>Recall how to construct a decimal number using powers of tens. For fractional numbers, it is the same, but with negative powers of tens after the comma: the number 12.345 can be written:</p>
-<p>12.345 = 1 * 10^1 + 2 * 10^0 + 3 * 10^(-1) + 4 * 10^(-2) + 5 * 10^(-3)</p>
-<p>We can use the same approach to represent a binary number:</p>
-<p>1100.101_2 = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0 + 1 * 2^(-1) + 0 * 2^(-2) + 1 * 2^(-3)</p>
-<p>The idea behind encoding floating point numbers is like representing the numbers in scientific notation. Scientific notation, in decimal, is the representation of any number in the form</p>
-<p>number = y.xxx * 10^e</p>
-<p>for example: 1 345 673.12 = 1.34567312 * 10^6</p>
-<p>Thus the binary number scientific notation would be:</p>
-<p>number_2 = 1.xxx * 2^e</p>
-<p>for example: 1100.101_2 = 1.100101_2 * 2^(11_2)</p>
-<p>This is what is used to encode fractional binary numbers: \pm 1.[fraction] * 2^([exponent]).</p>
-<h2 id="19-storing-characters">1.9. Storing characters</h2>
+<h4 id="1581-range-and-precision">1.5.8.1. Range and Precision</h4>
+<p>The 52 bits of the fractional part allows between 14 and 16 significant digits ($2^{52} \approx 4.5 * 10^{15}$). The exponent is stored on 11 bits, which allows numbers from $2^{-1023} \approx 1.11 * 10^{308}$ to $2^{1024} \approx 1.8 * 10^{308}$ although sometimes these two bounds are reserved for special purposes.</p>
+<h2 id="16-storing-characters">1.6. Storing characters</h2>
 <p>In a computer, we often need to store text, so we need a way to store characters.</p>
 <p>Characters are stored using a convention that we define in advance, saying how to convert a character into a storable data.</p>
 <p>In computers, data can only be stored as numbers. So these conventions are telling the computer (or the program that reads the memory of the computer) how to convert numbers into characters. The conventions are called encodings.</p>
@@ -348,26 +378,26 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <p>UTF: Unicode Transformation Format. How do we handle other languages?</p>
 </li>
 </ul>
-<h2 id="110-ascii">1.10. ASCII</h2>
+<h3 id="161-ascii">1.6.1. ASCII</h3>
 <p><em>American Standard Code for Information Interchange</em></p>
 <p>The first encoding that came to the mind of computer scientists was the following: decide for a corresponding number to each letter.</p>
 <p>The English alphabet is composed of 26 letters, that are declined into lowercase and uppercase letters; which makes 52 different symbols. If we can add to this the 10 digits plus different symbols, such as $ or punctuation symbols, we reach 127 characters.</p>
 <p>Knowing that the bigger the number, the more space it takes in a computer memory; they wanted to limit the space taken by each character in memory so they decided that this encoding was sufficient to encode English texts. Each symbol corresponds to a single number, as shown below</p>
 <p><img alt="The ASCII Table" src="images/ASCII-Table.png" /></p>
-<h2 id="111-utf">1.11. UTF</h2>
+<h3 id="162-utf">1.6.2. UTF</h3>
 <p><em>Unicode Transformation Format</em></p>
 <p>The ASCII encoding is great for the English language, but what about other languages with different symbols and alphabets, such as French, Spanish or any other language with special characters such as accents and other symbols? We need another convention that can also store these different characters.</p>
 <p>The first way to solve this problem is to extend the transformation table to these other characters: the Extended ASCII.</p>
 <p>The Unicode encoding is a bit more than a conversion between characters and numbers: it defines the conversion between characters and code points, that are then translated into storable numbers using different techniques, called UTF-8, UTF-16 and UTF-32 (amongst others). It defines 1112064 code points corresponding to the different characters existing in the different languages on this planet.</p>
-<h2 id="112-utf-32">1.12. UTF-32</h2>
+<h3 id="163-utf-32">1.6.3. UTF-32</h3>
 <p>Storing characters with large numbers.</p>
 <p>The ASCII encoding is using numbers from 0 to 127 to store the English alphabet and letters. As explained in Storing Numbers, these numbers are stored using a fixed amount of memory, that is called a byte (taking 8-bits of memory space); and is limited to numbers below 256.</p>
 <p>In order to extend the alphabet to other symbols, we need to convert these symbols to numbers that are higher than 256. The UTF-32 encoding uses numbers up to 4294967296 (that is a lot!) in a number format that takes 32-bits of memory space.</p>
-<h2 id="113-advantages">1.13. Advantages</h2>
+<h4 id="1631-advantages">1.6.3.1. Advantages</h4>
 <p>The advantages of this encoding is that it is retro-compatible with ASCII: the first 127 characters are equivalent in both encodings.</p>
-<h2 id="114-drawbacks">1.14. Drawbacks</h2>
+<h4 id="1632-drawbacks">1.6.3.2. Drawbacks</h4>
 <p>The drawbacks is that if you store mostly English alphabet's characters, you are loosing memory space because each number will take the same amount of space in this encoding, whatever its value (which will be 32 bits of memory space for each character, as compared to just 8-bits for ASCII encoding characters).</p>
-<h2 id="115-utf-8">1.15. UTF-8</h2>
+<h3 id="164-utf-8">1.6.4. UTF-8</h3>
 <p>How to reduce the memory footprint for texts with mostly simple characters?</p>
 <p>To overcome the problems of memory space explained in UTF-32, the UTF-8 encoding has been invented.</p>
 <p>The UTF-8 is a variable bit-length format that takes at minimum 1 byte of memory for each character, but can go up to 4 bytes of memory for a single character (see Storing Numbers).</p>
@@ -411,16 +441,16 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 </table>
 
 <p>By using a variable length enconding like this one, we are saving space on the memory. This encoding is one of the most used encoding for storing strings of characters in programs and websites.</p>
-<h2 id="116-utf-16">1.16. UTF-16</h2>
+<h3 id="165-utf-16">1.6.5. UTF-16</h3>
 <p>A trade-off between the two previous ones.</p>
 <p>UTF-16 is another variable length format, that follows the same principle that UTF-8. The difference is that its base unit is coded on 16 bits instead of 8, meaning each character is taking at least 16 bits of memory. Characters are either 16 bits or 32 bits.</p>
-<h2 id="117-storing-images">1.17. Storing images</h2>
+<h2 id="17-storing-images">1.7. Storing images</h2>
 <p>How to store graphical contents, such as images or videos, on a computer memory?</p>
 <p>Following the same principle explained in <a href="Storing%20Characters.html">Storing Characters</a>, images are stored in the memory using a convention that we define in advanced, saying how to convert an image into storable information. This convention is called a format or sometimes an encoding, like for numbers. The process to convert an image into a set of storable data is called digitization.</p>
-<h2 id="118-basic-principle">1.18. Basic principle</h2>
+<h3 id="171-basic-principle">1.7.1. Basic principle</h3>
 <p>An image is usually a rectangle filled with different colors. As we saw in the description of <a href="Computer%20Memories.html">computer memories</a>, the memory of a computer can only store strings of data (uni-dimensional array of bits -- or numbers). 
 We need to find a way to transform a rectangle filled with colors into a string of numbers. </p>
-<h3 id="1181-pixelization-rasterization">1.18.1. "Pixelization" -- Rasterization</h3>
+<h4 id="1711-pixelization-rasterization">1.7.1.1. "Pixelization" -- Rasterization</h4>
 <p>The first step is to divide the image into a combination of small discrete regions. If we make the regions small enough, we can fool our eyes into believing the content is continuous. </p>
 <table width="100%" class="w3-center">
     <tr><th>
@@ -429,7 +459,7 @@ We need to find a way to transform a rectangle filled with colors into a string 
     <tr><td class="w3-text-gray">Image digitalization.</td></tr>
 </table>
 
-<h3 id="1182-metadata">1.18.2. Metadata</h3>
+<h4 id="1712-metadata">1.7.1.2. Metadata</h4>
 <p>To store each region -- called pixel -- into the memory, which is linear, we can define in a convention, that we'll store all the rows of the digitalized image rectangle one after the other in the memory. But this is not enough, we also need to know the row lengths in order to reconstruct the image from the memory. We also need to know the total length of the image (number of pixels) so that we know when to stop reading the memory to reconstruct the image. To do this, we could for example store the length of a row (width of the image) at first, then the total size of the image, and then all the rows one after the other. </p>
 <table width="100%" class="w3-center">
     <tr><th>
@@ -439,7 +469,7 @@ We need to find a way to transform a rectangle filled with colors into a string 
 </table>
 
 <p>In practice, how we store these extra information is defined in the image format. It is part of a header section that contains metadata (extra information that is not part of the raw data of the image itself) and many more information could be present depending on the format. Some formats even allow adding custom metadata into the image file directly.</p>
-<h2 id="119-storing-colors-into-the-memory">1.19. Storing colors into the memory</h2>
+<h3 id="172-storing-colors-into-the-memory">1.7.2. Storing colors into the memory</h3>
 <p>Scientists remarked that we can make almost all visible colors by mixing only three base colors: <span style="color:red;">red</span>, <span style="color:green;">green</span> and <span style="color:blue;">blue</span>. 
 Based on this, we can transform the colors of each pixel into a percentage of mixing for the red color, a percentage of mixing for the green color and a percentage of mixing for the blue color. 
 These are three numbers that completely define the pixel's color.</p>
@@ -453,6 +483,6 @@ These are three numbers that completely define the pixel's color.</p>
 [ <span style="color:red">100</span> ] [ <span style="color:green">100</span> ] [ <span style="color:blue">0</span> ]
 </div>
 
-<h3 id="1191-improving-the-range-of-colors">1.19.1. Improving the range of colors</h3>
+<h4 id="1721-improving-the-range-of-colors">1.7.2.1. Improving the range of colors</h4>
 <p>These percentages could be stored as integers from 0 to 100. However, to take advantage of the physical memories properties, they are usually stored using a different transformation depending on the underlying encoding we are using.</p>
 <p>The simplest encoding uses the 8-bits data type to store each percentage, so that 0 corresponds to 0% and its maximum value (255) corresponds to 100%. Other formats exist, for example with 16-bits data types resulting in a increased color range available: from 0 to 65535.</p></div></div></body></html>

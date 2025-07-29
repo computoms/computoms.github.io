@@ -17,7 +17,22 @@
 .nounder {
     text-decoration: none;
 }
-h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card logoBg">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
@@ -97,7 +112,7 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <p>This is the idea behind a magnetic hard drive. In reality, the ferromagnets are tiny regions of a coating ferromagnetic material that is spread over a circular disk, called a platter. This disk rotates around its center at a given speed, usually around 5000 rotations per minute. A fixed reading head is placed just above the surface of the disk and reads the data while the disk is rotating. An electronic controller converts the requests from the computer in order to move the read /write head for reading / writing the correct portion of information.</p>
 <p>Magnetic hard drives are still the predominant form of mass storage on computers and servers. It is the cheapest of the persistent memories per gigabyte of storage. Nevertheless, due to the mechanical parts that have to move inside the hard disk drive to place the head at the correct locations, these drives are slower than flash / SSDs.</p>
 <h4 id="1112-flash-drives">1.1.1.2. Flash drives</h4>
-<p>The flash memory is a kind of memory that is faster and has a smaller form factor than magnetic drives. Its principle of operation is basically based on the <a href="electronics.html">DRAM</a> but with different electronic components; that allows it to be persistent (without the need of a refresh mechanism): the floating-gate (FG) transistors.</p>
+<p>The flash memory is a kind of memory that is faster and has a smaller form factor than magnetic drives. Its principle of operation is basically based on the <a href="electronics.html">DRAM</a> but with different electronic components; that allows it to be persistent (without the need of a refresh mechanism): the <a href="electronics.html#14-floating-gate-transistors">floating-gate (FG) transistors</a>.</p>
 <h5 id="11121-architecture">1.1.1.2.1. Architecture</h5>
 <p>The flash memories combine many of these FG transistors into arrays, in a similar way as in random access memories. Different layouts exist, but the two main layouts are called <em>NOR Flash</em> and <em>NAND Flash</em>.</p>
 <p>In a memory, such as SRAM, DRAM or flash, we usually use two electronic lines to read or write the data at a specific location. These two lines are called the <em>bit line</em> and the <em>word line</em>. When we have an array of memory cells, each column corresponds to a word line and each row of the array corresponds to a bit line. To read the content of a specific cell, we just apply or read the voltage/current between the corresponding word and bit lines.</p>
@@ -111,8 +126,8 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <h3 id="112-random-access-memories">1.1.2. Random-access memories</h3>
 <p>Random access memory (RAM) is where the non-persistent data is stored on your computer. It is a volatile data storage. When starting a program, the operating system loads the content of the program into the RAM memory and the program's data is stored within the RAM memory.</p>
 <p>The RAM memory is relatively fast to access, but looses its data when power is turned off. It needs a certain amount of power to be refreshed and to avoid loosing its data.</p>
-<p>Most of the RAM storage available on the market are made from <a href="electronics.html#dram-cell-for-ram-storage">DRAM cells</a>.</p>
+<p>Most of the RAM storage available on the market are made from <a href="electronics.html#161-dram-cell-for-ram-storage">DRAM cells</a>.</p>
 <h3 id="113-processor-cache">1.1.3. Processor cache</h3>
 <p>In order to have an even faster memory, processors implement a part of memory directly onto their chips, called the cache memory. Its hardware implementation and location (closer to logic area of the processor) makes it the fastest storage accessible from the processor. This memory is also a type of random access memory, and shares its drawbacks (loss of data when power turns off).</p>
 <p>Before data is loaded into processor registers from the RAM memory, it is actually transferred from RAM to cache memory. Knowing this is important to understand the performance of data structures and of some algorithms.</p>
-<p>Most of cache storage are built using <a href="electronics.html#sram-cell-for-processor-cache-storage">SRAM cells</a>.</p></div></div></body></html>
+<p>Most of cache storage are built using <a href="electronics.html#162-sram-cell-for-processor-cache-storage">SRAM cells</a>.</p></div></div></body></html>

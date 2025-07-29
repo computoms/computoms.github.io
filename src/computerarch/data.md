@@ -46,21 +46,17 @@ Only one numeric system allows to count with two digits: the binary system.
 
 ### 1.5.1. Encoding positive integral numbers
 
-Usually, we work with the decimal base to represent numbers, with digits from 0 to 9. The number 127 thus represents: 1*(10*10) + 2*(10) + 7.
+Usually, we work with the decimal base to represent numbers, with digits from 0 to 9. The number 127 thus represents: $ 1 * 1^2 + 2 * 10^1 + 7 * 10^0 $.
 
-In computer memories, we only have access to two states (0 and 1) so we must convert integral numbers to binary. To "understand" a binary number, we can use the same formula but on base two: 1101 in binary represents: 1*(2*2*2) + 1*(2*2) + 0*(2) + 1.
+In computer memories, we only have access to two states (0 and 1) so we must convert integral numbers to binary. To "understand" a binary number, we can use the same formula but on base two: 1101 in binary represents: $ 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 1 * 2^0 $.
 
 Explain in more details how to convert between number bases: Number base conversions
-
--- Negative Numbers
-
--- Fractional Numbers
 
 ### 1.5.2. Negative numbers
 
 In mathematics, we are representing the negative numbers using the minus sign `-`. In computer hardware, there's no such thing. Only 0 and 1, so we needed to find a way to encode our negative numbers in binary form without using an extra symbol.
 
-## 1.6. The Two's Complement Encoding
+### 1.5.3. The Two's Complement Encoding
 
 There are several ways to encode a negative number into binary, but the main technique that is used nowadays by processors is called two's complement.
 
@@ -157,7 +153,7 @@ There are two special cases, though: 0 and -8:
 	</tr>
 </table>
 
-More formally, the two's complement b of a binary number a encoded using n bits is the binary number such that a + b = 2^n with n the number of bits that encodes a and b. Thus, b = 2^n - a, and we can find our two special cases:
+More formally, the two's complement b of a binary number a encoded using n bits is the binary number such that $ a + b = 2^n $ with n the number of bits that encodes a and b. Thus, $ b = 2^n - a $, and we can find our two special cases:
 
 <table class="w3-table-all w3-hoverable">
 	<tr class="w3-green">
@@ -182,9 +178,9 @@ More formally, the two's complement b of a binary number a encoded using n bits 
 
 As you can see, overflowing bits are thrown away (the fifth bit cannot be stored as we are using 4 bits to stored our numbers).
 
-## 1.7. Why two's complement ?
+### 1.5.4. Why two's complement ?
 
-## 1.8. The Reason behind Two's Complement Representation
+### 1.5.5. The Reason behind Two's Complement Representation
 
 Why are we using such a complicated formula? Because the goal of computers is to compute (perform operations on numbers) and this representation helps our electronic components handle the data. For example, using the two's complement reprsentation it is straightforward to add two numbers. The addition rule is the same as with positive numbers (adding bits one by one with the carry):
 
@@ -203,31 +199,61 @@ Why are we using such a complicated formula? Because the goal of computers is to
 	</tr>
 </table>
 
-The second advantage of this representation is we can easily implement subtraction: to perform a - b, we only need to transform b into its two's complement representation and then add the two numbers a + (-b).
+The second advantage of this representation is we can easily implement subtraction: to perform \(a - b\), we only need to transform b into its two's complement representation and then add the two numbers \(a + (-b)\).
 
-### 1.8.1. Single Precision Numbers
+### 1.5.6. Fractional numbers
+
+Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (`float` type in C) and 64 bits (`double` type in C).
+
+Recall how to construct a decimal number using powers of tens. For fractional numbers, it is the same, but with negative powers of tens after the comma: the number 12.345 can be written:
+
+$$ 12.345 = 1 * 10^1 + 2 * 10^0 + 3 * 10^{-1} + 4 * 10^{-2} + 5 * 10^{-3} $$
+
+We can use the same approach to represent a binary number:
+
+$$ 1100.101_2 = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0 + 1 * 2^{-1} + 0 * 2^{-2} + 1 * 2^{-3} $$
+
+The idea behind encoding floating point numbers is like representing the numbers in scientific notation. Scientific notation, in decimal, is the representation of any number in the form
+
+$$ number = y.xxx * 10^e $$
+
+for example: $ 1 345 673.12 = 1.34567312 * 10^6 $
+
+Thus the binary number scientific notation would be:
+
+$$ number_2 = 1.xxx * 2^e $$
+
+for example: $ 1100.101_2 = 1.100101_2 * 2^{11_2} $
+
+This is what is used to encode fractional binary numbers: $ 1.[fraction] * 2^{[exponent]} $.
+
+
+### 1.5.7. Single Precision Numbers
 
 On 32 bits, we divid the bits with 1 sign bit s, 8 exponent bits e and the remaining 23 bits for the fractional part:
 
 The formula for decoding a 32-bit floating point number is as follows:
 
-$$n_(10) = (-1)^s * 2^e * ( 1 + \sum_i b_(23-i) * 2^(-i))$$
+$$ n_{10} = (-1)^s * 2^e * \left( 1 + \sum_i b_{23-i} * 2^{-i} \right) $$
 
-where n_(10) is the resulting decimal number, s is the sign bit (most significant bit), e is the decimal value corresponding to the 8 exponent bits and b_i are the bits number i.
+where $ n_{10} $ is the resulting decimal number, s is the sign bit (most significant bit), e is the decimal value corresponding to the 8 exponent bits and $ b_i $ are the bits number $ i $.
 
-#### 1.8.1.1. Sign bit
+#### 1.5.7.1. Sign bit
 
 The most significant bit (bit 31) is the sign bit. `0` means we encoded a positive number, and `1` is negative.
 
-#### 1.8.1.2. Exponent encoding
+#### 1.5.7.2. Exponent encoding
 
-The exponent e is not encoded using the two's complement representation, but with a different one: the offset-binary representation with the zero offset being 127. This means that 0000 \, 0000_2 represents -126, 1000 \, 0000_2 represents 0 and 1111 \, 1111_2 represents 127.
+The exponent e is not encoded using the two's complement representation, but with a different one: the offset-binary representation with the zero offset being 127. This means that $0000,0000_2$ represents $-126$, $1000,0000_2$ represents $0$ and $1111,1111_2$ represents $127$.
 
-#### 1.8.1.3. Fraction encoding
+#### 1.5.7.3. Fraction encoding
 
 The fractional part of the number is encoded with standard binary encoding. There is a simple method to convert a decimal fractional part into binary:
 
-* multiply by two * take the integer part (either 0 or 1) which will be the binary bit number -1 (bit number 22 in our 32-bit floating-point encoding) * multiply the fractional part of the number obtained by 2 * repeat for bit number -2 ... -22 (bits 21 to 0 in 32-bit floating-point encoding)
+* multiply by two 
+* take the integer part (either 0 or 1) which will be the binary bit number -1 (bit number 22 in our 32-bit floating-point encoding) 
+* multiply the fractional part of the number obtained by 2 
+* repeat for bit number -2 ... -22 (bits 21 to 0 in 32-bit floating-point encoding)
 
 For example, for 0.345:
 
@@ -250,46 +276,21 @@ For example, for 0.345:
 	<tr class="w3-hover-green"><td>0.880 * 2 = 1.760</td>	<td>1</td>	<td>0.760</td>	<td>0</td></tr>
 </table>
 
-#### 1.8.1.4. Range and Precision
+#### 1.5.7.4. Range and Precision
 
-The fractional part is stored with 23 bits. This allows a precision of between 7 and 9 significant digits (2^(23) = 8 \, 388 \, 608). The exponent is stored on 8 bits, which allows numbers from 2^(-126) \approx 1.175 * 10^(-38) to 2^(127) \approx 1.701 * 10^(38).
+The fractional part is stored with 23 bits. This allows a precision of between 7 and 9 significant digits ( $2^{23} = 8,388,608$). The exponent is stored on 8 bits, which allows numbers from $2^{-126} \approx 1.175 * 10^{-38}$ to $2^{127} \approx 1.701 * 10^{38}$.
 
 
-### 1.8.2. Double-precision numbers
+### 1.5.8. Double-precision numbers
 
 The `double` data type, as for double precision floating-point, is a data type encoded on 64 bits: 1 sign bit, 11 exponent bits and 52 fractional bits.
 
-#### 1.8.2.1. Range and Precision
+#### 1.5.8.1. Range and Precision
 
-The 52 bits of the fractional part allows between 14 and 16 significant digits (2^(52) \approx 4.5 * 10^(15)). The exponent is stored on 11 bits, which allows numbers from 2^(-1023) \approx 1.11 * 10^(308) to 2^(1024) \approx 1.8 * 10^(308) although sometimes these two bounds are reserved for special purposes.
+The 52 bits of the fractional part allows between 14 and 16 significant digits ($2^{52} \approx 4.5 * 10^{15}$). The exponent is stored on 11 bits, which allows numbers from $2^{-1023} \approx 1.11 * 10^{308}$ to $2^{1024} \approx 1.8 * 10^{308}$ although sometimes these two bounds are reserved for special purposes.
 
-### 1.8.3. Fractional numbers
 
-Until now, we saw how to store integer numbers. But how to store fractional numbers, such as 2.34? We need a different encoding for these numbers: the floating-point format. We are usually representing fractional numbers in two sizes: 32 bits (`float` type in C) and 64 bits (`double` type in C).
-
-Recall how to construct a decimal number using powers of tens. For fractional numbers, it is the same, but with negative powers of tens after the comma: the number 12.345 can be written:
-
-12.345 = 1 * 10^1 + 2 * 10^0 + 3 * 10^(-1) + 4 * 10^(-2) + 5 * 10^(-3)
-
-We can use the same approach to represent a binary number:
-
-1100.101_2 = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0 + 1 * 2^(-1) + 0 * 2^(-2) + 1 * 2^(-3)
-
-The idea behind encoding floating point numbers is like representing the numbers in scientific notation. Scientific notation, in decimal, is the representation of any number in the form
-
-number = y.xxx * 10^e
-
-for example: 1 345 673.12 = 1.34567312 * 10^6
-
-Thus the binary number scientific notation would be:
-
-number_2 = 1.xxx * 2^e
-
-for example: 1100.101_2 = 1.100101_2 * 2^(11_2)
-
-This is what is used to encode fractional binary numbers: \pm 1.[fraction] * 2^([exponent]).
-
-## 1.9. Storing characters
+## 1.6. Storing characters
 
 In a computer, we often need to store text, so we need a way to store characters.
 
@@ -303,7 +304,7 @@ There exists different encodings. The most common ones include:
 
 - UTF: Unicode Transformation Format. How do we handle other languages?
 
-## 1.10. ASCII
+### 1.6.1. ASCII
 
 _American Standard Code for Information Interchange_
 
@@ -315,7 +316,7 @@ Knowing that the bigger the number, the more space it takes in a computer memory
 
 ![The ASCII Table](images/ASCII-Table.png)
 
-## 1.11. UTF
+### 1.6.2. UTF
 
 _Unicode Transformation Format_
 
@@ -325,7 +326,7 @@ The first way to solve this problem is to extend the transformation table to the
 
 The Unicode encoding is a bit more than a conversion between characters and numbers: it defines the conversion between characters and code points, that are then translated into storable numbers using different techniques, called UTF-8, UTF-16 and UTF-32 (amongst others). It defines 1112064 code points corresponding to the different characters existing in the different languages on this planet.
 
-## 1.12. UTF-32
+### 1.6.3. UTF-32
 
 Storing characters with large numbers.
 
@@ -333,15 +334,15 @@ The ASCII encoding is using numbers from 0 to 127 to store the English alphabet 
 
 In order to extend the alphabet to other symbols, we need to convert these symbols to numbers that are higher than 256. The UTF-32 encoding uses numbers up to 4294967296 (that is a lot!) in a number format that takes 32-bits of memory space.
 
-## 1.13. Advantages
+#### 1.6.3.1. Advantages
 
 The advantages of this encoding is that it is retro-compatible with ASCII: the first 127 characters are equivalent in both encodings.
 
-## 1.14. Drawbacks
+#### 1.6.3.2. Drawbacks
 
 The drawbacks is that if you store mostly English alphabet's characters, you are loosing memory space because each number will take the same amount of space in this encoding, whatever its value (which will be 32 bits of memory space for each character, as compared to just 8-bits for ASCII encoding characters).
 
-## 1.15. UTF-8
+### 1.6.4. UTF-8
 
 How to reduce the memory footprint for texts with mostly simple characters?
 
@@ -391,24 +392,24 @@ The principle behind the encoding uses the fact that ASCII only uses 7 bits to s
 
 By using a variable length enconding like this one, we are saving space on the memory. This encoding is one of the most used encoding for storing strings of characters in programs and websites.
 
-## 1.16. UTF-16
+### 1.6.5. UTF-16
 
 A trade-off between the two previous ones.
 
 UTF-16 is another variable length format, that follows the same principle that UTF-8. The difference is that its base unit is coded on 16 bits instead of 8, meaning each character is taking at least 16 bits of memory. Characters are either 16 bits or 32 bits.
 
-## 1.17. Storing images
+## 1.7. Storing images
 
 How to store graphical contents, such as images or videos, on a computer memory?
 
 Following the same principle explained in [Storing Characters](Storing%20Characters.html), images are stored in the memory using a convention that we define in advanced, saying how to convert an image into storable information. This convention is called a format or sometimes an encoding, like for numbers. The process to convert an image into a set of storable data is called digitization.
 
-## 1.18. Basic principle
+### 1.7.1. Basic principle
 
 An image is usually a rectangle filled with different colors. As we saw in the description of [computer memories](Computer%20Memories.html), the memory of a computer can only store strings of data (uni-dimensional array of bits -- or numbers). 
 We need to find a way to transform a rectangle filled with colors into a string of numbers. 
 
-### 1.18.1. "Pixelization" -- Rasterization
+#### 1.7.1.1. "Pixelization" -- Rasterization
 
 The first step is to divide the image into a combination of small discrete regions. If we make the regions small enough, we can fool our eyes into believing the content is continuous. 
 
@@ -419,7 +420,7 @@ The first step is to divide the image into a combination of small discrete regio
 	<tr><td class="w3-text-gray">Image digitalization.</td></tr>
 </table>
 
-### 1.18.2. Metadata
+#### 1.7.1.2. Metadata
 
 To store each region -- called pixel -- into the memory, which is linear, we can define in a convention, that we'll store all the rows of the digitalized image rectangle one after the other in the memory. But this is not enough, we also need to know the row lengths in order to reconstruct the image from the memory. We also need to know the total length of the image (number of pixels) so that we know when to stop reading the memory to reconstruct the image. To do this, we could for example store the length of a row (width of the image) at first, then the total size of the image, and then all the rows one after the other. 
 
@@ -432,7 +433,7 @@ To store each region -- called pixel -- into the memory, which is linear, we can
 
 In practice, how we store these extra information is defined in the image format. It is part of a header section that contains metadata (extra information that is not part of the raw data of the image itself) and many more information could be present depending on the format. Some formats even allow adding custom metadata into the image file directly.
 
-## 1.19. Storing colors into the memory
+### 1.7.2. Storing colors into the memory
 
 Scientists remarked that we can make almost all visible colors by mixing only three base colors: <span style="color:red;">red</span>, <span style="color:green;">green</span> and <span style="color:blue;">blue</span>. 
 Based on this, we can transform the colors of each pixel into a percentage of mixing for the red color, a percentage of mixing for the green color and a percentage of mixing for the blue color. 
@@ -450,7 +451,7 @@ This is because for a pixel that is totally blue, we do not mix any red nor gree
 [ <span style="color:red">100</span> ] [ <span style="color:green">100</span> ] [ <span style="color:blue">0</span> ]
 </div>
 
-### 1.19.1. Improving the range of colors
+#### 1.7.2.1. Improving the range of colors
 
 These percentages could be stored as integers from 0 to 100. However, to take advantage of the physical memories properties, they are usually stored using a different transformation depending on the underlying encoding we are using.
 

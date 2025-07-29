@@ -11,17 +11,36 @@ ROOT_STYLESHEETS = """
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 """
+JS_EXTS = """
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+            displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+"""
+
+def root_attrs():
+    return ROOT_TITLE + ROOT_HEAD_ATTR + ROOT_STYLESHEETS
+
 
 def root(content):
     o = "<!DOCTYPE html>"
     o += "<html lang=\"en\">"
-    o += ROOT_TITLE
-    o += ROOT_HEAD_ATTR
-    o += ROOT_STYLESHEETS
+    o += root_attrs()
     o += "<style>"
     o += utils.read_file('layout/base.css')
     o += "</style>"
     o += "<body>"
+    o += JS_EXTS
     o += nav()
     o += """
     <div class="w3-content" style="max-width:2000px;margin-top:46px">
@@ -47,14 +66,13 @@ def banner(content, image):
 
     o = "<!DOCTYPE html>"
     o += "<html lang=\"en\">"
-    o += ROOT_TITLE
-    o += ROOT_HEAD_ATTR
-    o += ROOT_STYLESHEETS
+    o += root_attrs()
     o += "<style>"
     o += utils.read_file('layout/base.css')
     o += banner_style
     o += "</style>"
     o += "<body>"
+    o += JS_EXTS
     o += nav()
     o += """
     <div class="w3-content" style="max-width:2000px;margin-top:46px">

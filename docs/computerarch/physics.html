@@ -17,7 +17,22 @@
 .nounder {
     text-decoration: none;
 }
-h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card logoBg">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
@@ -97,13 +112,17 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <h2 id="11-mass-the-gravitational-force">1.1. Mass &amp; the gravitational force</h2>
 <p>The <em>mass</em> is one of the few intrinsic characteristics of matter. This property defines the quantity of inertia a body has. It plays a role in the relationship between a force and the resulting acceleration of a body, through Newton's second law of mechanics (stating that the force equals the mass of a body multiplied by its acceleration). This property also rules the gravitational interaction between two bodies. Indeed, Newton's also discovered that two bodies with given masses are interacting together by attracting each other with a force that depends on both masses. </p>
 <p>IF you hold an apple with your hand and suddenly drop it, it will fall down on the floor. This is due to what we call its "weight", which is a force applied by the Earth onto the apple. Two masses attract each other with a force that is proportional to their distance and to their masses:</p>
-<p><code>W = G. (m1m2)/r^2</code></p>
+<p>
+<script type="math/tex; mode=display"> W = G \times \frac{m1 \times m2}{r^2} </script>
+</p>
 <h2 id="12-sub-atomic-forces">1.2. Sub-atomic forces</h2>
 <p>The strong and weak nuclear forces are forces that rule the sub-atomic world. The distance on which these forces can act are very small, on the order of the size of the atom itself and they do not play a role in computers; but are indispensable to maintain the atoms and their composing particles together. </p>
 <h2 id="13-the-electromagnetic-force-electrons-charge-spin">1.3. The Electromagnetic force: electrons charge &amp; spin</h2>
 <p>The electromagnetic force regroups the electric force that relates to the electric charge of electrons and the magnetic force that relates to the spin of electrons.</p>
 <p>The force applied on a moving particle <code>q</code> of velocity <code>v</code> inside an environment where an electric field <code>E</code> and a magnetic field <code>B</code> is present is equal to:</p>
-<p><code>F = qE + qv x B</code></p>
+<p>
+<script type="math/tex; mode=display"> F = q \times E + q \times v \times B </script>
+</p>
 <h1 id="2-creating-magnetic-fields">2. Creating Magnetic Fields</h1>
 <h3 id="201-creating-a-magnetic-field">2.0.1. Creating a magnetic field</h3>
 <p>Some materials called <em>ferromagnetic</em> materials can be magnetized, using a large magnetic field to align their internal magnetic orientations. Once magnetized, these materials emit a constant magnetic field.</p>
@@ -116,11 +135,13 @@ h1 h2 {font-weight: bold;}</style><body><!-- Navbar -->
 <p>This phase shift in the propagation of electric/magnetic forces means that it is possible, much like in the water analogy, to create electromagnetic <em>waves</em>. But waves usually propagate through a medium, and so physicists invented a name for this medium: a <em>field</em>. The <strong>electromagnetic field</strong> was born. The electromagnetic waves can have effects much much further than the static forces would allow. They are travelling at the speed of light, which is <code>299 792 458 m/s</code>.</p>
 <p>More theoretically, a force field has actually a mathematical definition; which basically defines "a non-contact force applied to a partile at various positions in space." [Wikipedia]</p>
 <h1 id="4-electric-force-and-electric-field">4. Electric force and electric field</h1>
-<p>The electric force is the force applied by a particle of charge <code>q</code> to other particles with a charge. The following formula gives the value of the electric force that a particle of charge <code>q_1</code> applies on another particle of charge <code>q_2</code> separated by distance <code>r</code>: </p>
-<p><code>F = k q_1 * q_2 / (r * r)</code></p>
+<p>The electric force is the force applied by a particle of charge <code>q</code> to other particles with a charge. The following formula gives the value of the electric force that a particle of charge $ q_1 $ applies on another particle of charge $ q_2 $ separated by distance <code>r</code>: </p>
+<p>
+<script type="math/tex; mode=display"> F = k q_1 \times \frac{q_2}{r^2} </script>
+</p>
 <p>where <code>k</code> is the Coulomb's constant.</p>
 <h2 id="41-moving-electrons-generating-a-current">4.1. Moving electrons, generating a current</h2>
-<p>How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large <em>fixed</em> charge <code>q_1</code> (i.e. a battery). The other way to make them move is by using a current generator (see next posts).</p>
+<p>How do we actually force electrons to move inside a metal? Using the above formula, one way to do this would be to have, at one end of a piece of metal, a large <em>fixed</em> charge $ q_1 $ (i.e. a battery). The other way to make them move is by using a current generator (see next posts).</p>
 <h1 id="5-magnetic-force">5. Magnetic Force</h1>
 <p>The magnetic force is the force generated by either:</p>
 <ul>
