@@ -27,7 +27,7 @@ def process_file(path, transf):
 
 def transform_markdown(path):
     content = read_file(path)
-    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code'])
+    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code', 'tables'])
     html_content = md.convert(content)
     html_content = layout.root(html_content)
     write_file(path.replace('.md', '.html'), html_content)
