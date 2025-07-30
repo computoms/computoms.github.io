@@ -36,11 +36,18 @@ Here is a list of interesting engineering blogs:
     o += "<h2>Articles from me</h2>"
     o += "<ul>"
     for post in utils.list_articles('dev'):
-        o += "<li><a href=\"" + post['src'].replace('.md', '.html') + "\">" + post['title'] + "</a></li>"
+        o += "<li><a href=\"/" + post['src'].replace('.md', '.html') + "\">" + post['title'] + "</a></li>"
     o += "</ul>"
     return o
 
+class DevMarkdownProcessor(utils.MarkdownProcessor):
+    def __init__(self):
+        super().__init__()
+
+    def process(self, content, metadata):
+        return '# ' + metadata['title'] + '\n\n' + content
+
 def gen():
-    utils.generate_markdowns('dev')
+    utils.generate_markdowns('dev', markdown_processor=DevMarkdownProcessor())
     utils.copy_images('dev')
     utils.write_file('dev/index.html', layout.Layout().build(build_index()))
