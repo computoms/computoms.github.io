@@ -1,9 +1,9 @@
 ---
-title: 'Understanding Linux In-Depth: resources'
+title: 'Linux in-depth resources'
 date: 2025-07-30
 ---
 
-Here are a list of resources to understand linux foundations and working principles in-depth.
+Here are a list of resources to dig the Linux subject.
 
 [TOC]
 

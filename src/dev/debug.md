@@ -3,7 +3,7 @@ date: 2025-07-28
 title: Debugging tools
 ---
 
-This article aims at summarizing all the tools used for debugging a web application or computer application.
+This article aims at summarizing all the tools used for debugging a web application or computer.
 
 [TOC]
 
