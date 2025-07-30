@@ -92,3 +92,5 @@ sudo dmidecode -t bios
 ### 1.3.1. Linux
 
 - See list of modern command-line tools for Unix-based systems on [ibraheemdev GitHub's page](https://github.com/ibraheemdev/modern-unix)
+
+- `tail -f` to follow a journal/log file
