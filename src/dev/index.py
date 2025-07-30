@@ -1,5 +1,6 @@
 import utils
 import layout
+from datetime import datetime
 
 def read_favorite_blogs():
     return utils.read_yaml('dev/favorite_blogs.yml')['blogs']
@@ -45,7 +46,8 @@ class DevMarkdownProcessor(utils.MarkdownProcessor):
         super().__init__()
 
     def process(self, content, metadata):
-        return '# ' + metadata['title'] + '\n\n' + content
+        date = metadata['date'].strftime('%b %d, %Y')
+        return '# ' + metadata['title'] + '\n\n' + date + '\n' + content
 
 def gen():
     utils.generate_markdowns('dev', markdown_processor=DevMarkdownProcessor())

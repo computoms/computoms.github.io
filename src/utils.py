@@ -7,6 +7,7 @@ import glob
 import shutil
 
 OUTPUT_DIR = "../docs/"
+INCLUDE_DRAFTS = False
 
 # File IO
 
@@ -43,6 +44,8 @@ class MarkdownProcessor:
         pass
 
 def is_draft(metadata):
+    if (INCLUDE_DRAFTS):
+        return False
     return 'draft' in metadata and metadata['draft'] == True
 
 def generate_markdowns(dir, markdown_processor: MarkdownProcessor = None, fn_custom_layout = None):

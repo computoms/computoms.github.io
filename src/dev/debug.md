@@ -33,7 +33,7 @@ This article aims at summarizing all the tools used for debugging a web applicat
 
 ## 1.5. Low-level packet analysis
 
-1. `tshark` [command-line](https://www.wireshark.org/docs/man-pages/tshark.html)
+1. `tshark` [command-line](https://www.wireshark.org/docs/man-pages/tshark.html), [Using tshark](https://opensource.com/article/20/1/wireshark-linux-tshark)
 2. `WireShark` [GUI](https://www.wireshark.org/)
 
 # 2. Operating-system informations

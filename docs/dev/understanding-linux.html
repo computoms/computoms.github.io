@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\[", "\]"]],
+                processEscapes: true
+            },
+            config: ["MMLorHTML.js"],
+            jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+            extensions: ["MathMenu.js", "MathZoom.js"]
+        });
+    </script>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-padding-64" id="band">
+        <h1 id="understanding-linux-in-depth-resources">Understanding Linux In-Depth: resources</h1>
+<p>Jul 30, 2025</p>
+<p>Here are a list of resources to understand linux foundations and working principles in-depth.</p>
+<div class="toc">
+<ul>
+<li><a href="#understanding-linux-in-depth-resources">Understanding Linux In-Depth: resources</a></li>
+<li><a href="#1-the-linuxunix-story">1. The Linux/Unix Story</a></li>
+<li><a href="#2-the-linux-kernel">2. The Linux Kernel</a><ul>
+<li><a href="#21-kernel">2.1. Kernel</a></li>
+<li><a href="#22-memory-management">2.2. Memory management</a></li>
+<li><a href="#23-device-drivers">2.3. Device Drivers</a></li>
+<li><a href="#24-syscalls">2.4. Syscalls</a></li>
+</ul>
+</li>
+<li><a href="#3-the-linux-shell">3. The Linux Shell</a><ul>
+<li><a href="#31-ttl-terminals">3.1. TTL terminals</a></li>
+<li><a href="#32-shells">3.2. Shells</a></li>
+<li><a href="#33-multiplexers-tmux">3.3. Multiplexers -- tmux</a></li>
+</ul>
+</li>
+<li><a href="#4-access-control">4. Access control</a></li>
+<li><a href="#5-filesystems">5. Filesystems</a></li>
+<li><a href="#6-processes-and-packaging">6. Processes and packaging</a></li>
+<li><a href="#7-networking">7. Networking</a><ul>
+<li><a href="#71-tcpip-stack">7.1. TCP/IP stack</a></li>
+<li><a href="#72-dns">7.2. DNS</a></li>
+<li><a href="#73-application-layer">7.3. Application layer</a></li>
+</ul>
+</li>
+<li><a href="#8-observability">8. Observability</a><ul>
+<li><a href="#81-logging">8.1. Logging</a></li>
+<li><a href="#82-system-monitoring">8.2. System Monitoring</a></li>
+</ul>
+</li>
+<li><a href="#9-others">9. Others</a></li>
+</ul>
+</div>
+<p><em>Most of these resources are taken from <a href="/books/learning-modern-linux.html">Learning Modern Linux</a></em>.</p>
+<h1 id="1-the-linuxunix-story">1. The Linux/Unix Story</h1>
+<ul>
+<li><a href="https://corecursive.com/brian-kernighan-unix-bell-labs1/">The Birth of UNIX</a></li>
+</ul>
+<h1 id="2-the-linux-kernel">2. The Linux Kernel</h1>
+<h2 id="21-kernel">2.1. Kernel</h2>
+<ul>
+<li><a href="https://linux-kernel-labs.github.io/refs/heads/master/lectures/intro.html">Linux Kernel Teaching</a></li>
+<li><a href="https://developer.ibm.com/articles/l-linux-kernel/">Anatomy of the Linux Kernel</a></li>
+<li><a href="https://www.cs.cornell.edu/courses/cs614/2007fa/Slides/kernel%20architectures.pdf">Operating Systems Kernels</a></li>
+<li><a href="https://kernelnewbies.org/">KernelNeybies</a></li>
+<li><a href="https://github.com/udoprog/kernelstats">kernelstats</a></li>
+<li><a href="https://makelinux.github.io/kernel/map/">The Linux Kernel Map</a></li>
+</ul>
+<h2 id="22-memory-management">2.2. Memory management</h2>
+<ul>
+<li><a href="https://www.kernel.org/doc/gorman/pdf/understand.pdf">Understanding the Linux Virtual Memory Manager</a></li>
+<li><a href="https://hammertux.github.io/slab-allocator">The Slab Allocator in the Linux Kernel</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/admin-guide/mm/index.html">Linux Kernel Documentation</a></li>
+</ul>
+<h2 id="23-device-drivers">2.3. Device Drivers</h2>
+<ul>
+<li><a href="https://opensource.com/article/18/11/how-install-device-driver-linux">How to install a device driver on Linux</a></li>
+<li><a href="https://linux-kernel-labs.github.io/refs/heads/master/labs/device_drivers.html">Character device drivers</a></li>
+<li><a href="https://www.apriorit.com/dev-blog/195-simple-driver-for-linux-os">Linux Device Drivers: Tutorial for Linux Driver Development</a></li>
+</ul>
+<h2 id="24-syscalls">2.4. Syscalls</h2>
+<ul>
+<li><a href="https://www.cs.montana.edu/courses/spring2005/518/Hypertextbook/jim/media/interrupts_on_linux.pdf">Linux Interrupts: The Basic Concepts</a></li>
+<li><a href="https://linux-kernel-labs.github.io/refs/heads/master/lectures/syscalls.html">System Calls</a></li>
+<li><a href="https://faculty.nps.edu/cseagle/assembly/sys_call.html">Linux syscalls table</a></li>
+<li><a href="https://elixir.bootlin.com/linux/v6.16/source/include/linux/syscalls.h">Syscalls.h source code</a></li>
+<li><a href="https://prototype-kernel.readthedocs.io/en/latest/bpf/ebpf_maps.html">eBPF cards documentation</a></li>
+</ul>
+<h1 id="3-the-linux-shell">3. The Linux Shell</h1>
+<h2 id="31-ttl-terminals">3.1. TTL terminals</h2>
+<ul>
+<li><a href="https://poor.dev/blog/terminal-anatomy/">Anatomy of a Terminal Emulator</a></li>
+<li><a href="https://www.linusakesson.net/programming/tty/">The TTY Demystified</a></li>
+<li><a href="https://unixdigest.com/articles/the-terminal-the-console-and-the-shell-what-are-they.html">The Terminal, the Console and the Shell -- What are they?</a></li>
+<li><a href="https://www.howtogeek.com/428174/what-is-a-tty-on-linux-and-how-to-use-the-tty-command/">What is a TTY on Linux</a></li>
+<li><a href="https://lucasfcosta.com/2019/04/07/streams-introduction.html">Your Terminal is not a Terminal: An Introduction to Streams</a></li>
+</ul>
+<h2 id="32-shells">3.2. Shells</h2>
+<ul>
+<li><a href="https://hyperpolyglot.org/unix-shells">Unix Shells: bash, Fish, ksh, tcsh, zsh</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_command_shells">Comparison of Command Shells</a></li>
+<li><a href="https://www.reddit.com/r/linux/comments/1csl7c/bash_vs_zsh/">bash vs zsh</a></li>
+<li><a href="https://vermaden.wordpress.com/2021/09/19/ghost-in-the-shell-part-7-zsh-setup/">Ghost in the Shell</a></li>
+</ul>
+<h2 id="33-multiplexers-tmux">3.3. Multiplexers -- tmux</h2>
+<ul>
+<li><a href="https://thoughtbot.com/blog/a-tmux-crash-course">A tmux Crash Course</a></li>
+<li><a href="https://hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">A Quick and Easy Guide to tmux</a></li>
+<li><a href="https://www.howtogeek.com/671422/how-to-use-tmux-on-linux-and-why-its-better-than-screen/">How to Use tmux on Linux</a></li>
+<li><a href="https://pragprog.com/titles/bhtmux2/tmux-2/">tmux 2: Productive Mouse-Free Development</a></li>
+<li><a href="https://tmuxcheatsheet.com/">Tips and tricks for tmux</a></li>
+</ul>
+<h1 id="4-access-control">4. Access control</h1>
+<ul>
+<li><a href="https://www.cs.umd.edu/sites/default/files/scholarly_papers/ACrowell_1.pdf">A Survey of Access Control Policies</a></li>
+<li><a href="https://blog.container-solutions.com/linux-capabilities-in-practice">Linux Capabilities in Practice</a></li>
+<li><a href="https://www.kernel.org/doc/ols/2008/ols2008v1-pages-163-172.pdf">Linux Capabilites: Making Them Work</a></li>
+<li><a href="https://lwn.net/Articles/656307/">A seccomp Overview</a></li>
+<li><a href="https://blog.cloudflare.com/sandboxing-in-linux-with-zero-lines-of-code/">Sandboxing in Linux with zero Lines of Code</a></li>
+<li><a href="https://www.usenix.org/legacy/publications/library/proceedings/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher_html/main.html">POSIX Access control Lists on Linux</a></li>
+<li><a href="https://www.redhat.com/en/blog/linux-access-control-lists">An Introduction to Linux Access Control Lists (RedHat)</a></li>
+</ul>
+<h1 id="5-filesystems">5. Filesystems</h1>
+<ul>
+<li><a href="https://www.oakton.edu/user/2/rjtaylor/CIS228/Slide/UNIX%20File%20Systems%202.pdf">UNIX filesystems basics</a></li>
+<li><a href="https://www.kernel.org/doc/html/latest/filesystems/vfs.html">Overview of the Linux Virtual File System</a></li>
+<li><a href="https://www.starlab.io/blog/introduction-to-the-linux-virtual-filesystem-vfs-part-i-a-high-level-tour">Introduction to Linux Virtual File Systems</a></li>
+<li><a href="https://www.linuxjournal.com/content/review-gui-lvm-tools">How to use LVM GUI</a></li>
+<li><a href="https://tldp.org/LDP/Linux-Filesystem-Hierarchy/Linux-Filesystem-Hierarchy.pdf">File systems hierarchy on Linux</a></li>
+<li><a href="https://www.reddit.com/r/DataHoarder/comments/f5uzv8/filesystem_efficiancy_comparision_of_ext4_xfs/">Filesystem efficiency: ext4, xfs, btrfs and zfs compared</a></li>
+<li><a href="https://www.linuxjournal.com/article/7714">Kernel Korner Unionfs: Bringing Filesystems Together</a></li>
+<li><a href="https://opensource.com/article/20/11/btrfs-linux">Starting with btrfs on Linux</a></li>
+</ul>
+<h1 id="6-processes-and-packaging">6. Processes and packaging</h1>
+<ul>
+<li><a href="https://opensource.com/article/18/1/analyzing-linux-boot-process">Analyzing the Linux boot process</a></li>
+<li><a href="https://www.crybit.com/linux-boot-process/">Linux boot process steps</a></li>
+<li><a href="https://www.linode.com/docs/guides/tools-reference/linux-package-management/">Linux Package Management guides</a></li>
+</ul>
+<h1 id="7-networking">7. Networking</h1>
+<h2 id="71-tcpip-stack">7.1. TCP/IP stack</h2>
+<ul>
+<li><a href="https://www.oreilly.com/library/view/understanding-linux-network/0596002556/">Understanding Linux Network Internal</a></li>
+</ul>
+<h2 id="72-dns">7.2. DNS</h2>
+<ul>
+<li><a href="https://www.thegeekstuff.com/2014/01/install-dns-server/">Install and configure a Linux DNS Server</a></li>
+<li><a href="https://zwischenzugs.com/2018/06/08/anatomy-of-a-linux-dns-lookup-part-i/">Anatomy of a DNS search on Linux</a></li>
+<li><a href="https://www.netmeister.org/blog/tlds.html">TLD - Putting the .fun in the top of the DNS</a></li>
+</ul>
+<h2 id="73-application-layer">7.3. Application layer</h2>
+<ul>
+<li><a href="https://goteleport.com/blog/ssh-tunneling-explained/">SSH tunnels explained</a></li>
+<li><a href="https://curl.se/book.html">All about curl</a></li>
+<li><a href="https://www.redhat.com/en/blog/getting-started-socat">Getting started with socat, a multipurpose relay tool for Linux</a></li>
+<li><a href="https://xn--blgg-hra.no/2015/10/geomapping-network-traffic/">Geomappy network traffic</a></li>
+</ul>
+<h1 id="8-observability">8. Observability</h1>
+<ul>
+<li><a href="https://netflixtechblog.com/linux-performance-analysis-in-60-000-milliseconds-accc10403c55">Linux Performance Analysis in 60,000 Milliseconds</a></li>
+</ul>
+<h2 id="81-logging">8.1. Logging</h2>
+<ul>
+<li><a href="https://devconnected.com/linux-logging-complete-guide/">Linux Logging Complete Guide</a></li>
+<li><a href="https://www.tutorialspoint.com/unix/unix-system-logging.htm">UNIX/Linux System Logging</a></li>
+<li><a href="https://www.fluentd.org/">fluentd</a></li>
+</ul>
+<h2 id="82-system-monitoring">8.2. System Monitoring</h2>
+<ul>
+<li><a href="https://www.sysdig.com/blog/monitoring-statsd-metrics">Monitoring statsd</a></li>
+<li><a href="https://jvns.ca/blog/2017/07/05/linux-tracing-systems/">Linux tracing systems</a></li>
+<li><a href="https://www.markhansen.co.nz/profilerpedia/">Profilerpedia: A map of the Software Profiling Ecosystem</a></li>
+<li><a href="https://prometheus.io/docs/guides/node-exporter/">Monitoring Linux host metrics with the Node Explorer</a></li>
+</ul>
+<h1 id="9-others">9. Others</h1>
+<ul>
+<li><a href="https://www.infoworld.com/article/2255121/rancheros-a-simpler-linux-for-docker-lovers.html">RancherOS: a simpler Linux alternative for Docker enthusiasts</a></li>
+<li><a href="https://web.mit.edu/kerberos/">Kerberos: authentication procotol</a></li>
+<li><a href="https://lwn.net/Articles/337677/">Functional Linux with NixOS</a></li>
+<li><a href="https://jichu4n.com/posts/how-x-window-managers-work-and-how-to-write-one-part-i/">How X-Window Managers works</a></li>
+</ul></div></div></body></html>
