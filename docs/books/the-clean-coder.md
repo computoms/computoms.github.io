@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <h1 id="the-clean-coder">The Clean Coder</h1>
+<div class="w3-flex">
+    <img class="w3-padding" src="images/the-clean-coder.jpg" alt="The Clean Coder - Cover" width="250px" />
+    <div style="width: 400px;" class="w3-padding">
+    <p><i>A Code of Conduct for Professional Programmers</i></p>
+    <p>Robert C. Martin</p>
+    </div>
+</div>
+
+<div class="toc">
+<ul>
+<li><a href="#the-clean-coder">The Clean Coder</a></li>
+<li><a href="#chatgpts-summary">ChatGPT's summary</a><ul>
+<li><a href="#core-premise">✅ Core Premise:</a></li>
+<li><a href="#key-lessons-themes">🧠 Key Lessons &amp; Themes:</a><ul>
+<li><a href="#1-professionalism-is-a-discipline">1. Professionalism Is a Discipline</a></li>
+<li><a href="#2-saying-no-is-part-of-the-job">2. Saying "No" Is Part of the Job</a></li>
+<li><a href="#3-coding-thinking">3. Coding = Thinking</a></li>
+<li><a href="#4-test-driven-development-tdd">4. Test-Driven Development (TDD)</a></li>
+<li><a href="#5-time-management-avoiding-burnout">5. Time Management &amp; Avoiding Burnout</a></li>
+<li><a href="#6-communication-skills-matter">6. Communication Skills Matter</a></li>
+<li><a href="#7-continuous-learning">7. Continuous Learning</a></li>
+<li><a href="#8-professional-ethics">8. Professional Ethics</a></li>
+</ul>
+</li>
+<li><a href="#key-practices-encouraged">🧾 Key Practices Encouraged:</a></li>
+<li><a href="#who-should-read-this-book">⚖️ Who Should Read This Book?</a></li>
+<li><a href="#in-summary">🧩 In Summary:</a></li>
+<li><a href="#comparison-clean-code-vs-the-clean-coder">🔁 Comparison: Clean Code vs. The Clean Coder</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="chatgpts-summary">ChatGPT's summary</h1>
+<p><strong>Published:</strong> 2011</p>
+<p><strong>Genre:</strong> Software development, professional conduct</p>
+<p><strong>Focus:</strong> What it means to be a <strong>professional software developer</strong>—beyond just writing code.</p>
+<hr />
+<h3 id="core-premise">✅ <strong>Core Premise:</strong></h3>
+<p>While <em>Clean Code</em> (his earlier book) focuses on how to <strong>write clean code</strong>, <em>The Clean Coder</em> is about how to <strong>act like a professional</strong> in your work. Uncle Bob shares lessons from decades in the industry, emphasizing discipline, communication, responsibility, and ethics.</p>
+<hr />
+<h2 id="key-lessons-themes">🧠 <strong>Key Lessons &amp; Themes:</strong></h2>
+<h3 id="1-professionalism-is-a-discipline">1. <strong>Professionalism Is a Discipline</strong></h3>
+<ul>
+<li>You’re not just writing code—you’re committing to <strong>quality</strong>, <strong>reliability</strong>, and <strong>accountability</strong>.</li>
+<li>Professionals <strong>say no</strong> when they can’t deliver. They <strong>don’t commit</strong> to unrealistic deadlines just to please people.</li>
+</ul>
+<hr />
+<h3 id="2-saying-no-is-part-of-the-job">2. <strong>Saying "No" Is Part of the Job</strong></h3>
+<ul>
+<li>A recurring theme: professionals must <strong>learn to say no</strong> to protect their integrity.</li>
+<li>Agreeing to impossible timelines or skipping tests may please the boss short-term, but <strong>harms the product and team long-term</strong>.</li>
+</ul>
+<hr />
+<h3 id="3-coding-thinking">3. <strong>Coding = Thinking</strong></h3>
+<ul>
+<li>Real coding involves <strong>deep focus, deliberate design, and constant learning</strong>.</li>
+<li>Avoid chaotic, reactive coding. Use <strong>TDD</strong>, <strong>pair programming</strong>, and <strong>refactoring</strong> to stay sharp and clean.</li>
+</ul>
+<hr />
+<h3 id="4-test-driven-development-tdd">4. <strong>Test-Driven Development (TDD)</strong></h3>
+<ul>
+<li>TDD isn’t just a testing technique—it's a <strong>design tool</strong>.</li>
+<li>Writing tests first helps you think clearly about <strong>what the code should do</strong>, leading to simpler, better-structured software.</li>
+</ul>
+<hr />
+<h3 id="5-time-management-avoiding-burnout">5. <strong>Time Management &amp; Avoiding Burnout</strong></h3>
+<ul>
+<li>Track how you spend your time. Don’t let interruptions or disorganized work rob your productivity.</li>
+<li>Being “heroic” by pulling all-nighters isn't professional—<strong>it’s dangerous</strong>.</li>
+<li><strong>Burnout is real</strong>, and professionals need to take care of their <strong>mental and physical health</strong>.</li>
+</ul>
+<hr />
+<h3 id="6-communication-skills-matter">6. <strong>Communication Skills Matter</strong></h3>
+<ul>
+<li>Being a professional means <strong>communicating clearly and often</strong>: with managers, teammates, and customers.</li>
+<li>You must be able to <strong>negotiate deadlines</strong>, <strong>explain technical trade-offs</strong>, and <strong>admit mistakes</strong> without ego.</li>
+</ul>
+<hr />
+<h3 id="7-continuous-learning">7. <strong>Continuous Learning</strong></h3>
+<ul>
+<li>A clean coder <strong>never stops learning</strong>. Read books, practice code katas, attend meetups, and stay sharp.</li>
+<li>Uncle Bob recommends dedicating <strong>20 hours per week</strong> to learning outside work (which many see as aspirational).</li>
+</ul>
+<hr />
+<h3 id="8-professional-ethics">8. <strong>Professional Ethics</strong></h3>
+<ul>
+<li>Don’t compromise code quality to cut corners.</li>
+<li>Don’t cover up mistakes—<strong>own them</strong>.</li>
+<li>Prioritize the interests of your <strong>users, team, and long-term product health</strong> over short-term convenience.</li>
+</ul>
+<hr />
+<h2 id="key-practices-encouraged">🧾 <strong>Key Practices Encouraged:</strong></h2>
+<ul>
+<li>Test-Driven Development (TDD)</li>
+<li>Pair Programming</li>
+<li>Daily Code Practice (e.g. katas)</li>
+<li>Code Reviews</li>
+<li>Honest and transparent communication</li>
+<li>Saying "No" responsibly</li>
+</ul>
+<hr />
+<h2 id="who-should-read-this-book">⚖️ <strong>Who Should Read This Book?</strong></h2>
+<ul>
+<li><strong>Junior to mid-level developers</strong> looking to grow professionally</li>
+<li><strong>Senior developers and tech leads</strong> mentoring others</li>
+<li><strong>Anyone in software</strong> who wants to write better code <em>and</em> be a better teammate</li>
+</ul>
+<hr />
+<h2 id="in-summary">🧩 In Summary:</h2>
+<p><em>The Clean Coder</em> teaches that professionalism in software is about more than writing code—it's about how you <strong>communicate, commit, and conduct yourself</strong>. It's a call to higher standards, discipline, and respect for the craft.</p>
+<h2 id="comparison-clean-code-vs-the-clean-coder">🔁 Comparison: <em>Clean Code</em> vs. <em>The Clean Coder</em></h2>
+<table class="w3-table-all w3-hoverable">
+    <tr class="w3-green">
+        <td>Feature</td>
+        <td>Clean Code</td>
+        <td>The Clean Coder</td>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>Focus</td>
+        <td>How to write readable, maintainable code</td>
+        <td>How to behave like a professional</td>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>Style</td>
+        <td>Technical, example-rich</td>
+        <td>Narrative, reflecting</td>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>Topics</td>
+        <td>Naming, functions, testing, formatting, etc.</td>
+        <td>Communication, responsibility, time management</td>
+    </tr>
+    <tr class="w3-hover-green">
+        <td>Use Case</td>
+        <td>Writing better code</td>
+        <td>Becoming a better software craftsman</td>
+    </tr>
+</table></div></div></body></html></div></div></body></html>

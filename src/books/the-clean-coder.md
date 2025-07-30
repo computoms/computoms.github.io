@@ -1,13 +1,17 @@
+---
+page: the-clean-coder.html
+image: the-clean-coder.jpg
+title: The Clean Coder
+subtitle: A Code of Conduct for Professional Programmers
+authors: Robert C. Martin
+category: tech
+date: 2016-01-01
+---
+
 # The Clean Coder
 
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/the-clean-coder.jpg" alt="The Clean Coder - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Code of Conduct for Professional Programmers</i></p>
-    <p>Robert C. Martin</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

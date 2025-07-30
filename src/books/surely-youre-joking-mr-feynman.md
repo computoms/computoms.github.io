@@ -1,13 +1,17 @@
+---
+page: surely-youre-joking-mr-feynman.html
+image: surely-youre-joking-mr-feynman.jpg
+title: Surely you're Joking Mr Feynman
+subtitle: Adventures of a curious character
+authors: Richard P. Feynman
+category: science
+date: 2023-06-12
+---
+
 # Surely you're Joking Mr Feynman
 
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/surely-youre-joking-mr-feynman.jpg" alt="Surely you're Joking Mr Feynman - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>Adventures of a curious character</i></p>
-    <p>Richard P. Feynman</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

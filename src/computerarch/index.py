@@ -31,6 +31,8 @@ def build_index():
     return header + index + footer
 
 def gen():
-    utils.generate_markdowns_in_dir('computerarch')
+    for f in utils.list_markdowns('computerarch'):
+        utils.transform_markdown(f)
+
     utils.copy_images('computerarch')
     utils.write_file('computerarch/index.html', layout.root(build_index()))

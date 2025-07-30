@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <!DOCTYPE html><html lang="en"><title>Computoms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}</style><body>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]],
+            displayMath: [["$$", "$$"], ["\[", "\]"]],
+            processEscapes: true
+        },
+        config: ["MMLorHTML.js"],
+        jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+        extensions: ["MathMenu.js", "MathZoom.js"]
+    });
+</script>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+    <div class="w3-container w3-content w3-padding-64" id="band">
+    <h1 id="clean-code">Clean Code</h1>
+<div class="w3-flex">
+    <img class="w3-padding" src="images/clean-code.jpg" alt="Clean Code - Cover" width="250px" />
+    <div style="width: 400px;" class="w3-padding">
+    <p><i>A Handbook of Agile Software Craftsmanship</i></p>
+    <p>Robert C. Martin</p>
+    </div>
+</div>
+
+<div class="toc">
+<ul>
+<li><a href="#clean-code">Clean Code</a></li>
+<li><a href="#chatgpts-summary">ChatGPT's summary</a><ul>
+<li><a href="#main-premise">✅ Main Premise:</a></li>
+<li><a href="#key-principles-and-lessons">🧠 Key Principles and Lessons</a><ul>
+<li><a href="#1-meaningful-names">1. Meaningful Names</a></li>
+<li><a href="#2-functions-should-be-small">2. Functions Should Be Small</a></li>
+<li><a href="#3-comments-are-a-last-resort">3. Comments Are a Last Resort</a></li>
+<li><a href="#4-formatting-matters">4. Formatting Matters</a></li>
+<li><a href="#5-objects-and-data-structures">5. Objects and Data Structures</a></li>
+<li><a href="#6-error-handling">6. Error Handling</a></li>
+<li><a href="#7-dry-dont-repeat-yourself">7. DRY (Don’t Repeat Yourself)</a></li>
+<li><a href="#8-testing">8. Testing</a></li>
+</ul>
+</li>
+<li><a href="#structure-of-the-book">📦 Structure of the Book</a><ul>
+<li><a href="#part-i-principles-patterns-and-practices">Part I: Principles, Patterns, and Practices</a></li>
+<li><a href="#part-ii-case-studies">Part II: Case Studies</a></li>
+<li><a href="#part-iii-clean-code-guidelines">Part III: Clean Code Guidelines</a></li>
+</ul>
+</li>
+<li><a href="#key-takeaways">💡 Key Takeaways</a></li>
+<li><a href="#who-should-read-this">🧾 Who Should Read This?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="chatgpts-summary">ChatGPT's summary</h1>
+<p><strong>Published:</strong> 2008</p>
+<p><strong>Genre:</strong> Software Engineering / Programming Best Practices</p>
+<p><strong>Core Idea:</strong> <em>“Clean code is code that is easy to read, easy to change, and works correctly.”</em></p>
+<hr />
+<h3 id="main-premise">✅ <strong>Main Premise:</strong></h3>
+<p>Writing code that merely works isn't enough—<strong>code must be clean</strong>. Clean code is:</p>
+<ul>
+<li><strong>Understandable</strong></li>
+<li><strong>Simple</strong></li>
+<li><strong>Well-structured</strong></li>
+<li><strong>Tested</strong></li>
+</ul>
+<p>Uncle Bob argues that clean code <strong>reduces bugs, lowers maintenance cost, and improves team velocity</strong>. He combines <strong>best practices, code examples</strong>, and <strong>principles</strong> to show how to write code that is elegant and sustainable.</p>
+<hr />
+<h2 id="key-principles-and-lessons">🧠 <strong>Key Principles and Lessons</strong></h2>
+<h3 id="1-meaningful-names">1. <strong>Meaningful Names</strong></h3>
+<ul>
+<li>Use names that reveal intent: <code>getActiveUsers()</code> is better than <code>getData()</code>.</li>
+<li>Avoid generic names like <code>data</code>, <code>tmp</code>, or <code>foo</code>.</li>
+<li>Prefer <strong>descriptive over clever</strong>.</li>
+</ul>
+<hr />
+<h3 id="2-functions-should-be-small">2. <strong>Functions Should Be Small</strong></h3>
+<ul>
+<li>Functions should do <strong>one thing</strong>, and do it well.</li>
+<li>Prefer many small functions over one large one.</li>
+<li>
+<p>Functions should have:</p>
+</li>
+<li>
+<p><strong>Few arguments</strong> (ideally 0–2)</p>
+</li>
+<li><strong>Descriptive names</strong></li>
+<li>No side effects</li>
+</ul>
+<hr />
+<h3 id="3-comments-are-a-last-resort">3. <strong>Comments Are a Last Resort</strong></h3>
+<ul>
+<li>Good code should <strong>explain itself</strong> through naming and structure.</li>
+<li>Use comments only when necessary (e.g. legal, TODOs, clarifying intent).</li>
+<li><strong>Avoid misleading or outdated comments.</strong></li>
+</ul>
+<hr />
+<h3 id="4-formatting-matters">4. <strong>Formatting Matters</strong></h3>
+<ul>
+<li>Proper indentation and spacing <strong>enhance readability</strong>.</li>
+<li>Group related code together.</li>
+<li>Vertical openness (line spacing) and horizontal alignment (short lines) help scanning.</li>
+</ul>
+<hr />
+<h3 id="5-objects-and-data-structures">5. <strong>Objects and Data Structures</strong></h3>
+<ul>
+<li>Prefer <strong>encapsulation</strong>: hide data inside objects and expose behavior.</li>
+<li>Don’t expose internal structure (e.g., no public fields).</li>
+<li>Data structures are for holding data; objects encapsulate behavior.</li>
+</ul>
+<hr />
+<h3 id="6-error-handling">6. <strong>Error Handling</strong></h3>
+<ul>
+<li>Use <strong>exceptions</strong>, not error codes.</li>
+<li>Write code that handles exceptions <strong>gracefully</strong> and doesn’t obscure core logic.</li>
+<li>Clean error handling separates normal logic from error logic.</li>
+</ul>
+<hr />
+<h3 id="7-dry-dont-repeat-yourself">7. <strong>DRY (Don’t Repeat Yourself)</strong></h3>
+<ul>
+<li>Repetition breeds bugs.</li>
+<li>Abstract common logic into reusable functions or classes.</li>
+<li>Duplicate logic is a sign of poor design.</li>
+</ul>
+<hr />
+<h3 id="8-testing">8. <strong>Testing</strong></h3>
+<ul>
+<li>Clean code is <strong>tested code</strong>.</li>
+<li>Write <strong>unit tests</strong> and run them continuously.</li>
+<li>Aim for <strong>fast, isolated, and deterministic</strong> tests.</li>
+<li>TDD is supported but not the central focus of this book (covered more in <em>The Clean Coder</em> and <em>TDD by Example</em>).</li>
+</ul>
+<hr />
+<h2 id="structure-of-the-book">📦 <strong>Structure of the Book</strong></h2>
+<h3 id="part-i-principles-patterns-and-practices"><strong>Part I: Principles, Patterns, and Practices</strong></h3>
+<ul>
+<li>Naming, functions, comments, formatting, error handling, boundaries, unit testing</li>
+</ul>
+<h3 id="part-ii-case-studies"><strong>Part II: Case Studies</strong></h3>
+<ul>
+<li>Real-world Java code is incrementally improved, showing the <em>how</em> of clean coding.</li>
+</ul>
+<h3 id="part-iii-clean-code-guidelines"><strong>Part III: Clean Code Guidelines</strong></h3>
+<ul>
+<li>Summarizes key heuristics and principles.</li>
+<li>Includes a “smells and heuristics” chapter—a practical checklist.</li>
+</ul>
+<hr />
+<h2 id="key-takeaways">💡 <strong>Key Takeaways</strong></h2>
+<ul>
+<li>Code should be treated as a craft, not a chore.</li>
+<li>Readable code is <strong>more important than clever code</strong>.</li>
+<li>Code is read far more often than it’s written—<strong>optimize for readers</strong>.</li>
+<li><strong>Clean code saves time</strong> in the long run by making it easier to change and extend.</li>
+</ul>
+<hr />
+<h2 id="who-should-read-this">🧾 Who Should Read This?</h2>
+<ul>
+<li><strong>Developers of all levels</strong>, especially those working on long-lived or collaborative codebases</li>
+<li><strong>Code reviewers</strong>, team leads, and mentors</li>
+<li>Anyone who wants to improve their code clarity, structure, and maintainability</li>
+</ul></div></div></body></html></div></div></body></html>

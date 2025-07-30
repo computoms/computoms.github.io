@@ -1,4 +1,5 @@
 import utils
+import books.index as book_index
 
 def build_latest_books():
     lb = ''
@@ -13,7 +14,7 @@ def build_latest_books():
         <div class="w3-flex" style="flex-wrap: wrap">
 """
 
-    books = sorted(utils.list_articles('books'), key=lambda x: x['date'], reverse=True)
+    books = sorted(book_index.list_books(), key=lambda x: x['date'], reverse=True)
     for book in books[:5]:
         lb += """
         <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="width: 300px;">

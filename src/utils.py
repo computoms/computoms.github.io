@@ -8,6 +8,8 @@ import shutil
 
 OUTPUT_DIR = "../docs/"
 
+# File IO
+
 def read_file(path):
     with open(path, 'r') as i:
         return i.read()
@@ -25,34 +27,36 @@ def process_file(path, transf):
     content = read_file(path)
     write_file(path, transf(content))
 
+# Markdown processing
+
+def list_markdowns(dir):
+    return glob.glob(dir + '/*.md')
+
+def convert_markdown(md_content):
+    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code', 'tables'])
+    html_content = md.convert(md_content)
+    html_content = layout.root(html_content)
+    return html_content
+
 def transform_markdown(path):
     content = read_file(path)
-    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code', 'tables'])
-    html_content = md.convert(content)
-    html_content = layout.root(html_content)
-    write_file(path.replace('.md', '.html'), html_content)
+    write_file(path.replace('.md', '.html'), convert_markdown(content))
 
-def generate_markdowns_in_dir(dir):
-    markdown_files = glob.glob(dir + '/*.md')
-    for f in markdown_files:
-        transform_markdown(f)
+# Images
 
 def copy_images(dir):
     if os_path.exists(dir + '/images'):
         shutil.copytree(dir + '/images', OUTPUT_DIR + dir + '/images', dirs_exist_ok=True)
 
-def read_metadata(filename):
-    with open(filename, 'r') as f:
+
+# Metadata
+
+def split_metadata(content):
+    start = content.find('---')
+    end = content.find('---', start + 1)
+    if start != -1 and end != -1:
         try:
-            obj = yaml.safe_load(f)
-            return obj
+            yaml_parsed = yaml.safe_load(content[start+3:end])
+            return yaml_parsed, content[end+3:]
         except yaml.YAMLError as exc:
             print(exc)
-
-def list_articles(dir):
-    yaml_files = glob.glob(dir + '/*.yml')
-    articles = []
-    for f in yaml_files:
-        metadata = read_metadata(f)
-        articles.append(metadata)
-    return articles

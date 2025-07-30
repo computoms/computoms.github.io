@@ -1,13 +1,17 @@
+---
+page: tdd-by-example.html
+image: tdd-by-examples.jpeg
+title: Test-Driven Development
+subtitle: By Example
+authors: Kent Beck
+category: tech
+date: 2016-02-01
+---
+
 # Test-Driven Development
 
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/tdd-by-examples.jpeg" alt="Test-Driven Development - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>By Example</i></p>
-    <p>Kent Beck</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

@@ -1,12 +1,16 @@
+---
+page: the-unicorn-project.html
+image: the-unicorn-project.jpg
+title: The Unicorn Project
+subtitle: A Novel About Developers, Digital Distruption, and Thriving in the Age of Data
+authors: Gene Kim
+category: tech
+date: 2023-05-07
+---
+
 # The Unicorn Project
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/the-unicorn-project.jpg" alt="The Unicorn Project - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Novel About Developers, Digital Distruption, and Thriving in the Age of Data</i></p>
-    <p>Gene Kim</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

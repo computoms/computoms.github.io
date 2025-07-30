@@ -1,13 +1,16 @@
+---
+page: clean-code.html
+image: clean-code.jpg
+title: Clean Code
+subtitle: A Handbook of Agile Software Craftsmanship
+authors: Robert C. Martin
+category: tech
+date: 2015-01-01
+---
+
 # Clean Code
 
-
-<div class="w3-flex">
-    <img class="w3-padding" src="images/clean-code.jpg" alt="Clean Code - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Handbook of Agile Software Craftsmanship</i></p>
-    <p>Robert C. Martin</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

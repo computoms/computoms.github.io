@@ -1,6 +1,6 @@
 import utils
-import glob
 
 def gen():
-    utils.generate_markdowns_in_dir('dev')
+    for f in utils.list_markdowns('dev'):
+        utils.transform_markdown(f)
     utils.copy_images('dev')

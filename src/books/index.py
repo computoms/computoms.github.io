@@ -15,6 +15,12 @@ def book_display(book):
     </div>
     """
 
+def list_books():
+    books = []
+    for mdf in utils.list_markdowns('books'):
+        metadata, _ = utils.split_metadata(utils.read_file(mdf))
+        books.append(metadata)
+    return books
 
 def build_index():
     o = """
@@ -26,9 +32,9 @@ def build_index():
     <div class="w3-flex" style="flex-wrap: wrap">
     """
 
-    science_books = [book for book in utils.list_articles('books') if book['category'] == 'science']
+    science_books = [book for book in list_books() if book['category'] == 'science']
     science_books = sorted(science_books, key=lambda x: x['date'], reverse=True)
-    tech_books = [book for book in utils.list_articles('books') if book['category'] == 'tech']
+    tech_books = [book for book in list_books() if book['category'] == 'tech']
     tech_books = sorted(tech_books, key=lambda x: x['date'], reverse=True)
 
     for book in science_books:
@@ -46,7 +52,24 @@ def build_index():
     o += "</div>"
     return o
 
+def build_book_header(metadata):
+    return """
+<div class="w3-flex">
+    <img class="w3-padding" src="images/""" + metadata['image'] + """\" alt=\"""" + metadata['title'] + """ - Cover" width="250px" />
+    <div style="width: 400px;" class="w3-padding">
+    <p><i>""" + metadata['subtitle'] + """</i></p>
+    <p>""" + metadata['authors'] + """</p>
+    </div>
+</div>
+    """
+
+def generate_markdowns():
+    for mdf in utils.list_markdowns('books'):
+        metadata, md_content = utils.split_metadata(utils.read_file(mdf))
+        md_content = md_content.replace('[BOOK_HEADER]', build_book_header(metadata))
+        utils.write_file(mdf.replace('.md', '.html'), utils.convert_markdown(md_content))
+
 def gen():
-    utils.generate_markdowns_in_dir('books')
+    generate_markdowns()
     utils.copy_images('books')
     utils.write_file('books/index.html', layout.root(build_index()))

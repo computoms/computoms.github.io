@@ -1,13 +1,17 @@
+---
+page: numbers-dont-lie.html
+image: numbers-dont-lie.jpg
+title: Numbers don't Lie
+subtitle: 71 things you need to know about the world
+authors: Vaclav Smil
+category: science
+date: 2021-04-05
+---
+
 # Numbers don't Lie
 
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/numbers-dont-lie.jpg" alt="Numbers don't Lie - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>71 things you need to know about the world</i></p>
-    <p>Vaclav Smil</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

@@ -1,13 +1,17 @@
+---
+page: clean-architecture.html
+image: clean-architecture.jpg
+title: Clean Architecture
+subtitle: A Craftsman's Guide to Software Structure and Design
+authors: Robert C. Martin
+category: tech
+date: 2017-07-01
+---
+
 # Clean Architecture
 
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/clean-architecture.jpg" alt="Clean Architecture - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Craftsman's Guide to Software Structure and Design</i></p>
-    <p>Robert C. Martin</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

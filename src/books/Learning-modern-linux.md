@@ -1,12 +1,16 @@
+---
+page: learning-modern-linux.html
+image: learning-modern-linux.png
+title: Learning Modern Linux
+subtitle: A Handbook for the Cloud Native Practitioner
+authors: Michael Hausenblas
+category: tech
+date: 2025-07-29
+---
+
 # Learning Modern Linux
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/learning-modern-linux.png" alt="Learning Modern Linux - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Handbook for the Cloud Native Practitioner</i></p>
-    <p>Michael Hausenblas</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

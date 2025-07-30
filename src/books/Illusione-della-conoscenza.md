@@ -1,12 +1,16 @@
+---
+page: illusione-della-conoscenza.html
+image: illusione-della-conoscenza.png
+title: The Knowledge Illusion (L'Illusione della Conoscenza)
+subtitle: Perché non pensiamo mai da soli -- Why do we never think by our own
+authors: Steven Sloman, Philip Fernbach
+category: science
+date: 2025-04-15
+---
+
 # L'illusione della conoscenza - The Knowledge Illusion
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/illusione-della-conoscenza.png" alt="Illusione della Conoscenza - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>Perché non pensiamo mai da soli -- Why do we never think by our own</i></p>
-    <p>Steven Sloman, Philip Fernbach</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 

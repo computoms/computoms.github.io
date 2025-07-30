@@ -1,12 +1,16 @@
+---
+page: the-phoenix-project.html
+image: the-phoenix-project.jpg
+title: The Phoenix Project
+subtitle: A Novel About IT, DevOps, and Helping Your Business Win
+authors: Gene Kim, Kevin Behr, and George Spafford
+category: tech
+date: 2023-01-15
+---
+
 # The Phoenix Project
 
-<div class="w3-flex">
-    <img class="w3-padding" src="images/the-phoenix-project.jpg" alt="The Phoenix Project - Cover" width="250px" />
-    <div style="width: 400px;" class="w3-padding">
-    <p><i>A Novel About IT, DevOps, and Helping Your Business Win</i></p>
-    <p>Gene Kim, Kevin Behr, and George Spafford</p>
-    </div>
-</div>
+[BOOK_HEADER]
 
 [TOC]
 
