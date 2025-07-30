@@ -1,6 +1,5 @@
 import utils
 
 def gen():
-    for f in utils.list_markdowns('dev'):
-        utils.transform_markdown(f)
+    utils.generate_markdowns('dev')
     utils.copy_images('dev')

@@ -17,8 +17,9 @@ dev.gen()
 comp.gen()
 books.gen()
 
-utils.write_file('index.html', layout.banner(index.build_index(), 'WaterDrop.jpg'))
-utils.process_file('about.html', lambda x: layout.banner(x, 'WaterDrop.jpg'))
+banner_lyt = layout.BannerLayout('WaterDrop.jpg')
+utils.write_file('index.html', banner_lyt.build(index.build_index()))
+utils.write_file('about.html', banner_lyt.build(utils.read_file('about.html')))
 utils.copy_images('.')
 
 print('Done.')
