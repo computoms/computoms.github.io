@@ -1,7 +1,7 @@
 import utils
 import layout
 
-def book_display(book):
+def book_shelf_display(book):
     return """
     <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="width: 250px;">
         <a href=\"""" + book['page'] + """\" class="nounder">
@@ -38,7 +38,7 @@ def build_index():
     tech_books = sorted(tech_books, key=lambda x: x['date'], reverse=True)
 
     for book in science_books:
-        o += book_display(book)
+        o += book_shelf_display(book)
 
     o += "</div>"
     o += "<h2>Tech</h2>"
@@ -47,7 +47,7 @@ def build_index():
     """
 
     for book in tech_books:
-        o += book_display(book)
+        o += book_shelf_display(book)
 
     o += "</div>"
     return o
@@ -59,6 +59,7 @@ def build_book_header(metadata):
     <div style="width: 400px;" class="w3-padding">
     <p><i>""" + metadata['subtitle'] + """</i></p>
     <p>""" + metadata['authors'] + """</p>
+    <p><b>Published:</b> """ + str(metadata['published']) + """</p>
     </div>
 </div>
     """

@@ -6,6 +6,7 @@ subtitle: Adventures of a curious character
 authors: Richard P. Feynman
 category: science
 date: 2023-06-12
+published: 1985
 ---
 
 # Surely you're Joking Mr Feynman
@@ -16,10 +17,6 @@ date: 2023-06-12
 [TOC]
 
 ## ChatGPT's summary
-
-**Published:** 1985
-
----
 
 ### **Overview:**
 

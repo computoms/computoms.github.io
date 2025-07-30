@@ -6,6 +6,7 @@ subtitle: A Handbook for the Cloud Native Practitioner
 authors: Michael Hausenblas
 category: tech
 date: 2025-07-29
+published: 2022
 ---
 
 # Learning Modern Linux

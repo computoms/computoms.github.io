@@ -6,6 +6,7 @@ subtitle: A Craftsman's Guide to Software Structure and Design
 authors: Robert C. Martin
 category: tech
 date: 2017-07-01
+published: 2017
 ---
 
 # Clean Architecture
@@ -16,8 +17,6 @@ date: 2017-07-01
 [TOC]
 
 # ChatGPT's summary
-
-**Published:** 2017
 
 **Genre:** Software Design / Architecture / Programming Best Practices
 

@@ -6,6 +6,7 @@ subtitle: Perché non pensiamo mai da soli -- Why do we never think by our own
 authors: Steven Sloman, Philip Fernbach
 category: science
 date: 2025-04-15
+published: 2018
 ---
 
 # L'illusione della conoscenza - The Knowledge Illusion

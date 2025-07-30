@@ -6,6 +6,7 @@ subtitle: By Example
 authors: Kent Beck
 category: tech
 date: 2016-02-01
+published: 2002
 ---
 
 # Test-Driven Development
@@ -16,8 +17,6 @@ date: 2016-02-01
 [TOC]
 
 # ChatGPT's summary
-
-**Published:** 2002
 
 **Topic:** Software engineering, Agile practices, Test-Driven Development (TDD)
 

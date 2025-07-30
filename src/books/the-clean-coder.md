@@ -6,6 +6,7 @@ subtitle: A Code of Conduct for Professional Programmers
 authors: Robert C. Martin
 category: tech
 date: 2016-01-01
+published: 2011
 ---
 
 # The Clean Coder
@@ -16,8 +17,6 @@ date: 2016-01-01
 [TOC]
 
 # ChatGPT's summary
-
-**Published:** 2011
 
 **Genre:** Software development, professional conduct
 

@@ -6,6 +6,7 @@ subtitle: A Handbook of Agile Software Craftsmanship
 authors: Robert C. Martin
 category: tech
 date: 2015-01-01
+published: 2008
 ---
 
 # Clean Code
@@ -15,8 +16,6 @@ date: 2015-01-01
 [TOC]
 
 # ChatGPT's summary
-
-**Published:** 2008
 
 **Genre:** Software Engineering / Programming Best Practices
 

@@ -6,6 +6,7 @@ subtitle: A Novel About Developers, Digital Distruption, and Thriving in the Age
 authors: Gene Kim
 category: tech
 date: 2023-05-07
+published: 2019
 ---
 
 # The Unicorn Project

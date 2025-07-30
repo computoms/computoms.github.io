@@ -6,6 +6,7 @@ subtitle: 71 things you need to know about the world
 authors: Vaclav Smil
 category: science
 date: 2021-04-05
+published: 2020
 ---
 
 # Numbers don't Lie

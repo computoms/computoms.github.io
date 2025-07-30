@@ -6,6 +6,7 @@ subtitle: A Novel About IT, DevOps, and Helping Your Business Win
 authors: Gene Kim, Kevin Behr, and George Spafford
 category: tech
 date: 2023-01-15
+published: 2014
 ---
 
 # The Phoenix Project
