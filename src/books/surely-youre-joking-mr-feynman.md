@@ -1,5 +1,4 @@
 ---
-page: surely-youre-joking-mr-feynman.html
 image: surely-youre-joking-mr-feynman.jpg
 title: Surely you're Joking Mr Feynman
 subtitle: Adventures of a curious character

@@ -1,5 +1,4 @@
 ---
-page: tdd-by-example.html
 image: tdd-by-examples.jpeg
 title: Test-Driven Development
 subtitle: By Example

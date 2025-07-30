@@ -1,5 +1,4 @@
 ---
-page: the-unicorn-project.html
 image: the-unicorn-project.jpg
 title: The Unicorn Project
 subtitle: A Novel About Developers, Digital Distruption, and Thriving in the Age of Data

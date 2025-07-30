@@ -1,5 +1,4 @@
 ---
-page: illusione-della-conoscenza.html
 image: illusione-della-conoscenza.png
 title: The Knowledge Illusion (L'Illusione della Conoscenza)
 subtitle: Perché non pensiamo mai da soli -- Why do we never think by our own

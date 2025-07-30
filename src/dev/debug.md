@@ -1,5 +1,6 @@
 ---
 date: 2025-07-28
+title: Debugging tools
 ---
 
 # 1. Debugging tools

@@ -1,5 +1,4 @@
 ---
-page: clean-code.html
 image: clean-code.jpg
 title: Clean Code
 subtitle: A Handbook of Agile Software Craftsmanship

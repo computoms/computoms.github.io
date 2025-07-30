@@ -1,5 +1,4 @@
 ---
-page: numbers-dont-lie.html
 image: numbers-dont-lie.jpg
 title: Numbers don't Lie
 subtitle: 71 things you need to know about the world

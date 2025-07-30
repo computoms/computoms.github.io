@@ -4,7 +4,7 @@ import layout
 def book_shelf_display(book):
     return """
     <div class="w3-card w3-center w3-hover-shadow w3-margin w3-padding" style="width: 250px;">
-        <a href=\"""" + book['page'] + """\" class="nounder">
+        <a href=\"/""" + book['src'].replace('.md', '.html') + """\" class="nounder">
             <header class="w3-container">
                 <img src=\"images/""" + book['image'] + """\" width="200px" style="width: auto; height: auto; max-width: 200px; max-height: 250px;" alt=\"""" + book['title'] + """\" />
             </header>

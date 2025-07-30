@@ -81,6 +81,7 @@ def list_articles(dir, filter: Filter = None):
     articles = []
     for mdf in list_markdowns(dir):
         metadata, _ = split_metadata(read_file(mdf))
+        metadata['src'] = mdf
         if filter == None or metadata[filter.key] == filter.value:
             articles.append(metadata)
     return sorted(articles, key=lambda x: x['date'], reverse=True)

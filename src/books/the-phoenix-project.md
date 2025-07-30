@@ -1,5 +1,4 @@
 ---
-page: the-phoenix-project.html
 image: the-phoenix-project.jpg
 title: The Phoenix Project
 subtitle: A Novel About IT, DevOps, and Helping Your Business Win

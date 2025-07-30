@@ -1,5 +1,4 @@
 ---
-page: the-clean-coder.html
 image: the-clean-coder.jpg
 title: The Clean Coder
 subtitle: A Code of Conduct for Professional Programmers

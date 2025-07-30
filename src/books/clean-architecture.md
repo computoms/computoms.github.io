@@ -1,5 +1,4 @@
 ---
-page: clean-architecture.html
 image: clean-architecture.jpg
 title: Clean Architecture
 subtitle: A Craftsman's Guide to Software Structure and Design

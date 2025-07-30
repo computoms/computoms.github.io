@@ -1,5 +1,4 @@
 ---
-page: learning-modern-linux.html
 image: learning-modern-linux.png
 title: Learning Modern Linux
 subtitle: A Handbook for the Cloud Native Practitioner
