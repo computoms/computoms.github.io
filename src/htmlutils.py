@@ -19,10 +19,10 @@ def imagecard(title, body, link, image):
         <a href=\"""" + link + """\" class="nounder">
         <div class="w3-padding">
             <header class="w3-container">
-                <h3 style="height: 80px;">""" + title + """</h3>
+                <h3 style="height: 100px;">""" + title + """</h3>
                 <img src=\"""" + image + """\" width="200px" />
             </header>
-            <div class="w3-container w3-margin" style="height: 200px">
+            <div class="w3-container w3-margin" style="height: 250px">
                 """ + body + """
             </div>
         </div>
