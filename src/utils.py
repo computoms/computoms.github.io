@@ -45,6 +45,8 @@ class MarkdownProcessor:
 def generate_markdowns(dir, markdown_processor: MarkdownProcessor = None, fn_custom_layout = None):
     for mdf in list_markdowns(dir):
         metadata, md_content = split_metadata(read_file(mdf))
+        if metadata != '' and 'draft' in metadata and metadata['draft'] == True:
+            continue
         if markdown_processor != None:
             md_content = markdown_processor.process(md_content, metadata)
         write_file(mdf.replace('.md', '.html'), convert_markdown(md_content, fn_custom_layout))

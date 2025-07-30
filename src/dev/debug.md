@@ -1,3 +1,7 @@
+---
+date: 2025-07-28
+---
+
 # 1. Debugging tools
 
 This article aims at summarizing all the tools used for debugging a web application or computer application.
