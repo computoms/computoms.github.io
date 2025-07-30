@@ -1,0 +1,9 @@
+blogs:
+- title: Uber Engineering
+  url: https://www.uber.com/en-RS/blog/engineering/
+- title: Github Engineering
+  url: https://github.blog/engineering/
+- title: Slack Engineering
+  url: https://slack.engineering/
+- title: Spotify Engineering
+  url: https://engineering.atspotify.com/

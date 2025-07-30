@@ -42,10 +42,13 @@ class MarkdownProcessor:
     def process(self, content, metadata) -> str:
         pass
 
+def is_draft(metadata):
+    return 'draft' in metadata and metadata['draft'] == True
+
 def generate_markdowns(dir, markdown_processor: MarkdownProcessor = None, fn_custom_layout = None):
     for mdf in list_markdowns(dir):
         metadata, md_content = split_metadata(read_file(mdf))
-        if metadata != '' and 'draft' in metadata and metadata['draft'] == True:
+        if is_draft(metadata):
             continue
         if markdown_processor != None:
             md_content = markdown_processor.process(md_content, metadata)
@@ -60,6 +63,14 @@ def copy_images(dir):
 
 
 # Metadata
+
+def read_yaml(file):
+    with open(file, 'r') as f:
+        try:
+            yaml_parsed = yaml.safe_load(f)
+            return yaml_parsed
+        except yaml.YAMLError as exc:
+            print(exc)
 
 def split_metadata(content):
     start = content.find('---')
@@ -82,7 +93,7 @@ def list_articles(dir, filter: Filter = None):
     for mdf in list_markdowns(dir):
         metadata, _ = split_metadata(read_file(mdf))
         metadata['src'] = mdf
-        if filter == None or metadata[filter.key] == filter.value:
+        if not is_draft(metadata) and (filter == None or metadata[filter.key] == filter.value):
             articles.append(metadata)
     return sorted(articles, key=lambda x: x['date'], reverse=True)
 
