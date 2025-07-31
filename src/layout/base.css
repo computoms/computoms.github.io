@@ -11,3 +11,11 @@ body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
     text-decoration: none;
 }
 h1 h2 {font-weight: bold;}
+blockquote {
+    background-color: #e6e6e6;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}

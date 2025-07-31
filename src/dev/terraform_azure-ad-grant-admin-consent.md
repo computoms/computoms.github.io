@@ -61,9 +61,80 @@ Then, the CI pipeline will be divded into two separate processes:
 
 # 3. Terraform configurations
 
-## 3.1. Infra
+## 3.1. Grant admin reusable configuration in Admin-Operations
 
-## 3.2. Admin-Operations
+Let's write a reusable Terraform configuration that performs the grant admin for the list of permissions passed as arguments. First, let's see how we can grant the admin consent for a permission between `AppReg A` and `AppReg B`. 
+
+- If the permission is an application permission (usually, used for backend-to-backend communication without user authentication), we can use the app role assignment resource:
+
+```hcl
+resource "azuread_app_role_assignment" "ac_application" {
+    app_role_id         = "..." # Object id of the role in destination
+                                # (app_role.id declared in azuread_application)
+    principal_object_id = "..." # Object id of the source
+    resource_object_id  = "..." # Object id of the destination
+}
+```
+
+- If the permission is a delegated permission (access is granted on behalf of a user), we use a delegated permission grant resource:
+
+```hcl
+resource "azuread_service_principal_delegated_permission_grant" "ac_delegated" {
+    service_principal_object_id             = ""    # SP of the source
+    resource_service_principal_object_id    = ""    # SP of the destination
+    claim_values                            = ["openid", "User.Read.All"]
+}
+```
+
+To make a reusable configuration, we can add two arrays of objects representing the list of permissions (application and delegated) to be granted. Then, we have to loop through these lists to grant all permissions. 
+
+> Note: the list of objects cannot be directly passed to `for_each` in Terraform as the `for_each` requires a map, but we can transform the list into a map using a `for`.
+
+```hcl
+variable "application_permissions" {
+    type = list(object({
+        src_sp_id   = string
+        dest_id     = string
+        role_id     = string
+    }))
+}
+
+variable "delegated_permissions" {
+    type = list(object({
+        src_sp_id   = string
+        dest_sp_id  = string
+        claims      = list(string)
+    }))
+}
+
+resource "azuread_app_role_assignment" "ac_application" {
+    for_each = {
+        for index, obj in var.application_permissions:
+        index => obj
+    }
+    app_role_id         = each.value.role_id
+    principal_object_id = each.value.src_sp_id
+    resource_object_id  = each.value.dest_id
+}
+
+resource "azuread_service_principal_delegated_permission_grant" "ac_delegated" {
+    for_each = {
+        for index, obj in var.delegated_permissions:
+        index => obj
+    }
+    service_principal_object_id             = each.value.src_sp_id
+    resource_service_principal_object_id    = each.value.dest_sp_id
+    claim_values                            = each.value.claims
+}
+```
+
+With this simple configuration, we now have a reusable way of setting grant admins listed in a `.tfvars` file that we pass to the `terraform plan` command line:
+
+```bash
+terraform plan -var-file="grant-admin-consents.tfvars"
+```
+
+## 3.2. Infra
 
 ## 3.3. Passing information from one configuration to the other
 

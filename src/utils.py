@@ -32,7 +32,7 @@ def list_markdowns(dir):
 # Converts markdown string to html output using default layout
 # Or using fn_cusotm_layout function to be applied on resulting html string
 def convert_markdown(md_content, layout_builder: layout.Layout = None):
-    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code', 'tables'])
+    md = markdown.Markdown(extensions=['toc', 'mdx_math', 'fenced_code', 'tables', 'codehilite'])
     html_content = md.convert(md_content)
     if layout_builder == None:
         layout_builder = layout.Layout()

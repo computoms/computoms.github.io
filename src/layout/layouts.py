@@ -1,5 +1,7 @@
 from .nav import nav
 
+# Note: to generate code.css, use `.venv/bin/pygmentize -S colorful -f html -a .codehilite > layout/code.css`
+
 class Layout:
 
     ROOT_TITLE = "<title>Computoms</title>"
@@ -39,6 +41,8 @@ class Layout:
         o += "<style>"
         with open('layout/base.css', 'r') as css:
             o += css.read()
+        with open('layout/code.css', 'r') as code:
+            o += code.read()
         o += "</style>"
         o += "<body>"
         o += Layout.JS_EXTS
@@ -76,6 +80,8 @@ class BannerLayout(Layout):
         o += "<style>"
         with open('layout/base.css', 'r') as css:
             o += css.read()
+        with open('layout/code.css', 'r') as code:
+            o += code.read()
         o += banner_style
         o += "</style>"
         o += "<body>"

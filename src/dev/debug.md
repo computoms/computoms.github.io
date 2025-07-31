@@ -44,15 +44,18 @@ _Some of these tools are taken from Michael Hausenblas's [Learning Modern Linux]
 
 ### 2.1.1. System info
 
-``` { .bash }
-cat /etc/*-release  # Get info about distribution
-cat /proc/version   # Get info about Linux release (kernel)
-uname -a            # Print all information related to the system
+```sh
+# Get info about distribution
+cat /etc/*-release
+# Get info about Linux release (kernel)
+cat /proc/version
+# Print all information related to the system
+uname -a
 ```
 
 ### 2.1.2. Hardware info
 
-``` { .bash }
+```bash
 cat /proc/cpuinfo
 cat /proc/meminfo
 cat /proc/diskstats
