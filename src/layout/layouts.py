@@ -1,6 +1,6 @@
 from .nav import nav
 
-# Note: to generate code.css, use `.venv/bin/pygmentize -S colorful -f html -a .codehilite > layout/code.css`
+# Note: to generate code.css, use `.venv/bin/pygmentize -S nord -f html -a .codehilite > layout/code.css`
 
 class Layout:
 
