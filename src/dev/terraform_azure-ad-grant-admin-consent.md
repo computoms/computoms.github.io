@@ -1,7 +1,6 @@
 ---
 date: 2025-08-01
 title: Terraform AzureAD - Safe Grant Admin Consent pipeline
-draft: True
 ---
 
 This article explains one way of building a safe CI/CD pipeline to apply the "Admin Consent" on AzureAD AppRegistrations created by Terraform.
@@ -131,7 +130,7 @@ resource "azuread_service_principal_delegated_permission_grant" "ac_delegated" {
 With this simple configuration, we now have a reusable way of setting grant admins listed in a `.tfvars` file that we pass to the `terraform plan` command line:
 
 ```bash
-terraform plan -var-file="grant-admin-consents.tfvars"
+terraform plan -var-file="grant-admin.tfvars"
 ```
 
 ## 3.2. Infra
@@ -223,17 +222,139 @@ foreach ($item in $json) {
 }
 
 $new_output = "delegated_permissions = [`n" + $($elements -join ",`n") + "`n]"
+$new_output = "application_permissions = []"
 
-$new_output | Out-File delegated_permissions.tfvars
+$new_output | Out-File "grant-admin.tfvars"
 ```
 
 ## 3.4. Security
 
+The security of these operations must be carefully managed in order to prevent unwanted usage of the high-priviledged service principal for other usage or for granting permissions to unauthorized services.
+
+- The service principal should be a managed identity or something giving the equivalent security level
+- The access to the service principal should be restricted to the deployment pipeline that takes the `grant-admin.tfvars` as input and performs the grants
+- The repository containing the automated admin consent Terraform configuration should be configured such that an administrator must review the changes to the code before it can be used in a pipeline.
+
+In addition to these measures, we can add the following restrictions:
+
+- Input validation: we can use the built-in Terraform input validation feature to validate the inputs passed to the second Terraform configuration
+- Precondition: we can also leverage Terraform's precondition to check that the owner of the resources is a valid one
+
+To protect our configuration so that it operates only on whitelisted resources, we can add validations. Here are examples of such validations:
+
+- The source service principal must either be a known/authorized service principal or must be owned by a known service principal
+- The destination resource must be an authorized resource (or must be owned by a known service principal)
+- The claims/roles must be part of an authorized list
+
 ### 3.4.1. Adding validations to terraform inputs
 
-### 3.4.2. Filtering on allowed roles
+Let's validate that the source service principal is authorized:
 
-### 3.4.3. RBAC and Azure DevOps security
+```hcl
+locals {
+    valid_sources = [
+        "Valid-source-id-1",
+        "Valid-source-id-2"
+    ]
+}
+
+variable "delegated_permissions" {
+    type = list(object({
+        src_sp_id   = string
+        dest_sp_id  = string
+        claims      = list(string)
+    }))
+
+    validations {
+        condition       = length([
+            for p in var.delegated_permissions : true
+            if !contains(local.valid_sources, p.src_sp_id)
+        ]) == 0
+        error_message   = "Delegated permissions should have [...]
+            [...] an authorized source service principal."
+    }
+}
+```
+
+> Note: for the sake of presentation, the `[...]` are added to split lines. In Terraform, lines containing these symbols should be layed out on a single line.
+
+The `condition` in the validations filters the `delegated_permissions` array based on if `src_sp_id` is not in the specified list of valid sources `local.valid_sources`. We could do the same for the `dest_sp_id`. 
+
+### 3.4.2. Filtering on allowed claims
+
+For the `claims` part, the condition become a little more complex as it requires two imbricated for loops:
+
+```hcl
+condition = length(flatten([
+    for p in var.delegated_permissions : [
+            for c in p.claims : true
+            if !contains(local.valid_claims, c)
+        ]
+    ])) == 0
+```
+
+The [`flatten` function](https://developer.hashicorp.com/terraform/language/functions/flatten) allows merging all the arrays together so we can have one final array on which to calculate the length.
 
 
 
+### 3.4.3. Preconditions
+
+We can leverage the `precondition` Terraform lifecycle expression to further validate the authorizations. For example, we could make sure that the objects we are manipulating are owned by a valid service principal:
+
+```hcl
+locals {
+    valid_sps = [
+        "Valid-service-principal-id-1"
+    ]
+}
+
+data "azuread_service_principal" "sps" {
+    for_each = {
+        for index, obj in var.delegated_permissions:
+        index => obj
+    }
+    object_id = each.value.src_sp_id
+}
+
+data "azuread_application" "apps" {
+    for_each = azuread_service_principal.sps
+
+    client_id = each.value.client_id
+}
+
+resource "azuread_service_principal_delegated_permission_grant" "ac_delegated" {
+    service_principal_object_id             = ""    # SP of the source
+    resource_service_principal_object_id    = ""    # SP of the destination
+    claim_values                            = ["openid", "User.Read.All"]
+
+    lifecycle {
+        precondition {
+            condition       = length(flatten([
+                for app in azuread_application.apps : [
+                    for o in app.owners : true
+                    if !contains(local.valid_sps, o)
+                ]
+            ])) == 0
+            error_message   = "One of the App registration's [...]
+                [...] owner is not valid"
+        }
+    }
+}
+```
+
+The first `data` loops through the input variable to fetch the service principals info in the cloud, using the given `src_sp_id`s. 
+
+Then, the second `data` block gets the related `azuread_application` information using the service principal's `client_id` field.
+
+Then, the precondition checks that all `owners` of the `azuread_application`s are valid.
+
+# 4. Conclusion
+
+We now have:
+
+- A repository containing Terraform configuration to create app registrations for two applications calling each other
+- A second repository that is protected, allowing to apply the admin consents automatically via Terraform and a high-priviledged service principal
+- A script that transforms the outputs of this first configuration so that we can apply the grant admin consents using our second repository
+- We improved the security around granting admin consents to prevent authorized operations
+
+All these steps can be orchestrated using Azure DevOps or any other CI/CD tool.

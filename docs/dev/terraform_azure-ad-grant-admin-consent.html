@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="en"><title>Computoms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:wght@300">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>body {font-family: "Quicksand", sans-serif; font-size: 15pt;}
+.mySlides {display: none}
+.logoBg {
+    background-image: url("/images/logo/logo32.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    width: 100%;
+}
+.nounder {
+    text-decoration: none;
+}
+h1 h2 {font-weight: bold;}
+blockquote {
+    background-color: #e6e6e6;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-radius: 10px;
+}pre { line-height: 125%; }
+td.linenos .normal { color: #D8DEE9; background-color: #242933; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #D8DEE9; background-color: #242933; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #242933; background-color: #D8DEE9; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #242933; background-color: #D8DEE9; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #3B4252 }
+.codehilite { background: #2E3440; color: #D8DEE9 }
+.codehilite .c { color: #616E87; font-style: italic } /* Comment */
+.codehilite .err { color: #BF616A } /* Error */
+.codehilite .esc { color: #D8DEE9 } /* Escape */
+.codehilite .g { color: #D8DEE9 } /* Generic */
+.codehilite .k { color: #81A1C1; font-weight: bold } /* Keyword */
+.codehilite .l { color: #D8DEE9 } /* Literal */
+.codehilite .n { color: #D8DEE9 } /* Name */
+.codehilite .o { color: #81A1C1; font-weight: bold } /* Operator */
+.codehilite .x { color: #D8DEE9 } /* Other */
+.codehilite .p { color: #ECEFF4 } /* Punctuation */
+.codehilite .ch { color: #616E87; font-style: italic } /* Comment.Hashbang */
+.codehilite .cm { color: #616E87; font-style: italic } /* Comment.Multiline */
+.codehilite .cp { color: #5E81AC; font-style: italic } /* Comment.Preproc */
+.codehilite .cpf { color: #616E87; font-style: italic } /* Comment.PreprocFile */
+.codehilite .c1 { color: #616E87; font-style: italic } /* Comment.Single */
+.codehilite .cs { color: #616E87; font-style: italic } /* Comment.Special */
+.codehilite .gd { color: #BF616A } /* Generic.Deleted */
+.codehilite .ge { color: #D8DEE9; font-style: italic } /* Generic.Emph */
+.codehilite .ges { color: #D8DEE9; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+.codehilite .gr { color: #BF616A } /* Generic.Error */
+.codehilite .gh { color: #88C0D0; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #A3BE8C } /* Generic.Inserted */
+.codehilite .go { color: #D8DEE9 } /* Generic.Output */
+.codehilite .gp { color: #616E88; font-weight: bold } /* Generic.Prompt */
+.codehilite .gs { color: #D8DEE9; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #88C0D0; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #BF616A } /* Generic.Traceback */
+.codehilite .kc { color: #81A1C1; font-weight: bold } /* Keyword.Constant */
+.codehilite .kd { color: #81A1C1; font-weight: bold } /* Keyword.Declaration */
+.codehilite .kn { color: #81A1C1; font-weight: bold } /* Keyword.Namespace */
+.codehilite .kp { color: #81A1C1 } /* Keyword.Pseudo */
+.codehilite .kr { color: #81A1C1; font-weight: bold } /* Keyword.Reserved */
+.codehilite .kt { color: #81A1C1 } /* Keyword.Type */
+.codehilite .ld { color: #D8DEE9 } /* Literal.Date */
+.codehilite .m { color: #B48EAD } /* Literal.Number */
+.codehilite .s { color: #A3BE8C } /* Literal.String */
+.codehilite .na { color: #8FBCBB } /* Name.Attribute */
+.codehilite .nb { color: #81A1C1 } /* Name.Builtin */
+.codehilite .nc { color: #8FBCBB } /* Name.Class */
+.codehilite .no { color: #8FBCBB } /* Name.Constant */
+.codehilite .nd { color: #D08770 } /* Name.Decorator */
+.codehilite .ni { color: #D08770 } /* Name.Entity */
+.codehilite .ne { color: #BF616A } /* Name.Exception */
+.codehilite .nf { color: #88C0D0 } /* Name.Function */
+.codehilite .nl { color: #D8DEE9 } /* Name.Label */
+.codehilite .nn { color: #8FBCBB } /* Name.Namespace */
+.codehilite .nx { color: #D8DEE9 } /* Name.Other */
+.codehilite .py { color: #D8DEE9 } /* Name.Property */
+.codehilite .nt { color: #81A1C1 } /* Name.Tag */
+.codehilite .nv { color: #D8DEE9 } /* Name.Variable */
+.codehilite .ow { color: #81A1C1; font-weight: bold } /* Operator.Word */
+.codehilite .pm { color: #ECEFF4 } /* Punctuation.Marker */
+.codehilite .w { color: #D8DEE9 } /* Text.Whitespace */
+.codehilite .mb { color: #B48EAD } /* Literal.Number.Bin */
+.codehilite .mf { color: #B48EAD } /* Literal.Number.Float */
+.codehilite .mh { color: #B48EAD } /* Literal.Number.Hex */
+.codehilite .mi { color: #B48EAD } /* Literal.Number.Integer */
+.codehilite .mo { color: #B48EAD } /* Literal.Number.Oct */
+.codehilite .sa { color: #A3BE8C } /* Literal.String.Affix */
+.codehilite .sb { color: #A3BE8C } /* Literal.String.Backtick */
+.codehilite .sc { color: #A3BE8C } /* Literal.String.Char */
+.codehilite .dl { color: #A3BE8C } /* Literal.String.Delimiter */
+.codehilite .sd { color: #616E87 } /* Literal.String.Doc */
+.codehilite .s2 { color: #A3BE8C } /* Literal.String.Double */
+.codehilite .se { color: #EBCB8B } /* Literal.String.Escape */
+.codehilite .sh { color: #A3BE8C } /* Literal.String.Heredoc */
+.codehilite .si { color: #A3BE8C } /* Literal.String.Interpol */
+.codehilite .sx { color: #A3BE8C } /* Literal.String.Other */
+.codehilite .sr { color: #EBCB8B } /* Literal.String.Regex */
+.codehilite .s1 { color: #A3BE8C } /* Literal.String.Single */
+.codehilite .ss { color: #A3BE8C } /* Literal.String.Symbol */
+.codehilite .bp { color: #81A1C1 } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #88C0D0 } /* Name.Function.Magic */
+.codehilite .vc { color: #D8DEE9 } /* Name.Variable.Class */
+.codehilite .vg { color: #D8DEE9 } /* Name.Variable.Global */
+.codehilite .vi { color: #D8DEE9 } /* Name.Variable.Instance */
+.codehilite .vm { color: #D8DEE9 } /* Name.Variable.Magic */
+.codehilite .il { color: #B48EAD } /* Literal.Number.Integer.Long */
+</style><body>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML-full"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\[", "\]"]],
+                processEscapes: true
+            },
+            config: ["MMLorHTML.js"],
+            jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
+            extensions: ["MathMenu.js", "MathZoom.js"]
+        });
+    </script>
+    <!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card logoBg">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-large w3-right" href="javascript:void(0)"
+      onclick="showHideSmallScreens()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/dev" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">TECH BLOGS</a>
+    <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">COMPUTER ARCHITECTURE</a>
+    <a href="/books" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">BOOKS</a>
+    <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">ABOUT</a>
+    <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-hide-medium">GITHUB</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navigationBar" class="w3-bar-block w3-black w3-hide w3-hide-large w3-top"
+  style="margin-top:46px">
+  <a href="/dev" class="w3-bar-item w3-button w3-padding-large">TECH BLOGS</a>
+  <a href="/computerarch" class="w3-bar-item w3-button w3-padding-large">COMPUTER ARCHITECTURE</a>
+  <a href="/books" class="w3-bar-item w3-button w3-padding-large">BOOKS</a>
+  <a href="/about.html" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
+  <a href="https://github.com/computoms" class="w3-bar-item w3-button w3-padding-large">GITHUB</a>
+</div>
+
+<script>
+  function showHideSmallScreens() {
+    var x = document.getElementById("navigationBar");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+</script>
+        <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-padding-64" id="band">
+        <h1 id="terraform-azuread-safe-grant-admin-consent-pipeline">Terraform AzureAD - Safe Grant Admin Consent pipeline</h1>
+<p>Aug 01, 2025</p>
+<p>This article explains one way of building a safe CI/CD pipeline to apply the "Admin Consent" on AzureAD AppRegistrations created by Terraform.</p>
+<div class="toc">
+<ul>
+<li><a href="#terraform-azuread-safe-grant-admin-consent-pipeline">Terraform AzureAD - Safe Grant Admin Consent pipeline</a></li>
+<li><a href="#1-context">1. Context</a></li>
+<li><a href="#2-use-case-and-process-workflow">2. Use case and process workflow</a><ul>
+<li><a href="#21-why-do-we-need-a-safe-admin-consent-workflow">2.1. Why do we need a safe admin consent workflow</a></li>
+<li><a href="#22-the-grant-admin-terraform-configuration-and-workflow">2.2. The Grant Admin Terraform configuration and workflow</a></li>
+</ul>
+</li>
+<li><a href="#3-terraform-configurations">3. Terraform configurations</a><ul>
+<li><a href="#31-grant-admin-reusable-configuration-in-admin-operations">3.1. Grant admin reusable configuration in Admin-Operations</a></li>
+<li><a href="#32-infra">3.2. Infra</a></li>
+<li><a href="#33-passing-information-from-one-configuration-to-the-other">3.3. Passing information from one configuration to the other</a></li>
+<li><a href="#34-security">3.4. Security</a><ul>
+<li><a href="#341-adding-validations-to-terraform-inputs">3.4.1. Adding validations to terraform inputs</a></li>
+<li><a href="#342-filtering-on-allowed-claims">3.4.2. Filtering on allowed claims</a></li>
+<li><a href="#343-preconditions">3.4.3. Preconditions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#4-conclusion">4. Conclusion</a></li>
+</ul>
+</div>
+<h1 id="1-context">1. Context</h1>
+<p>Azure AD uses <a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app">AppRegistration</a> objects to represent the identity of a web application. This object is used to configure the security related settings of the application, such as authentication and authorization.</p>
+<p>In the <em>Expose an API</em> settings of this Azure AD object, it is possible to declare scopes allowing to authorize a client application to call the API (usually through its access_token scope). Some of these scopes can require the "Admin Consent" for higher-priviledged operations, as an extra security measure.</p>
+<p>To authorize a client application to access a web API, you need to <a href="https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-configure-app-access-web-apis">configure the app permissions</a> in the client AppRegistration settings. After this step, if the scope declared in the web API requires admin consent, you need to have an admin account (with Global Administrator role) in order to grant the consent on behalf of all users (so they're not prompted to do so). This is especially the case for external APIs, such as Microsoft Graph API.</p>
+<h1 id="2-use-case-and-process-workflow">2. Use case and process workflow</h1>
+<p>Here is a simple use case to demonstrate the need of a grant admin workflow.</p>
+<p>We are developing two web APIs, <code>api-a</code> and <code>api-b</code>. Each of these web APIs are assigned an AppRegistration on Azure AD Portal to manage their security related features (respectively <code>AppReg A</code> and <code>AppReg B</code>). </p>
+<div class="w3-center">
+<img src="images/terraform_azure-ad-grant-admin-consent_01.png" alt="Use case: API-A calls API-B" />
+</div>
+
+<h2 id="21-why-do-we-need-a-safe-admin-consent-workflow">2.1. Why do we need a safe admin consent workflow</h2>
+<p><code>api-a</code> needs to call <code>api-b</code>, so we need to expose an API on <code>AppReg B</code> and authorize <code>api-a</code> to access this exposed API using its access_token. Now, imagine that <code>api-b</code> exposes an API that can perform dangerous operations : you want to restrict calling applications such that an administrator approves the authorization requests from calling apps. This can be done by setting the "Who can consent" to "Admins only" on Azure Portal.</p>
+<p>Another use case : your <code>api-a</code> needs to access a resource of the Microsoft Graph API. In this case, the admin consent can be enabled by default on some scopes.</p>
+<p>Terraform can create the AppRegistrations of <code>api-a</code> and <code>api-b</code>, and set the correct permissions.</p>
+<p>It can also apply the admin consent for us, but for this to work, it needs a high-priviledged service principal with the <code>Directory.ReadWrite.All</code> role (or your need the <code>Global Administrator</code> role if connected with a user principal), see <a href="https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/service_principal_delegated_permission_grant">Terraform Registry Documentation</a>. This is a high-level role that needs care before being assigned to any service principal, because of security reasons.</p>
+<h2 id="22-the-grant-admin-terraform-configuration-and-workflow">2.2. The Grant Admin Terraform configuration and workflow</h2>
+<p>In order to avoid using a highly priviledge service principal to perform "standard" Terraform operations (such as creating and configuration the AppRegistrations), we need to separate the two sets of operations:</p>
+<ul>
+<li>Perform "standard" Terraform operations using a service principal <code>sp1</code></li>
+<li>Perform the Admin Consent grant operation using a high priviledge service principal <code>sp2</code> </li>
+<li>Protect the grant operation using Terraform built-in validators and a whitelist of access rights, as well as git RBAC</li>
+</ul>
+<p>Here is the proposed configuration using two git repositories:</p>
+<ul>
+<li><code>infra</code>: stores Terraform configuration for creating the infrastructure. To be used with a standard service principal.</li>
+<li><code>admin-operations</code>: stores a protected Terraform configuration for applying the admin consent. Used with a high-privileged service principal. This repository must be configured so that a write modification must be reviewed by an Administrator of the system/infrastructure.</li>
+</ul>
+<p>Then, the CI pipeline will be divded into two separate processes:</p>
+<ul>
+<li><code>job1</code> will init/plan/apply the Terraform configuration from the <code>infra</code> repository using <code>sp1</code></li>
+<li><code>job1</code> will then export all necessary information regarding admin consents required</li>
+<li><code>job2</code> will ini/plan/apply the Terraform configuration from the <code>admin-operations</code> repository using <code>sp2</code> and the output from <code>job1</code></li>
+</ul>
+<div class="w3-center">
+<img src="images/terraform_azure-ad-grant-admin-consent_02.png" alt="Use case: CI pipeline" />
+</div>
+
+<h1 id="3-terraform-configurations">3. Terraform configurations</h1>
+<h2 id="31-grant-admin-reusable-configuration-in-admin-operations">3.1. Grant admin reusable configuration in Admin-Operations</h2>
+<p>Let's write a reusable Terraform configuration that performs the grant admin for the list of permissions passed as arguments. First, let's see how we can grant the admin consent for a permission between <code>AppReg A</code> and <code>AppReg B</code>. </p>
+<ul>
+<li>If the permission is an application permission (usually, used for backend-to-backend communication without user authentication), we can use the app role assignment resource:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_app_role_assignment&quot;</span><span class="w"> </span><span class="nv">&quot;ac_application&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">app_role_id</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="c1"> # Object id of the role in destination</span>
+<span class="c1">                                # (app_role.id declared in azuread_application)</span>
+<span class="w">    </span><span class="na">principal_object_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="c1"> # Object id of the source</span>
+<span class="w">    </span><span class="na">resource_object_id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="c1"> # Object id of the destination</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>If the permission is a delegated permission (access is granted on behalf of a user), we use a delegated permission grant resource:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal_delegated_permission_grant&quot;</span><span class="w"> </span><span class="nv">&quot;ac_delegated&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">service_principal_object_id</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="c1">    # SP of the source</span>
+<span class="w">    </span><span class="na">resource_service_principal_object_id</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="c1">    # SP of the destination</span>
+<span class="w">    </span><span class="na">claim_values</span><span class="w">                            </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;openid&quot;, &quot;User.Read.All&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>To make a reusable configuration, we can add two arrays of objects representing the list of permissions (application and delegated) to be granted. Then, we have to loop through these lists to grant all permissions. </p>
+<blockquote>
+<p>Note: the list of objects cannot be directly passed to <code>for_each</code> in Terraform as the <code>for_each</code> requires a map, but we can transform the list into a map using a <code>for</code>.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;application_permissions&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">object</span><span class="p">({</span>
+<span class="w">        </span><span class="na">src_sp_id</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">dest_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">role_id</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">    </span><span class="p">}))</span>
+<span class="p">}</span>
+
+<span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;delegated_permissions&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">object</span><span class="p">({</span>
+<span class="w">        </span><span class="na">src_sp_id</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">dest_sp_id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">claims</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}))</span>
+<span class="p">}</span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_app_role_assignment&quot;</span><span class="w"> </span><span class="nv">&quot;ac_application&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">for</span><span class="w"> </span><span class="err">index</span><span class="p">,</span><span class="w"> </span><span class="err">obj</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.application_permissions</span><span class="p">:</span>
+<span class="w">        </span><span class="na">index</span><span class="w"> </span><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="err">obj</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="na">app_role_id</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.role_id</span>
+<span class="w">    </span><span class="na">principal_object_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.src_sp_id</span>
+<span class="w">    </span><span class="na">resource_object_id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.dest_id</span>
+<span class="p">}</span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal_delegated_permission_grant&quot;</span><span class="w"> </span><span class="nv">&quot;ac_delegated&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">for</span><span class="w"> </span><span class="err">index</span><span class="p">,</span><span class="w"> </span><span class="err">obj</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.delegated_permissions</span><span class="p">:</span>
+<span class="w">        </span><span class="na">index</span><span class="w"> </span><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="err">obj</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="na">service_principal_object_id</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.src_sp_id</span>
+<span class="w">    </span><span class="na">resource_service_principal_object_id</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.dest_sp_id</span>
+<span class="w">    </span><span class="na">claim_values</span><span class="w">                            </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.claims</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>With this simple configuration, we now have a reusable way of setting grant admins listed in a <code>.tfvars</code> file that we pass to the <code>terraform plan</code> command line:</p>
+<div class="codehilite"><pre><span></span><code>terraform<span class="w"> </span>plan<span class="w"> </span>-var-file<span class="o">=</span><span class="s2">&quot;grant-admin.tfvars&quot;</span>
+</code></pre></div>
+
+<h2 id="32-infra">3.2. Infra</h2>
+<p>To configure app registartions in Terraform, we can use the resource <code>azuread_application</code>. We can also link the app registration to a service principal, using the <code>azuread_service_principal</code> resource.</p>
+<p>In our example, <code>appa</code> needs to access <code>appb</code>'s API. The following example code demonstrates how to do this using a delegated permission:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">data</span><span class="w"> </span><span class="nc">&quot;azuread_client_config&quot;</span><span class="w"> </span><span class="nv">&quot;current&quot;</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="c1"># Resources for App A</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_application&quot;</span><span class="w"> </span><span class="nv">&quot;appa&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">display_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;appa&quot;</span>
+<span class="w">    </span><span class="na">owners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">data.azuread_client_config.current.object_id</span><span class="p">]</span>
+<span class="w">    </span><span class="na">sign_in_audience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;AzureADMultipleOrgs&quot;</span>
+
+<span class="w">    </span><span class="nb">required_resource_access</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="na">resource_app_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_application.appb.application_id</span>
+
+<span class="w">        </span><span class="nb">resource_access</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="na">id</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;75f414d7-f356-456d-a7fb-a70740236fca&quot;</span>
+<span class="w">            </span><span class="na">type</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Scope&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal&quot;</span><span class="w"> </span><span class="nv">&quot;appa-sp&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">client_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_application.appa.client_id</span>
+<span class="p">}</span>
+
+<span class="c1"># Resources for App B</span>
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_application&quot;</span><span class="w"> </span><span class="nv">&quot;appb&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">display_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;appb&quot;</span>
+<span class="w">    </span><span class="na">owners</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nv">data.azuread_client_config.current.object_id</span><span class="p">]</span>
+<span class="w">    </span><span class="na">sign_in_audience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;AzureADMultipleOrgs&quot;</span>
+
+<span class="w">    </span><span class="nb">api</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">oauth2_permission_scope</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="na">admin_consent_description</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="w">            </span><span class="na">admin_consent_display_name</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Access appb&quot;</span>
+<span class="w">            </span><span class="na">enabled</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+<span class="w">            </span><span class="na">id</span><span class="w">          </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;75f414d7-f356-456d-a7fb-a70740236fca&quot;</span>
+<span class="w">            </span><span class="na">type</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Admin&quot;</span>
+<span class="w">            </span><span class="na">value</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;AppBDelegated&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal&quot;</span><span class="w"> </span><span class="nv">&quot;appb-sp&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">client_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_application.appb.client_id</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The <code>data</code> line helps getting the current service principal's object id to set it as owner of the resources. <code>appa</code> declares a <code>required_resource_access</code> to <code>appb</code>'s permission scope. <code>appb</code> declares an API with a permission scope (delegated). The <code>id</code> has been generated (<em>e.g.</em> with <code>New-Guid</code> powershell command).</p>
+<h2 id="33-passing-information-from-one-configuration-to-the-other">3.3. Passing information from one configuration to the other</h2>
+<p>To link the two configurations shown above, we can use Terraform <code>output</code>s:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;delegated_permissions&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="na">sp_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_service_principal.appa-sp.object_id</span>
+<span class="w">            </span><span class="na">rsp_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_service_principal.appb-sp.object_id</span>
+<span class="w">            </span><span class="na">claim_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;AppBDelegated&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Once terraform is appled, we can get this value using the usual <code>terraform output -json delegated_permissions</code> command (where <code>-json</code> generates a json result, which is useful in scripts).</p>
+<p>Now the output generated does not correspond exactly to what is expected by Terraform in a <code>tfvars</code> file. We can correct this be using a Powershell script to convert to the correct format:</p>
+<div class="codehilite"><pre><span></span><code><span class="nv">$json</span> <span class="p">=</span> <span class="p">$(</span><span class="n">terraform</span> <span class="n">output</span> <span class="n">-json</span> <span class="n">delegated_permissions</span><span class="p">)</span> <span class="p">|</span> <span class="nb">ConvertFrom-Json</span>
+
+<span class="nv">$elements</span> <span class="p">=</span> <span class="p">@()</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$item</span> <span class="k">in</span> <span class="nv">$json</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$el</span> <span class="p">=</span> <span class="s2">&quot;    {&quot;</span> <span class="p">+</span> <span class="s2">&quot;</span><span class="se">`n</span><span class="s2">&quot;</span>
+    <span class="nv">$el</span> <span class="p">+=</span> <span class="s2">&quot;        src_sp_id = </span><span class="p">$(</span><span class="nv">$item</span><span class="p">.</span><span class="n">sp_id</span><span class="p">)</span><span class="se">`n</span><span class="s2">&quot;</span>
+    <span class="nv">$el</span> <span class="p">+=</span> <span class="s2">&quot;        dest_sp_id = </span><span class="p">$(</span><span class="nv">$item</span><span class="p">.</span><span class="n">rsp_id</span><span class="p">)</span><span class="se">`n</span><span class="s2">&quot;</span>
+    <span class="nv">$claims</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$item</span><span class="p">.</span><span class="n">claim_values</span> <span class="p">|</span> <span class="k">ForEach</span><span class="n">-Object</span> <span class="p">{</span> <span class="s2">&quot;</span><span class="se">`&quot;</span><span class="s2">&quot;</span> <span class="p">+</span> <span class="nv">$_</span> <span class="p">+</span> <span class="s2">&quot;</span><span class="se">`&quot;</span><span class="s2">&quot;</span><span class="p">})</span> <span class="n">-join</span> <span class="s2">&quot;,&quot;</span>
+    <span class="nv">$el</span> <span class="p">+=</span> <span class="s2">&quot;        claims = [$claims]</span><span class="se">`n</span><span class="s2">&quot;</span>
+    <span class="nv">$el</span> <span class="p">+=</span> <span class="s2">&quot;    }&quot;</span>
+    <span class="nv">$elements</span> <span class="p">+=</span> <span class="nv">$el</span>
+<span class="p">}</span>
+
+<span class="nv">$new_output</span> <span class="p">=</span> <span class="s2">&quot;delegated_permissions = [</span><span class="se">`n</span><span class="s2">&quot;</span> <span class="p">+</span> <span class="p">$(</span><span class="nv">$elements</span> <span class="n">-join</span> <span class="s2">&quot;,</span><span class="se">`n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="p">+</span> <span class="s2">&quot;</span><span class="se">`n</span><span class="s2">]&quot;</span>
+<span class="nv">$new_output</span> <span class="p">=</span> <span class="s2">&quot;application_permissions = []&quot;</span>
+
+<span class="nv">$new_output</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="s2">&quot;grant-admin.tfvars&quot;</span>
+</code></pre></div>
+
+<h2 id="34-security">3.4. Security</h2>
+<p>The security of these operations must be carefully managed in order to prevent unwanted usage of the high-priviledged service principal for other usage or for granting permissions to unauthorized services.</p>
+<ul>
+<li>The service principal should be a managed identity or something giving the equivalent security level</li>
+<li>The access to the service principal should be restricted to the deployment pipeline that takes the <code>grant-admin.tfvars</code> as input and performs the grants</li>
+<li>The repository containing the automated admin consent Terraform configuration should be configured such that an administrator must review the changes to the code before it can be used in a pipeline.</li>
+</ul>
+<p>In addition to these measures, we can add the following restrictions:</p>
+<ul>
+<li>Input validation: we can use the built-in Terraform input validation feature to validate the inputs passed to the second Terraform configuration</li>
+<li>Precondition: we can also leverage Terraform's precondition to check that the owner of the resources is a valid one</li>
+</ul>
+<p>To protect our configuration so that it operates only on whitelisted resources, we can add validations. Here are examples of such validations:</p>
+<ul>
+<li>The source service principal must either be a known/authorized service principal or must be owned by a known service principal</li>
+<li>The destination resource must be an authorized resource (or must be owned by a known service principal)</li>
+<li>The claims/roles must be part of an authorized list</li>
+</ul>
+<h3 id="341-adding-validations-to-terraform-inputs">3.4.1. Adding validations to terraform inputs</h3>
+<p>Let's validate that the source service principal is authorized:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">locals</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">valid_sources</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;Valid-source-id-1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;Valid-source-id-2&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kr">variable</span><span class="w"> </span><span class="nv">&quot;delegated_permissions&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">object</span><span class="p">({</span>
+<span class="w">        </span><span class="na">src_sp_id</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">dest_sp_id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kt">string</span>
+<span class="w">        </span><span class="na">claims</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}))</span>
+
+<span class="w">    </span><span class="nb">validations</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="na">condition</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">([</span>
+<span class="w">            </span><span class="err">for</span><span class="w"> </span><span class="err">p</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.delegated_permissions</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">true</span>
+<span class="w">            </span><span class="err">if</span><span class="w"> </span><span class="p">!</span><span class="nf">contains</span><span class="p">(</span><span class="nv">local.valid_sources</span><span class="p">,</span><span class="w"> </span><span class="nv">p.src_sp_id</span><span class="p">)</span>
+<span class="w">        </span><span class="p">])</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span>
+<span class="w">        </span><span class="na">error_message</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="err">&quot;Delegated</span><span class="w"> </span><span class="err">permissions</span><span class="w"> </span><span class="err">should</span><span class="w"> </span><span class="err">have</span><span class="w"> </span><span class="p">[...]</span>
+<span class="w">            </span><span class="p">[...]</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">authorized</span><span class="w"> </span><span class="err">source</span><span class="w"> </span><span class="err">service</span><span class="w"> </span><span class="err">principal</span><span class="p">.</span><span class="err">&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p>Note: for the sake of presentation, the <code>[...]</code> are added to split lines. In Terraform, lines containing these symbols should be layed out on a single line.</p>
+</blockquote>
+<p>The <code>condition</code> in the validations filters the <code>delegated_permissions</code> array based on if <code>src_sp_id</code> is not in the specified list of valid sources <code>local.valid_sources</code>. We could do the same for the <code>dest_sp_id</code>. </p>
+<h3 id="342-filtering-on-allowed-claims">3.4.2. Filtering on allowed claims</h3>
+<p>For the <code>claims</code> part, the condition become a little more complex as it requires two imbricated for loops:</p>
+<div class="codehilite"><pre><span></span><code><span class="na">condition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">flatten</span><span class="p">([</span>
+<span class="w">    </span><span class="err">for</span><span class="w"> </span><span class="err">p</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.delegated_permissions</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="err">for</span><span class="w"> </span><span class="err">c</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">p.claims</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">true</span>
+<span class="w">            </span><span class="err">if</span><span class="w"> </span><span class="p">!</span><span class="nf">contains</span><span class="p">(</span><span class="nv">local.valid_claims</span><span class="p">,</span><span class="w"> </span><span class="err">c</span><span class="p">)</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">]))</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+
+<p>The <a href="https://developer.hashicorp.com/terraform/language/functions/flatten"><code>flatten</code> function</a> allows merging all the arrays together so we can have one final array on which to calculate the length.</p>
+<h3 id="343-preconditions">3.4.3. Preconditions</h3>
+<p>We can leverage the <code>precondition</code> Terraform lifecycle expression to further validate the authorizations. For example, we could make sure that the objects we are manipulating are owned by a valid service principal:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">locals</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">valid_sps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;Valid-service-principal-id-1&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kr">data</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal&quot;</span><span class="w"> </span><span class="nv">&quot;sps&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">for</span><span class="w"> </span><span class="err">index</span><span class="p">,</span><span class="w"> </span><span class="err">obj</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">var.delegated_permissions</span><span class="p">:</span>
+<span class="w">        </span><span class="na">index</span><span class="w"> </span><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="err">obj</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="na">object_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.src_sp_id</span>
+<span class="p">}</span>
+
+<span class="kr">data</span><span class="w"> </span><span class="nc">&quot;azuread_application&quot;</span><span class="w"> </span><span class="nv">&quot;apps&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">for_each</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">azuread_service_principal.sps</span>
+
+<span class="w">    </span><span class="na">client_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">each.value.client_id</span>
+<span class="p">}</span>
+
+<span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;azuread_service_principal_delegated_permission_grant&quot;</span><span class="w"> </span><span class="nv">&quot;ac_delegated&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">service_principal_object_id</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="c1">    # SP of the source</span>
+<span class="w">    </span><span class="na">resource_service_principal_object_id</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="c1">    # SP of the destination</span>
+<span class="w">    </span><span class="na">claim_values</span><span class="w">                            </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;openid&quot;, &quot;User.Read.All&quot;</span><span class="p">]</span>
+
+<span class="w">    </span><span class="nb">lifecycle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">precondition</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="na">condition</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="nf">flatten</span><span class="p">([</span>
+<span class="w">                </span><span class="err">for</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">azuread_application.apps</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                    </span><span class="err">for</span><span class="w"> </span><span class="err">o</span><span class="w"> </span><span class="err">in</span><span class="w"> </span><span class="nv">app.owners</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="no">true</span>
+<span class="w">                    </span><span class="err">if</span><span class="w"> </span><span class="p">!</span><span class="nf">contains</span><span class="p">(</span><span class="nv">local.valid_sps</span><span class="p">,</span><span class="w"> </span><span class="err">o</span><span class="p">)</span>
+<span class="w">                </span><span class="p">]</span>
+<span class="w">            </span><span class="p">]))</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span>
+<span class="w">            </span><span class="na">error_message</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="err">&quot;One</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">App</span><span class="w"> </span><span class="err">registration&#39;s</span><span class="w"> </span><span class="p">[...]</span>
+<span class="w">                </span><span class="p">[...]</span><span class="w"> </span><span class="err">owner</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">valid&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The first <code>data</code> loops through the input variable to fetch the service principals info in the cloud, using the given <code>src_sp_id</code>s. </p>
+<p>Then, the second <code>data</code> block gets the related <code>azuread_application</code> information using the service principal's <code>client_id</code> field.</p>
+<p>Then, the precondition checks that all <code>owners</code> of the <code>azuread_application</code>s are valid.</p>
+<h1 id="4-conclusion">4. Conclusion</h1>
+<p>We now have:</p>
+<ul>
+<li>A repository containing Terraform configuration to create app registrations for two applications calling each other</li>
+<li>A second repository that is protected, allowing to apply the admin consents automatically via Terraform and a high-priviledged service principal</li>
+<li>A script that transforms the outputs of this first configuration so that we can apply the grant admin consents using our second repository</li>
+<li>We improved the security around granting admin consents to prevent authorized operations</li>
+</ul>
+<p>All these steps can be orchestrated using Azure DevOps or any other CI/CD tool.</p></div></div></body></html>
