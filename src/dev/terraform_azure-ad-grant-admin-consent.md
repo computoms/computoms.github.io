@@ -136,7 +136,96 @@ terraform plan -var-file="grant-admin-consents.tfvars"
 
 ## 3.2. Infra
 
+To configure app registartions in Terraform, we can use the resource `azuread_application`. We can also link the app registration to a service principal, using the `azuread_service_principal` resource.
+
+In our example, `appa` needs to access `appb`'s API. The following example code demonstrates how to do this using a delegated permission:
+
+```hcl
+data "azuread_client_config" "current" {}
+
+# Resources for App A
+resource "azuread_application" "appa" {
+    display_name = "appa"
+    owners = [data.azuread_client_config.current.object_id]
+    sign_in_audience = "AzureADMultipleOrgs"
+
+    required_resource_access {
+        resource_app_id = azuread_application.appb.application_id
+
+        resource_access {
+            id      = "75f414d7-f356-456d-a7fb-a70740236fca"
+            type    = "Scope"
+        }
+    }
+}
+
+resource "azuread_service_principal" "appa-sp" {
+    client_id = azuread_application.appa.client_id
+}
+
+# Resources for App B
+resource "azuread_application" "appb" {
+    display_name = "appb"
+    owners = [data.azuread_client_config.current.object_id]
+    sign_in_audience = "AzureADMultipleOrgs"
+
+    api {
+        oauth2_permission_scope {
+            admin_consent_description   = "..."
+            admin_consent_display_name  = "Access appb"
+            enabled     = true
+            id          = "75f414d7-f356-456d-a7fb-a70740236fca"
+            type        = "Admin"
+            value       = "AppBDelegated"
+        }
+    }
+}
+
+resource "azuread_service_principal" "appb-sp" {
+    client_id = azuread_application.appb.client_id
+}
+```
+
+The `data` line helps getting the current service principal's object id to set it as owner of the resources. `appa` declares a `required_resource_access` to `appb`'s permission scope. `appb` declares an API with a permission scope (delegated). The `id` has been generated (_e.g._ with `New-Guid` powershell command).
+
 ## 3.3. Passing information from one configuration to the other
+
+To link the two configurations shown above, we can use Terraform `output`s:
+
+```hcl
+output "delegated_permissions" {
+    value = [
+        {
+            sp_id = azuread_service_principal.appa-sp.object_id
+            rsp_id = azuread_service_principal.appb-sp.object_id
+            claim_values = ["AppBDelegated"]
+        }
+    ]
+}
+```
+
+Once terraform is appled, we can get this value using the usual `terraform output -json delegated_permissions` command (where `-json` generates a json result, which is useful in scripts).
+
+Now the output generated does not correspond exactly to what is expected by Terraform in a `tfvars` file. We can correct this be using a Powershell script to convert to the correct format:
+
+```powershell
+$json = $(terraform output -json delegated_permissions) | ConvertFrom-Json
+
+$elements = @()
+foreach ($item in $json) {
+    $el = "    {" + "`n"
+    $el += "        src_sp_id = $($item.sp_id)`n"
+    $el += "        dest_sp_id = $($item.rsp_id)`n"
+    $claims = ($item.claim_values | ForEach-Object { "`"" + $_ + "`""}) -join ","
+    $el += "        claims = [$claims]`n"
+    $el += "    }"
+    $elements += $el
+}
+
+$new_output = "delegated_permissions = [`n" + $($elements -join ",`n") + "`n]"
+
+$new_output | Out-File delegated_permissions.tfvars
+```
 
 ## 3.4. Security
 
