@@ -1,3 +1,4 @@
 markdown
 python-markdown-math
 pyyaml
+Pygments
