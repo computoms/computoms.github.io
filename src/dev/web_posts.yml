@@ -1,7 +1,7 @@
 posts:
+- title: How Kubernetes Services Direct Traffic to Pods
+  url: https://dustinspecker.com/posts/ipvs-how-kubernetes-services-direct-traffic-to-pods/
 - title: Why Uber Engineering Switched from Postgres to MySQL
   url: https://www.uber.com/en-EG/blog/postgres-to-mysql-migration/?uclick_id=6581e45b-f7cb-4b7d-a655-1fe0fc656a43
 - title: How GitHub uses merge queue to ship hundreds of changes every day
   url: https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/
-- title: How Kubernetes Services Direct Traffic to Pods
-  url: https://dustinspecker.com/posts/ipvs-how-kubernetes-services-direct-traffic-to-pods/
