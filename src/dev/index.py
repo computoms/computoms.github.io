@@ -24,7 +24,7 @@ Here is a list of interesting engineering blogs:
 """
     o += "<h3>Personal selection of favorite blogs</h3><ul>"
     for post in read_favorite_blogs():
-        o += "<li><a href=\"" + post['url'] + "\">" + post['title'] + "</a></li>"
+        o += "<li><a href=\"" + post['url'] + "\">" + post['title'] + "</a></li>" + "\n"
     o += "</ul>"
     o += """
     <h2>Selection of articles form the web</h2>
@@ -32,12 +32,12 @@ Here is a list of interesting engineering blogs:
     <ul>
 """
     for post in read_interesting_posts():
-        o += "<li><a href=\"" + post['url'] + "\">" + post['title'] + "</a></li>"
+        o += "<li><a href=\"" + post['url'] + "\">" + post['title'] + "</a></li>" + "\n"
     o += "</ul>"
     o += "<h2>Articles from me</h2>"
     o += "<ul>"
     for post in utils.list_articles('dev'):
-        o += "<li><a href=\"/" + post['src'].replace('.md', '.html') + "\">" + post['title'] + "</a></li>"
+        o += "<li><a href=\"/" + post['src'].replace('.md', '.html') + "\">" + post['title'] + "</a></li>" + "\n"
     o += "</ul>"
     return o
 
