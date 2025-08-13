@@ -1,10 +1,9 @@
 ---
 date: 2025-08-12
-title: Container networking
-draft: true
+title: Container networking with iptables and namespaces
 ---
 
-This article summarizes networking concepts of containers using `iptables`.
+This article summarizes networking concepts of containers using `iptables` and network namespaces.
 
 [TOC]
 
@@ -12,7 +11,7 @@ This article summarizes networking concepts of containers using `iptables`.
 
 Sources: [Dustin Specker's excellent posts on the subject](https://dustinspecker.com/posts/ipvs-how-kubernetes-services-direct-traffic-to-pods/)
 
-Containers are packaged applications that are isolated form each other and form the host operating system using different isolation and control mechanisms. Here are the main ones:
+Containers are packaged applications that are isolated form each other -- and from the host operating system -- using different isolation and control mechanisms. Here are the main ones:
 
 - `namespaces` (a feature of the Linux kernel) allows the isolation of most of the dependencies, such as the networking, processes and users
 - `cgroups` (another feature of the Linux kernel) allows the monitoring and control of the resources used by processes (CPU, memory, etc.)
@@ -31,7 +30,7 @@ sudo ipnetns add http2
 sudo ip netns exec http2 pythohn3 -m http.server 8080
 ```
 
-To link two namespaces, such as the root namespace (host's one) and the new one:
+To link two namespaces, such as the root namespace (host's one) and the new one, we use a pair of virtual ethernet adapters:
 
 ```bash
 # Create a virtual ethernet interface pair
@@ -46,11 +45,17 @@ sudo ip address add 10.0.0.10/24 dev veth_http2
 sudo ip netns exec http2 ip address add 10.0.0.11/24 dev veth_ns_http2
 ```
 
-_Note_: by default, the loopback device is not enabled on new namespaces. To enable it: `sudo ip netns exec http2 ip link set dev lo up`.
+_Note_: by default, the loopback device is not enabled on new namespaces. To enable it: 
+
+```bash
+sudo ip netns exec http2 ip link set dev lo up
+```
 
 Here is a summary of the current setup:
 
-![Network namespaces](./images/container-networking_01.png)
+<div class="w3-center">
+<img src="./images/container-networking_01.png" alt="Network namespaces" />
+</div>
 
 
 ### 1.1.2. Routing between namespaces
@@ -100,3 +105,21 @@ sudo iptables --table nat --append POSTROUTING --source 10.0.0.0/24 --jump MASQU
 This creates a VLAN between http2 and http3 namesapces in the range 10.0.0.0/24 and enables the NAT to reach internet from host's interface.
 
 _Note_: iptables rules from previous section can be deleted.
+
+## 1.2. Virtual IPs
+
+A Virtual IP (VIP) is an IP that is not directly linked to a physical device but points to another IP. This allows to reassign the destination of this VIP easily by a software.
+
+With `iptables`, this can be configured easily:
+
+```bash
+sudo iptables --table nat --new VIP-EXAMPLE
+sudo iptables --table nat --append PREROUTING --jump VIP-EXAMPLE
+sudo iptables --table nat --append OUTPUT --jump VIP-EXAMPLE
+sudo iptables --table nat --append VIP-EXAMPLE \
+    --destination 10.100.100.100 --protocol tcp \
+    --match tcp --dport 8080 --jump DNAT \
+    --to-destination 10.0.0.11:8080
+```
+
+These commands create a virtual IP 10.100.100.100 that redirects local-network TCP traffic to IP 10.0.0.11 on port 8080.
