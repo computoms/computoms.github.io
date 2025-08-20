@@ -17,11 +17,11 @@ def build_dev():
     </ul>
     </p>
     <h3>Latest blog posts</h3>
-    <url>"""
+    <ul>"""
     for post in utils.list_articles('dev'):
         o += "<li><a href=\"" + post['src'].replace('.md', '.html') + "\">" + post['title'] + "</a></li>"
     o += """
-    </url>
+    </ul>
 </div>
 """
     return o
