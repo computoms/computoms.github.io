@@ -5,3 +5,5 @@ posts:
   url: https://www.uber.com/en-EG/blog/postgres-to-mysql-migration/?uclick_id=6581e45b-f7cb-4b7d-a655-1fe0fc656a43
 - title: How GitHub uses merge queue to ship hundreds of changes every day
   url: https://github.blog/engineering/engineering-principles/how-github-uses-merge-queue-to-ship-hundreds-of-changes-every-day/
+- title: How We Synchronize .NET’s Virtual Monorepo
+  url: https://devblogs.microsoft.com/dotnet/how-we-synchronize-dotnets-virtual-monorepo/
