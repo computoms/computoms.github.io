@@ -7,3 +7,9 @@ blogs:
   url: https://slack.engineering/
 - title: Spotify Engineering
   url: https://engineering.atspotify.com/
+- title: Netflix Tech Blog
+  url: https://netflixtechblog.com/
+- title: AWS Architecture Blog
+  url: https://aws.amazon.com/blogs/architecture/
+- title: Dropbox Tech Blog
+  url: https://dropbox.tech/
